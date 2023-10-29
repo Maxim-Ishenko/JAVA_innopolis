@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework2.task2_two_numbers_states;
+package ru.innopolis.java.homework2_JVM.task2_two_numbers_states;
 
 import java.util.Scanner;
 

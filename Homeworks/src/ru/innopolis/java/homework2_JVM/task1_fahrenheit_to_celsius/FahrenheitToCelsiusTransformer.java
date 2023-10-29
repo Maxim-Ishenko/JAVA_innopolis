@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework2.task1_fahrenheit_to_celsius;
+package ru.innopolis.java.homework2_JVM.task1_fahrenheit_to_celsius;
 
 import java.util.Scanner;
 

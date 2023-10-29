@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework2.task3_string_repeater;
+package ru.innopolis.java.homework2_JVM.task3_string_repeater;
 
 public class App {
     public static void main(String[] args) {

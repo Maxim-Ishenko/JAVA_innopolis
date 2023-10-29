@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework2.task3_string_repeater;
+package ru.innopolis.java.homework2_JVM.task3_string_repeater;
 
 import java.util.Scanner;
 

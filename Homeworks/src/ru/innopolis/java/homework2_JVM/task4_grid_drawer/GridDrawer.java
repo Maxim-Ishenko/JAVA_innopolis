@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework2.task4_grid_drawer;
+package ru.innopolis.java.homework2_JVM.task4_grid_drawer;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework2.task4_grid_drawer;
+package ru.innopolis.java.homework2_JVM.task4_grid_drawer;
 
 public class App {
     public static void main(String[] args) {
