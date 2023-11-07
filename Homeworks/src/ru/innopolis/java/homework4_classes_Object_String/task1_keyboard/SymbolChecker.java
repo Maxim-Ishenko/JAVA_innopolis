@@ -14,7 +14,7 @@ public class SymbolChecker {
 
         if (!inputEnglishSymbol.matches("^[a-zA-Z]+$")) {
             throw new Exception(
-                    "Ожидается ввод ТОЛЬКО одной буквы АНГЛИЙСКОГО алфавита."
+                "Ожидается ввод ТОЛЬКО одной буквы АНГЛИЙСКОГО алфавита."
             );
         }
 
