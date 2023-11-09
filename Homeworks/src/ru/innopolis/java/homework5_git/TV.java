@@ -1,8 +1,6 @@
 package ru.innopolis.java.homework5_git;
 
-import java.util.InputMismatchException;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class TV {
     /**
@@ -179,10 +177,10 @@ public class TV {
     public String toString() {
         return "Название класса: " + this.getClass().getSimpleName() + ";\n" +
             "Поля класса для проверки 5 домашки: " + "\n" +
-            "companyName: " + this.companyName + ";\n" +
-            "isTVActive: " + this.isTVActive + ";\n" +
-            "volumeValue: " + this.volumeValue + ";\n" +
-            "activeChannelNumber: " + this.activeChannelNumber + ".\n";
+            "companyName: " + this.companyName + "; " +
+            "isTVActive: " + this.isTVActive + "; " +
+            "volumeValue: " + this.volumeValue + "; " +
+            "activeChannelNumber: " + this.activeChannelNumber + ".";
     }
 
     // HW5_ADDITIONAL - equals & hashCode сгенерировал только по вновь добавленным в HW5Additional полям
@@ -201,7 +199,7 @@ public class TV {
         return Objects.hash(activeChannelNumber, volumeValue, isTVActive);
     }
 
-    //HW5Additional
+    //HW5Additional - наполнение коллекции из заданного числа телевизоров с помощью уже реализованных сеттеров и проверок
     public static TV[] getTVCollection(Scanner scanner, int tvAmount) throws Exception {
         TV[] tvCollection = new TV[tvAmount];
 
@@ -232,6 +230,33 @@ public class TV {
             scanner.nextLine();
         }
 
-        return tvCollection;
+        //HW5Additional (Double additional) Реализация сортировки по возрастанию по полю activeChannelNumber
+        List<TV> tvArrayList = Arrays.asList(tvCollection);
+        tvArrayList.sort(new Comparator<TV>() {
+            @Override
+            public int compare(TV a, TV b) {
+                return a.getActiveChannel() - b.getActiveChannel();
+            }
+        });
+
+        TV[] sortedTVCollection = new TV[tvArrayList.size()];
+
+        for (int i = 0; i < tvArrayList.size(); i++) {
+            sortedTVCollection[i] = tvArrayList.get(i);
+        }
+
+        return sortedTVCollection;
+    }
+
+    //HW5Additional - Получение списка телевизоров, удовлетворяющих условиям по активности и максимальной громкости
+    public static ArrayList<TV> getActiveTVCollectionWithAvailableVolume(TV[] tvCollection, int availableVolume) {
+        ArrayList<TV> filteredTVCollection = new ArrayList<>();
+
+        for (TV item: tvCollection) {
+            if (item.isTVActive && item.volumeValue <= availableVolume)
+                filteredTVCollection.add(item);
+        }
+
+        return filteredTVCollection;
     }
 }
