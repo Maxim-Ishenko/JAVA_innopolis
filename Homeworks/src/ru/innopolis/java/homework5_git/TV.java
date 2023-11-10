@@ -199,7 +199,7 @@ public class TV {
         return Objects.hash(activeChannelNumber, volumeValue, isTVActive);
     }
 
-    //HW5Additional - наполнение коллекции из заданного числа телевизоров с помощью уже реализованных сеттеров и проверок
+    // HW5_ADDITIONAL - наполнение коллекции из заданного числа телевизоров с помощью уже реализованных сеттеров и проверок
     public static TV[] getTVCollection(Scanner scanner, int tvAmount) throws Exception {
         TV[] tvCollection = new TV[tvAmount];
 
@@ -230,7 +230,7 @@ public class TV {
             scanner.nextLine();
         }
 
-        //HW5Additional (Double additional) Реализация сортировки по возрастанию по полю activeChannelNumber
+        // HW5_ADDITIONAL (Double additional) Реализация сортировки по возрастанию по полю activeChannelNumber
         List<TV> tvArrayList = Arrays.asList(tvCollection);
         tvArrayList.sort(new Comparator<TV>() {
             @Override
@@ -248,7 +248,7 @@ public class TV {
         return sortedTVCollection;
     }
 
-    //HW5Additional - Получение списка телевизоров, удовлетворяющих условиям по активности и максимальной громкости
+    // HW5_ADDITIONAL - Получение списка телевизоров, удовлетворяющих условиям по активности и максимальной громкости
     public static ArrayList<TV> getActiveTVCollectionWithAvailableVolume(TV[] tvCollection, int availableVolume) {
         ArrayList<TV> filteredTVCollection = new ArrayList<>();
 
