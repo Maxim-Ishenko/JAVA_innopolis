@@ -7,9 +7,10 @@ public class Product {
     private String productName;
     private double coast;
 
-    public Product(String productName, double coast) {
-        this.productName = productName;
-        this.coast = coast;
+   public Product() {}
+    public Product(String productName, double coast) throws Exception {
+        this.setProductName(productName);
+        this.setProductCoast(coast);
     }
 
     public String getProductName() {
@@ -36,14 +37,14 @@ public class Product {
 
         this.productName = productName;
     }
-    public void setMoneyAmount(double coast) throws Exception {
+    public void setProductCoast(double coast) throws Exception {
         if (coast < 0) {
             throw new Exception("Цена не может быть отрицательным числом!");
         }
 
         this.coast = coast;
     }
-    public void setMoneyAmount(Scanner scanner) throws Exception {
+    public void setProductCoast(Scanner scanner) throws Exception {
         System.out.println("Введите цену продукта: ");
         double moneyAmount = scanner.nextDouble();
 
