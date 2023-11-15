@@ -12,22 +12,32 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String [] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
+        //    HW5
+        //    Scanner scanner = new Scanner(System.in);
+        //
+        //    TV[] tvCollection = TV.getTVCollection(scanner, 10);
+        //
+        //    System.out.println("Введите максимально допустимую громкость: ");
+        //    int maxVolume = scanner.nextInt();
+        //    scanner.nextLine();
+        //
+        //    TV[] activeTVCollectionWithAvailableVolume =
+        //            TV.getActiveTVCollectionWithAvailableVolume(tvCollection, maxVolume).toArray(new TV[0]);
+        //
+        //    System.out.println("Коллекция телевизоров, удовлетворяющих условиям: "
+        //        + Arrays.toString(activeTVCollectionWithAvailableVolume));
+        //
+        //    scanner.close();
 
+        //    HW6
+        Programm firstProgramm = new Programm("Смехопанорама", 75, 51561);
+        Programm secondProgramm = new Programm("Новости", 150, 200000);
 
-        TV[] tvCollection = TV.getTVCollection(scanner, 10);
+        Channel firstChannel = new Channel("ОРТ", 1, firstProgramm);
+        Channel secondChannel = new Channel("Культура", 2, secondProgramm);
 
-        System.out.println("Введите максимально допустимую громкость: ");
-        int maxVolume = scanner.nextInt();
-        scanner.nextLine();
+        TV myTV = new TV(new Channel[]{firstChannel, secondChannel});
 
-        TV[] activeTVCollectionWithAvailableVolume =
-                TV.getActiveTVCollectionWithAvailableVolume(tvCollection, maxVolume).toArray(new TV[0]);
-
-        System.out.println("Коллекция телевизоров, удовлетворяющих условиям: "
-            + Arrays.toString(activeTVCollectionWithAvailableVolume));
-
-
-        scanner.close();
+        System.out.println("ТВ со стандарным набором каналов: " + myTV);
     }
 }
