@@ -53,7 +53,6 @@ public class App {
                     isEnoughFlag = true;
                     break;
                 }
-                ;
 
                 Person currentPerson = personsCollection.get(j);
                 Product currentProduct = productsCollection.get(i);

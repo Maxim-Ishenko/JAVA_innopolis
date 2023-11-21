@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework7_OOP_inheritance_polymorphism.task1;
+package ru.innopolis.java.homework7_OOP_inheritance_polymorphism;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -8,9 +8,16 @@ public class Product {
     private double coast;
 
    public Product() {}
+    public Product(String productName) throws Exception {
+        this.setProductName(productName);
+    }
     public Product(String productName, double coast) throws Exception {
         this.setProductName(productName);
         this.setProductCoast(coast);
+    }
+    public Product(Scanner scanner) throws Exception {
+        this.setProductName(scanner);
+        this.setProductCoast(scanner);
     }
 
     public String getProductName() {
@@ -22,7 +29,15 @@ public class Product {
 
     public void setProductName(String productName) throws Exception {
         if (Objects.equals(productName, "")) {
-            throw new Exception("Имя продукта не может быть пустой строкой!");
+            throw new Exception("Название продукта не может быть пустой строкой!");
+        }
+
+        if (productName.length() < 3) {
+            throw new Exception("Название продукта должно содержать минимум 3 символа!");
+        }
+
+        if (productName.matches("\\d+")) {
+            throw new Exception("Название продукта не может состоять только из цифр!");
         }
 
         this.productName = productName;
@@ -57,10 +72,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "productName='" + productName + '\'' +
-                ", coast=" + coast +
-                '}';
+        return "Product{" + "\n" +
+            "productName='" + productName + "\n, " +
+            "coast=" + coast + "\n" +
+            '}';
     }
     @Override
     public boolean equals(Object o) {

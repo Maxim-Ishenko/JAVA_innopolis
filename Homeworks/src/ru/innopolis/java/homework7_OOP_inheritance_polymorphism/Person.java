@@ -1,4 +1,4 @@
-package ru.innopolis.java.homework7_OOP_inheritance_polymorphism.task1;
+package ru.innopolis.java.homework7_OOP_inheritance_polymorphism;
 
 import java.util.ArrayList;
 import java.util.Arrays;
