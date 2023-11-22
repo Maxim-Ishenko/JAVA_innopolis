@@ -9,11 +9,7 @@ public class Person {
     private String name;
     private double moneyAmount;
     private Product[] productsPackage = new Product[0];
-
-public Person(String name, double moneyAmount) throws Exception {
-    this.setName(name);
-    this.setMoneyAmount(moneyAmount);
-}
+    private int age;
 
     public String getName() {
         return name;
@@ -21,10 +17,10 @@ public Person(String name, double moneyAmount) throws Exception {
     public double getMoneyAmount() {
         return moneyAmount;
     }
-
     public Product[] getProductsPackage() {
         return productsPackage;
     }
+    public int getAge() { return this.age; };
 
     public void setName(String name) throws Exception {
         if (Objects.equals(name, "")) {
@@ -60,7 +56,6 @@ public Person(String name, double moneyAmount) throws Exception {
 
         this.moneyAmount = moneyAmount;
     }
-
     public void setProductToPackage(Product product) {
         if (this.moneyAmount < product.getCoast()) {
             System.out.println(
@@ -75,12 +70,48 @@ public Person(String name, double moneyAmount) throws Exception {
             System.out.println(this.name + " купил " + product.getProductName());
         }
     }
+    // HW7
+    public void setAge(int age) throws Exception {
+        if (age < 0) {
+            throw new Exception("Возраст не может быть отрицательным числом!");
+        }
+
+        this.age = age;
+    }
+    public void setAge(Scanner scanner) throws Exception {
+        System.out.println("Введите возраст пользователя: ");
+        int age = scanner.nextInt();
+
+        if (age < 0) {
+            throw new Exception("Возраст не может быть отрицательным числом!");
+        }
+
+        this.age = age;
+    }
+
+    // HW7
+    public Person() {}
+    public Person(String name, double moneyAmount) throws Exception {
+        this.setName(name);
+        this.setMoneyAmount(moneyAmount);
+    }
+    public Person(String name, double moneyAmount, int age) throws Exception {
+        this.setName(name);
+        this.setMoneyAmount(moneyAmount);
+        this.setAge(age);
+    }
+    public Person(Scanner scanner) throws Exception {
+        this.setName(scanner);
+        this.setMoneyAmount(scanner);
+        this.setAge(scanner);
+    }
 
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", moneyAmount=" + moneyAmount +
+                ", age=" + age +
                 ", productsPackage=" + Arrays.toString(productsPackage) +
                 '}';
     }

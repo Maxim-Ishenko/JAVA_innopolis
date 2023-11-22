@@ -42,6 +42,7 @@ public class DiscountProduct extends Product {
             throw new Exception("Цена не может быть отрицательным числом!");
         }
 
+        // В задании не указано, что нужно делать отдельное поля - цена с учетом скидки, потому сделал на базе самой цены продукта по условию
         if (!discountLimit.isAfter(LocalDate.now())) {
             this.setProductCoast(coast);
         } else {
