@@ -3,8 +3,6 @@ package ru.innopolis.java.homework7_OOP_inheritance_polymorphism;
 import java.util.Scanner;
 
 public class Pensioner extends Person {
-    private final double additionalDiscount = 0.05;
-
     @Override
     public void setAge(int age) throws Exception {
         if (age < 0) {
@@ -12,7 +10,7 @@ public class Pensioner extends Person {
         } else if (age < 65) {
             throw new Exception("Возраст пенсионера человека должен быть от 65 лет!");
         } else {
-            this.setAge(age);
+            super.setAge(age);
         }
     }
     @Override
@@ -24,7 +22,18 @@ public class Pensioner extends Person {
         } else if (age < 65) {
             throw new Exception("Возраст пенсионера человека должен быть от 65 лет!");
         } else {
-            this.setAge(age);
+            super.setAge(age);
+        }
+    }
+    @Override
+    public void setProductToPackage(Product product) throws Exception {
+        double ADDITIONAL_DISCOUNT = 0.05;
+        if (this.getMoneyAmount() < product.getCoast() - product.getCoast() * ADDITIONAL_DISCOUNT) {
+            System.out.println(
+                super.getName() + " не может позволить себе " + product.getProductName()
+            );
+        } else if (product.getClass().getSimpleName().equals("DiscountProduct")) {
+            super.setProductToPackage(product);
         }
     }
 
@@ -34,8 +43,8 @@ public class Pensioner extends Person {
     }
     public Pensioner(Scanner scanner) throws Exception {
         super();
-        this.setName(scanner);
-        this.setMoneyAmount(scanner);
+        super.setName(scanner);
+        super.setMoneyAmount(scanner);
         this.setAge(scanner);
     }
 }

@@ -56,7 +56,7 @@ public class Person {
 
         this.moneyAmount = moneyAmount;
     }
-    public void setProductToPackage(Product product) {
+    public void setProductToPackage(Product product) throws Exception {
         if (this.moneyAmount < product.getCoast()) {
             System.out.println(
                 this.name + " не может позволить себе " + product.getProductName()
@@ -68,6 +68,8 @@ public class Person {
             this.productsPackage = productsList.toArray(productsPackage);
 
             System.out.println(this.name + " купил " + product.getProductName());
+
+            this.setMoneyAmount(moneyAmount - product.getCoast());
         }
     }
     // HW7
@@ -109,11 +111,11 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", moneyAmount=" + moneyAmount +
-                ", age=" + age +
-                ", productsPackage=" + Arrays.toString(productsPackage) +
-                '}';
+            "name='" + name + '\'' +
+            ", moneyAmount=" + moneyAmount +
+            ", age=" + age +
+            ", productsPackage=" + Arrays.toString(productsPackage) +
+            '}';
     }
     @Override
     public boolean equals(Object o) {

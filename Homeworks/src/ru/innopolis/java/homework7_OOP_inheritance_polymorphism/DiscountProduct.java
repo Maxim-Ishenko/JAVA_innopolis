@@ -38,17 +38,18 @@ public class DiscountProduct extends Product {
         System.out.println("Введите цену продукта: ");
         double coast = scanner.nextDouble();
 
-        if (coast < 0) {
-            throw new Exception("Цена не может быть отрицательным числом!");
+        if (coast <= 0) {
+            throw new Exception("Цена должна быть положительным числом!");
         }
 
-        // В задании не указано, что нужно делать отдельное поля - цена с учетом скидки, потому сделал на базе самой цены продукта по условию
+        // В задании не указано, что нужно делать отдельное поля - цена с учетом скидки, поэтому сделал на базе самой цены продукта по условию
         if (!discountLimit.isAfter(LocalDate.now())) {
-            this.setProductCoast(coast);
+            super.setProductCoast(coast);
         } else {
-            this.setProductCoast(coast * (1 - (double) discountValue / 100));
+            super.setProductCoast(coast - ((coast / 100) * discountValue));
         }
     }
+
     public void setDiscountLimit(Scanner scanner) {
         System.out.println("Введите, до какого числа действует скидка в формате `yyyy-mm-dd`: ");
         this.discountLimit = LocalDate.parse(scanner.next());
@@ -63,14 +64,27 @@ public class DiscountProduct extends Product {
         this.setDiscountLimit(discountLimit);
 
         if (!discountLimit.isAfter(LocalDate.now())) {
-            this.setProductCoast(coast);
+            super.setProductCoast(coast);
         } else {
-            this.setProductCoast(coast * (1 - (double) discountValue / 100));
+            super.setProductCoast(coast * (1 - (double) discountValue / 100));
+        }
+    }
+    public DiscountProduct(
+            String productName,
+            double coast,
+            Integer discountValue) throws Exception {
+        super(productName);
+        this.setDiscountValue(discountValue);
+
+        if (!discountLimit.isAfter(LocalDate.now())) {
+            super.setProductCoast(coast);
+        } else {
+            super.setProductCoast(coast * (1 - (double) discountValue / 100));
         }
     }
     public DiscountProduct(Scanner scanner) throws Exception {
         super();
-        this.setProductName(scanner);
+        super.setProductName(scanner);
         this.setDiscountValue(scanner);
         this.setDiscountLimit(scanner);
         this.setProductCoast(scanner);

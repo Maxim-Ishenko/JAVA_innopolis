@@ -17,7 +17,7 @@ public class Children extends Person {
         } else if (age > 17) {
             throw new Exception("Возраст ребенка не может быть больше 17 лет!");
         } else {
-            this.setAge(age);
+            super.setAge(age);
         }
     }
     @Override
@@ -29,9 +29,16 @@ public class Children extends Person {
         } else if (age > 17) {
             throw new Exception("Возраст ребенка не может быть больше 17 лет!");
         } else {
-            this.setAge(age);
+            super.setAge(age);
         }
     }
+    @Override
+    public void setProductToPackage(Product product) throws Exception {
+        if (this.getIsBuyProductsAvailable()) {
+            super.setProductToPackage(product);
+        }
+    }
+
     private void setIsBuyProductsAvailable() {
         this.isBuyProductsAvailable = true;
     }
@@ -43,8 +50,8 @@ public class Children extends Person {
     }
     public Children(Scanner scanner) throws Exception {
         super();
-        this.setName(scanner);
-        this.setMoneyAmount(scanner);
+        super.setName(scanner);
+        super.setMoneyAmount(scanner);
         this.setAge(scanner);
         if (this.getAge() >= 6) this.setIsBuyProductsAvailable();
     }

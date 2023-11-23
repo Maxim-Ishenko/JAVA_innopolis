@@ -16,7 +16,7 @@ public class Adult extends Person {
         } else if (age < 18 || age >= 65) {
             throw new Exception("Возраст зрослого человека должен быть от 18 до 65 лет!");
         } else {
-            this.setAge(age);
+            super.setAge(age);
         }
     }
     @Override
@@ -28,7 +28,7 @@ public class Adult extends Person {
         } else if (age < 18 || age >= 65) {
             throw new Exception("Возраст зрослого человека должен быть от 18 до 65 лет!");
         } else {
-            this.setAge(age);
+            super.setAge(age);
         }
     }
     private void setIsCreditAvailable(boolean isCreditAvailable) {
@@ -42,8 +42,8 @@ public class Adult extends Person {
     }
     public Adult(Scanner scanner) throws Exception {
         super();
-        this.setName(scanner);
-        this.setMoneyAmount(scanner);
+        super.setName(scanner);
+        super.setMoneyAmount(scanner);
         this.setAge(scanner);
         this.setIsCreditAvailable(this.getMoneyAmount() > 0);
     }

@@ -50,11 +50,19 @@ public class Product {
             throw new Exception("Имя продукта не может быть пустой строкой!");
         }
 
+        if (productName.length() < 3) {
+            throw new Exception("Название продукта должно содержать минимум 3 символа!");
+        }
+
+        if (productName.matches("\\d+")) {
+            throw new Exception("Название продукта не может состоять только из цифр!");
+        }
+
         this.productName = productName;
     }
     public void setProductCoast(double coast) throws Exception {
-        if (coast < 0) {
-            throw new Exception("Цена не может быть отрицательным числом!");
+        if (coast <= 0) {
+            throw new Exception("Цена должна быть положительным числом!");
         }
 
         this.coast = coast;
@@ -63,8 +71,8 @@ public class Product {
         System.out.println("Введите цену продукта: ");
         double moneyAmount = scanner.nextDouble();
 
-        if (moneyAmount < 0) {
-            throw new Exception("Цена не может быть отрицательным числом!");
+        if (moneyAmount <= 0) {
+            throw new Exception("Цена должна быть положительным числом!");
         }
 
         this.coast = moneyAmount;
