@@ -58,7 +58,7 @@ public Person(String name, double moneyAmount) throws Exception {
         this.moneyAmount = moneyAmount;
     }
 
-    public void setProductToPackage(Product product) {
+    public void setProductToPackage(Product product) throws Exception {
         if (this.moneyAmount < product.getCoast()) {
             System.out.println(
                 this.name + " не может позволить себе " + product.getProductName()
@@ -70,6 +70,8 @@ public Person(String name, double moneyAmount) throws Exception {
             this.productsPackage = productsList.toArray(productsPackage);
 
             System.out.println(this.name + " купил " + product.getProductName());
+
+            this.setMoneyAmount(moneyAmount - product.getCoast());
         }
     }
 
