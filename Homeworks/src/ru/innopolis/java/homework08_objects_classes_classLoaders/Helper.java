@@ -5,6 +5,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Helper {
+    private final String INITIAL_STRING_VALUE = "";
+    private final String PERSON_NAME_SIBSTRING = "name: ";
+    private final String PERSON_MONEY_AMOUNT_SUBSTRING = "moneyAmount: ";
+    private final String PRODUCT_NAME_SIBSTRING = "productName: ";
+    private final String PRODUCT_COAST_SIBSTRING = "coast: ";
+    private final String PRODUCTS_PERSONS_INFO_ITEMS_SEPARATOR = ", ";
+    private final double INITIAL_COAST_MONEY_AMOUNT = 0;
+    private final int PERSON_NAME_SUBSTRING_OFFSET = 6;
+    private final int PERSON_MONEY_AMOUNT_SUBSTRING_OFFSET = 13;
+    private final int PRODUCT_NAME_SUBSTRING_OFFSET = 13;
+    private final int PRODUCT_COAST_SUBSTRING_OFFSET = 7;
+
     public Helper() {}
 
     public List<String> setCollectionFromTheFile(String path) {
@@ -29,16 +41,16 @@ public class Helper {
         List<Person> personsCollection = new ArrayList<>(List.of());
 
         for (String personInfo: personsCollectionString) {
-            String name = "";
-            double moneyAmount = 0;
+            String name = INITIAL_STRING_VALUE;
+            double moneyAmount = INITIAL_COAST_MONEY_AMOUNT;
 
-            String[] personInfoArray = personInfo.trim().split(", ");
+            String[] personInfoArray = personInfo.trim().split(PRODUCTS_PERSONS_INFO_ITEMS_SEPARATOR);
 
             for (String person: personInfoArray) {
-                if (person.contains("name: ")) {
-                    name = person.substring(person.indexOf("name: ") + 6);
-                } else if (person.contains("moneyAmount: ")) {
-                    String moneyAmountString = person.substring(person.indexOf("name: ") + 13);
+                if (person.contains(PERSON_NAME_SIBSTRING)) {
+                    name = person.substring(person.indexOf(PERSON_NAME_SIBSTRING) + PERSON_NAME_SUBSTRING_OFFSET);
+                } else if (person.contains(PERSON_MONEY_AMOUNT_SUBSTRING)) {
+                    String moneyAmountString = person.substring(person.indexOf(PERSON_MONEY_AMOUNT_SUBSTRING) + PERSON_MONEY_AMOUNT_SUBSTRING_OFFSET);
                     moneyAmount = Double.parseDouble(moneyAmountString);
                 }
             }
@@ -55,16 +67,16 @@ public class Helper {
         List<Product> productsCollection = new ArrayList<>(List.of());
 
         for (String productInfo: productsCollectionString) {
-            String productName = "";
-            double coast = 0;
+            String productName = INITIAL_STRING_VALUE;
+            double coast = INITIAL_COAST_MONEY_AMOUNT;
 
-            String[] productInfoArray = productInfo.trim().split(", ");
+            String[] productInfoArray = productInfo.trim().split(PRODUCTS_PERSONS_INFO_ITEMS_SEPARATOR);
 
             for (String product: productInfoArray) {
-                if (product.contains("productName: ")) {
-                    productName = product.substring(product.indexOf("productName: ") + 13);
-                } else if (product.contains("coast: ")) {
-                    String coastString = product.substring(product.indexOf("coast: ") + 7);
+                if (product.contains(PRODUCT_NAME_SIBSTRING)) {
+                    productName = product.substring(product.indexOf(PRODUCT_NAME_SIBSTRING) + PRODUCT_NAME_SUBSTRING_OFFSET);
+                } else if (product.contains(PRODUCT_COAST_SIBSTRING)) {
+                    String coastString = product.substring(product.indexOf(PRODUCT_COAST_SIBSTRING) + PRODUCT_COAST_SUBSTRING_OFFSET);
                     coast = Double.parseDouble(coastString);
                 }
             }
