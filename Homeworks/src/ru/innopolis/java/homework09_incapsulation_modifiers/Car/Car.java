@@ -184,13 +184,13 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-            "brand='" + brand + '\'' +
-            ", model='" + model + '\'' +
-            ", year=" + year +
-            ", power=" + power +
-            ", acceleration=" + acceleration +
-            ", suspension=" + suspension +
-            ", durability=" + durability +
+            "brand='" + brand + '\'' + ", \n" +
+            "model='" + model + '\'' + ", \n" +
+            "year=" + year + ", \n" +
+            "power=" + power + ", \n" +
+            "acceleration=" + acceleration + ", \n" +
+            "suspension=" + suspension + ", \n" +
+            "durability=" + durability + ", \n" +
         '}';
     }
     @Override

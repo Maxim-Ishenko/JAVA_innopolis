@@ -64,10 +64,10 @@ public class Race {
     @Override
     public String toString() {
         return "Race{" +
-            "distance=" + distance +
-            ", route='" + route + '\'' +
-            ", prize=" + prize +
-            ", participants=" + Arrays.toString(participants) +
+            "distance=" + distance + ", \n" +
+            "route='" + route + '\'' + ", \n" +
+            "prize=" + prize + ", \n" +
+            "participants=" + Arrays.toString(participants) +
             '}';
     }
     @Override

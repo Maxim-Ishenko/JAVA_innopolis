@@ -20,17 +20,33 @@ public class Garage {
         this.setParkedCars(parkedCars);
     }
 
-    public void modifyPower(Car car, Integer power) {
+    public void modifyPower(Car car, Integer power) throws Exception {
+        if (power <= 0) {
+            throw new Exception("Мощность может быть только положительным числом!");
+        }
 
+        car.setPower(power);
     }
-    public void modifyAcceleration(Car car, Integer acceleration) {
+    public void modifyAcceleration(Car car, Integer acceleration) throws Exception {
+        if (acceleration <= 0) {
+            throw new Exception("Ускорение может быть только положительным числом!");
+        }
 
+        car.setAcceleration(acceleration);
     }
-    public void modifySuspension(Car car, Integer suspension) {
+    public void modifySuspension(Car car, Integer suspension) throws Exception {
+        if (suspension <= 0) {
+            throw new Exception("Значение подвески может быть только положительным числом!");
+        }
 
+        car.setSuspension(suspension);
     }
-    public void modifyDurability(Car car, Integer durability) {
+    public void modifyDurability(Car car, Integer durability) throws Exception {
+        if (durability < 0) {
+            throw new Exception("Долговечность не может быть отрицательным числом!");
+        }
 
+        car.setDurability(durability);
     }
 
     @Override

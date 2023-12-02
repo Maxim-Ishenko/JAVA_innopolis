@@ -5,6 +5,9 @@ import ru.innopolis.java.homework09_incapsulation_modifiers.Car.Car;
 import java.util.Arrays;
 
 public class DriftRace extends Race {
+    public DriftRace() {
+        super();
+    }
     public DriftRace(
         Integer distance,
         String route,

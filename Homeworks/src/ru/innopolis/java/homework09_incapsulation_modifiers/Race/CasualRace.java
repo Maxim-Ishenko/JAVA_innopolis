@@ -5,6 +5,9 @@ import ru.innopolis.java.homework09_incapsulation_modifiers.Car.Car;
 import java.util.Arrays;
 
 public class CasualRace extends Race {
+    public CasualRace() {
+        super();
+    }
     public CasualRace(
         Integer distance,
         String route,

@@ -27,6 +27,28 @@ public class ShowCar extends Car {
         this.stars = stars;
     }
 
+    public ShowCar() {
+        super();
+    }
+    public ShowCar(
+            String brand,
+            String model,
+            Integer year,
+            Integer power,
+            Integer acceleration,
+            Integer suspension,
+            Integer durability
+    ) throws Exception {
+        super(
+                brand,
+                model,
+                year,
+                power,
+                acceleration,
+                suspension,
+                durability
+        );
+    }
     public ShowCar(
         String brand,
         String model,

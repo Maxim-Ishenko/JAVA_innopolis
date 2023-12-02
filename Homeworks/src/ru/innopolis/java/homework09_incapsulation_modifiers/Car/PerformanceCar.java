@@ -54,6 +54,28 @@ public class PerformanceCar extends Car {
         super.setSuspension((int) (suspension - suspension * 0.25));
     }
 
+    public PerformanceCar() {
+        super();
+    }
+    public PerformanceCar(
+            String brand,
+            String model,
+            Integer year,
+            Integer power,
+            Integer acceleration,
+            Integer suspension,
+            Integer durability
+    ) throws Exception {
+        super(
+            brand,
+            model,
+            year,
+            acceleration,
+            durability
+        );
+        this.setPower(power);
+        this.setSuspension(suspension);
+    }
     public PerformanceCar(
         String brand,
         String model,
