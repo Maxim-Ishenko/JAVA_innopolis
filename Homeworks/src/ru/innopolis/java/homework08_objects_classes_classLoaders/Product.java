@@ -74,33 +74,3 @@ public class Product {
         return Objects.hash(getProductName(), getCoast());
     }
 }
-
-//    StringBuilder result = new StringBuilder();
-//
-//    try (BufferedReader br = new BufferedReader(new FileReader("src/test/resources/sampleText1.txt"))) {
-//            String line;
-//
-//            while((line = br.readLine()) != null) {
-//            result.append(line);
-//            result.append('\n');
-//            }
-//            } catch (IOException e) {
-//            e.printStackTrace();
-//            }
-
-//    // given string array
-//    String str[] = {"George","Sally","Fred"};
-//
-//    // By using StringJoiner class
-//
-//    // initializing StringJoiner instance with
-//    // required delimiter, prefix and suffix
-//    StringJoiner sj = new StringJoiner(":", "[", "]");
-//
-//// concatenating strings
-//        sj.add("George").add("Sally").add("Fred");
-//
-//                // converting StringJoiner to String
-//                String desiredString = sj.toString();
-//
-//                System.out.println(desiredString);

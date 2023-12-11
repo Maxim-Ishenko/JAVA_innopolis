@@ -1,14 +1,12 @@
 package ru.innopolis.java.homework08_objects_classes_classLoaders;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
 
 public class Person {
+    private static int NEW_ARR_SIZE = 0;
     private String name;
     private double moneyAmount;
-    private Product[] productsPackage = new Product[0];
+    private Product[] productsPackage = new Product[NEW_ARR_SIZE];
     private final String personsStorePath = "src/ru/innopolis/java/homework08_objects_classes_classLoaders/data/persons.txt";
 
     public Person() {}
@@ -79,24 +77,6 @@ public class Person {
             this.setMoneyAmount(moneyAmount - product.getCoast());
         }
     }
-
-//    public List<String> setPersonsCollectionFromTheFile() {
-//        StringBuilder resultString = new StringBuilder();
-//
-//        try (BufferedReader bufferReader = new BufferedReader(new FileReader(personsStorePath))) {
-//            String textLine;
-//
-//            while((textLine = bufferReader.readLine()) != null) {
-//                resultString.append(textLine);
-//                resultString.append("\n");
-//            }
-//
-//        } catch(IOException e) {
-//            System.out.println(e.getMessage());
-//        }
-//
-//        return List.of(resultString.toString().trim().split("\n"));
-//    }
 
     @Override
     public String toString() {

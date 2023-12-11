@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class App {
+    static String END = "END";
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
@@ -32,7 +33,7 @@ public class App {
                     );
                     String deprivateCommand = scanner.nextLine();
 
-                    if (Objects.equals(deprivateCommand.trim(), "END")) {
+                    if (Objects.equals(deprivateCommand.trim(), END)) {
                         isEnoughFlag = true;
                         break;
                     }
