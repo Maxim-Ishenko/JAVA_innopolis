@@ -34,6 +34,9 @@ public class TV {
 
     /**
     * Конструктор с тремя параметрами
+    * @param companyName - название производителя
+    * @param coast - цена
+    * @param diagonal - диагональ экрана
     */
     public TV(TVCompanies companyName, double coast, int diagonal) {
         this.companyName = companyName;
@@ -46,6 +49,14 @@ public class TV {
 
     /**
     * Конструктор со всеми необходимыми параметрами
+     * @param companyName - название производителя
+     * @param coast - цена
+     * @param diagonal - диагональ экрана
+     * @param activeChannelNumber - включенный канал
+     * @param hasInternetConnectivity - имеется ли доступ к интернету
+     * @param isTVActive - включен ли телевизор
+     * @param volumeValue - уровень громкости
+     * @param screenTechnologyType - технология экрана
     */
     public TV(
             TVCompanies companyName,
