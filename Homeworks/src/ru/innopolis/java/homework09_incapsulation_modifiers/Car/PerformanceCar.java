@@ -15,6 +15,50 @@ public class PerformanceCar extends Car {
         this.addOns = addOns;
     }
 
+    public PerformanceCar() {
+        super();
+    }
+    public PerformanceCar(
+            String brand,
+            String model,
+            Integer year,
+            Integer power,
+            Integer acceleration,
+            Integer suspension,
+            Integer durability
+    ) throws Exception {
+        super(
+                brand,
+                model,
+                year,
+                acceleration,
+                durability
+        );
+        this.setPower(power);
+        this.setSuspension(suspension);
+    }
+    public PerformanceCar(
+            String brand,
+            String model,
+            Integer year,
+            Integer power,
+            Integer acceleration,
+            Integer suspension,
+            Integer durability,
+            String[] addOns
+    ) throws Exception {
+        super(
+                brand,
+                model,
+                year,
+                acceleration,
+                durability
+        );
+        this.setPower(power);
+        this.setSuspension(suspension);
+        this.setAddOns(addOns);
+    }
+
     @Override
     public void setPower(Integer power) throws Exception {
         if (power <= 0) {
@@ -52,60 +96,6 @@ public class PerformanceCar extends Car {
         }
 
         super.setSuspension((int) (suspension - suspension * 0.25));
-    }
-
-    public PerformanceCar() {
-        super();
-    }
-    public PerformanceCar(
-            String brand,
-            String model,
-            Integer year,
-            Integer power,
-            Integer acceleration,
-            Integer suspension,
-            Integer durability
-    ) throws Exception {
-        super(
-            brand,
-            model,
-            year,
-            acceleration,
-            durability
-        );
-        this.setPower(power);
-        this.setSuspension(suspension);
-    }
-    public PerformanceCar(
-        String brand,
-        String model,
-        Integer year,
-        Integer power,
-        Integer acceleration,
-        Integer suspension,
-        Integer durability,
-        String[] addOns
-    ) throws Exception {
-        super(
-            brand,
-            model,
-            year,
-            acceleration,
-            durability
-        );
-        this.setPower(power);
-        this.setSuspension(suspension);
-        this.setAddOns(addOns);
-    }
-    public PerformanceCar(Scanner scanner) throws Exception {
-        super();
-        super.setBrand(scanner);
-        super.setModel(scanner);
-        super.setYear(scanner);
-        super.setDurability(scanner);
-        super.setAcceleration(scanner);
-        this.setPower(scanner);
-        this.setSuspension(scanner);
     }
 
     @Override

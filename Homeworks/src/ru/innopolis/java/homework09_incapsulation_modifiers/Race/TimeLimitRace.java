@@ -22,14 +22,6 @@ public class TimeLimitRace extends Race {
         return goldTime;
     }
 
-    public void setGoldTime(Integer goldTime) throws Exception {
-        if (goldTime <= 0) {
-            throw new Exception("Значение времени должно быть положительным числом!");
-        }
-
-        this.goldTime = goldTime;
-    }
-
     public TimeLimitRace() {
         super();
     }
@@ -66,6 +58,14 @@ public class TimeLimitRace extends Race {
         Integer goldTimeFromTheFile = Integer.valueOf(this.setFieldValueFromTheString(paramsStringFromTheFile));
 
         this.setGoldTime(goldTimeFromTheFile);
+    }
+
+    public void setGoldTime(Integer goldTime) throws Exception {
+        if (goldTime <= 0) {
+            throw new Exception("Значение времени должно быть положительным числом!");
+        }
+
+        this.goldTime = goldTime;
     }
 
     public String setParamsFromTheFile() {

@@ -12,6 +12,38 @@ public class Car {
     private Integer suspension;
     private Integer durability;
 
+    public Car() {}
+    public Car(
+            String brand,
+            String model,
+            Integer year,
+            Integer power,
+            Integer acceleration,
+            Integer suspension,
+            Integer durability
+    ) throws Exception {
+        this.setBrand(brand);
+        this.setModel(model);
+        this.setYear(year);
+        this.setPower(power);
+        this.setAcceleration(acceleration);
+        this.setSuspension(suspension);
+        this.setDurability(durability);
+    }
+    public Car(
+            String brand,
+            String model,
+            Integer year,
+            Integer acceleration,
+            Integer durability
+    ) throws Exception {
+        this.setBrand(brand);
+        this.setModel(model);
+        this.setYear(year);
+        this.setAcceleration(acceleration);
+        this.setDurability(durability);
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -138,47 +170,6 @@ public class Car {
             throw new Exception("Ускорение может быть только положительным числом!");
         }
         this.acceleration = acceleration;
-    }
-
-    public Car() {}
-    public Car(
-        String brand,
-        String model,
-        Integer year,
-        Integer power,
-        Integer acceleration,
-        Integer suspension,
-        Integer durability
-    ) throws Exception {
-        this.setBrand(brand);
-        this.setModel(model);
-        this.setYear(year);
-        this.setPower(power);
-        this.setAcceleration(acceleration);
-        this.setSuspension(suspension);
-        this.setDurability(durability);
-    }
-    public Car(
-        String brand,
-        String model,
-        Integer year,
-        Integer acceleration,
-        Integer durability
-    ) throws Exception {
-        this.setBrand(brand);
-        this.setModel(model);
-        this.setYear(year);
-        this.setAcceleration(acceleration);
-        this.setDurability(durability);
-    }
-    public Car(Scanner scanner) throws Exception {
-        this.setBrand(scanner);
-        this.setModel(scanner);
-        this.setYear(scanner);
-        this.setPower(scanner);
-        this.setAcceleration(scanner);
-        this.setSuspension(scanner);
-        this.setDurability(scanner);
     }
 
     @Override

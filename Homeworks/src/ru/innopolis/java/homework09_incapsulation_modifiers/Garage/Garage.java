@@ -7,17 +7,17 @@ import java.util.Arrays;
 public class Garage {
     private Car[] parkedCars = {};
 
+    public Garage() {}
+    public Garage(Car[] parkedCars) {
+        this.setParkedCars(parkedCars);
+    }
+
     public Car[] getParkedCars() {
         return parkedCars;
     }
 
     public void setParkedCars(Car[] parkedCars) {
         this.parkedCars = parkedCars;
-    }
-
-    public Garage() {}
-    public Garage(Car[] parkedCars) {
-        this.setParkedCars(parkedCars);
     }
 
     public void modifyPower(Car car, Integer power) throws Exception {
