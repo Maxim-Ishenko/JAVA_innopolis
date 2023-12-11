@@ -8,6 +8,16 @@ public class Programm {
     private double rating;
     private long audience;
 
+    public Programm() {}
+    public Programm(
+            String name,
+            double rating,
+            long audience) throws Exception {
+        this.setName(name);
+        this.setRating(rating);
+        this.setAudience(audience);
+    }
+
     public String getName() {
         return name;
     }
@@ -59,15 +69,6 @@ public class Programm {
         }
 
         this.audience = audience;
-    }
-
-    public Programm(
-        String name,
-        double rating,
-        long audience) throws Exception {
-        this.setName(name);
-        this.setRating(rating);
-        this.setAudience(audience);
     }
 
     @Override

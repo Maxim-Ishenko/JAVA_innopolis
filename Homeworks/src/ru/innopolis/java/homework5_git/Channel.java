@@ -8,6 +8,17 @@ public class Channel {
     private int orderNumber;
     private Programm programm;
 
+    public Channel() {}
+    public Channel(
+            String name,
+            int orderNumber,
+            Programm programm
+    ) throws Exception {
+        this.setName(name);
+        this.setOrderNumber(orderNumber);
+        this.setProgramm(programm);
+    }
+
     public String getName() {
         return name;
     }
@@ -54,16 +65,6 @@ public class Channel {
     }
     public void setProgramm(Programm programm) {
         this.programm = programm;
-    }
-
-    public Channel(
-        String name,
-        int orderNumber,
-        Programm programm
-    ) throws Exception {
-        this.setName(name);
-        this.setOrderNumber(orderNumber);
-        this.setProgramm(programm);
     }
 
     @Override

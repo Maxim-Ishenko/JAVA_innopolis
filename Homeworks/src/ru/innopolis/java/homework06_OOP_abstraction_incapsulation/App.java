@@ -6,35 +6,17 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
-        // 1
         Person pavelAndreich = new Person("Павел Андреевич", 10000);
         Person annaPetrovna = new Person("Анна Петровна", 2000);
         Person boris = new Person("Борис", 10);
-        // 2
-        // Person jane = new Person("Женя", 0);
-        // 3
-        // Person sveta = new Person("Света", -3);
 
-        // 1
         Product bread = new Product("Хлеб", 40);
         Product milk = new Product("Молоко", 60);
         Product cake = new Product("Торт", 1000);
         Product cofee = new Product("Кофе растворимый", 879);
         Product spread = new Product("Масло", 150);
-        // 2
-        // Product iceCream = new Product("Мороженое", 200);
-        // 3
-        // Product pasta = new Product("Очень дорогие макароны", 800);
-
-        // 1
         List<Person> personsCollection = Arrays.asList(pavelAndreich, annaPetrovna, boris);
         List<Product> productsCollection = Arrays.asList(bread, milk, cake, cofee, spread);
-        // 2
-        // List<Person> personsCollection = Arrays.asList(jane);
-        // List<Product> productsCollection = Arrays.asList(iceCream);
-        // 3
-        // List<Person> personsCollection = Arrays.asList(sveta);
-        // List<Product> productsCollection = Arrays.asList(pasta);
 
         boolean isEnoughFlag = false;
 

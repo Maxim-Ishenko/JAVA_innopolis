@@ -7,10 +7,11 @@ public class Person {
     private double moneyAmount;
     private Product[] productsPackage = new Product[0];
 
-public Person(String name, double moneyAmount) throws Exception {
-    this.setName(name);
-    this.setMoneyAmount(moneyAmount);
-}
+    public Person() {}
+    public Person(String name, double moneyAmount) throws Exception {
+        this.setName(name);
+        this.setMoneyAmount(moneyAmount);
+    }
 
     public String getName() {
         return name;
