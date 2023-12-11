@@ -27,6 +27,9 @@ public class TV {
     private int volumeValue;
     private boolean isTVActive;
 
+    // HW6
+    private Channel[] channels;
+
     /**
     * Конструктор без параметров
     */
@@ -66,7 +69,8 @@ public class TV {
             boolean hasInternetConnectivity,
             int activeChannelNumber,
             int volumeValue,
-            boolean isTVActive
+            boolean isTVActive,
+            Channel[] channels
     ) {
         this.companyName = companyName;
         this.coast = coast;
@@ -76,6 +80,7 @@ public class TV {
         this.activeChannelNumber = activeChannelNumber;
         this.volumeValue = volumeValue;
         this.isTVActive = isTVActive;
+        this.channels = channels;
     }
 
     // HW5_ADDITIONAL - Конструктор для проверки 5 домашки (с вновь добавленными параметрами)
@@ -89,6 +94,14 @@ public class TV {
         this.activeChannelNumber = activeChannelNumber;
         this.volumeValue = volumeValue;
         this.isTVActive = isTVActive;
+    }
+
+    // HW6
+    public TV(
+        Channel[] channels
+    ) {
+        this.companyName = TVCompanies.LG;
+        this.channels = channels;
     }
 
     // getters
@@ -118,6 +131,9 @@ public class TV {
     public boolean getIsTVActive() {
         return isTVActive;
     }
+
+    // HW6
+    public Channel[] getChannels() { return channels; };
 
     //setters
     public void setCompanyName(TVCompanies companyName) {
@@ -163,6 +179,11 @@ public class TV {
         this.isTVActive = isTVActive;
     }
 
+    // HW6
+    public void setChannels(Channel[] channels) {
+        this.channels = channels;
+    }
+
     // Метод класса без параметров
     public String getStandartWarning() {
         return
@@ -188,10 +209,11 @@ public class TV {
     public String toString() {
         return "Название класса: " + this.getClass().getSimpleName() + ";\n" +
             "Поля класса для проверки 5 домашки: " + "\n" +
-            "companyName: " + this.companyName + "; " +
-            "isTVActive: " + this.isTVActive + "; " +
-            "volumeValue: " + this.volumeValue + "; " +
-            "activeChannelNumber: " + this.activeChannelNumber + ".";
+            "companyName: " + this.companyName + "; " + "\n" +
+            "isTVActive: " + this.isTVActive + "; " + "\n" +
+            "volumeValue: " + this.volumeValue + "; " + "\n" +
+            "activeChannelNumber: " + this.activeChannelNumber + "; " + "\n" +
+            "channels: " + Arrays.toString(this.channels) + ".";
     }
 
     // HW5_ADDITIONAL - equals & hashCode сгенерировал только по вновь добавленным в HW5Additional полям
