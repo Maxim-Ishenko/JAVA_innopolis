@@ -10,6 +10,13 @@ public class Children extends Person {
         return isBuyProductsAvailable;
     }
 
+    public Children() {}
+    public Children(String name, double moneyAmount, int age) throws Exception {
+        super(name, moneyAmount);
+        this.setAge(age);
+        if (age >= 6) this.setIsBuyProductsAvailable();
+    }
+
     @Override
     public void setAge(int age) throws Exception {
         if (age < 0) {
@@ -41,18 +48,5 @@ public class Children extends Person {
 
     private void setIsBuyProductsAvailable() {
         this.isBuyProductsAvailable = true;
-    }
-
-    public Children(String name, double moneyAmount, int age) throws Exception {
-        super(name, moneyAmount);
-        this.setAge(age);
-        if (age >= 6) this.setIsBuyProductsAvailable();
-    }
-    public Children(Scanner scanner) throws Exception {
-        super();
-        super.setName(scanner);
-        super.setMoneyAmount(scanner);
-        this.setAge(scanner);
-        if (this.getAge() >= 6) this.setIsBuyProductsAvailable();
     }
 }

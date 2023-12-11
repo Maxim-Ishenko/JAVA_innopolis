@@ -11,6 +11,18 @@ public class Person {
     private Product[] productsPackage = new Product[0];
     private int age;
 
+    // HW7
+    public Person() {}
+    public Person(String name, double moneyAmount) throws Exception {
+        this.setName(name);
+        this.setMoneyAmount(moneyAmount);
+    }
+    public Person(String name, double moneyAmount, int age) throws Exception {
+        this.setName(name);
+        this.setMoneyAmount(moneyAmount);
+        this.setAge(age);
+    }
+
     public String getName() {
         return name;
     }
@@ -89,23 +101,6 @@ public class Person {
         }
 
         this.age = age;
-    }
-
-    // HW7
-    public Person() {}
-    public Person(String name, double moneyAmount) throws Exception {
-        this.setName(name);
-        this.setMoneyAmount(moneyAmount);
-    }
-    public Person(String name, double moneyAmount, int age) throws Exception {
-        this.setName(name);
-        this.setMoneyAmount(moneyAmount);
-        this.setAge(age);
-    }
-    public Person(Scanner scanner) throws Exception {
-        this.setName(scanner);
-        this.setMoneyAmount(scanner);
-        this.setAge(scanner);
     }
 
     @Override

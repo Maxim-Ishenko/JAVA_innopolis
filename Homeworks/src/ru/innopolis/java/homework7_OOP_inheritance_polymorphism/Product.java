@@ -15,10 +15,6 @@ public class Product {
         this.setProductName(productName);
         this.setProductCoast(coast);
     }
-    public Product(Scanner scanner) throws Exception {
-        this.setProductName(scanner);
-        this.setProductCoast(scanner);
-    }
 
     public String getProductName() {
         return productName;

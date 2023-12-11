@@ -13,6 +13,37 @@ public class DiscountProduct extends Product {
     public LocalDate getDiscountLimit() {
         return discountLimit;
     }
+
+    public DiscountProduct() {}
+    public DiscountProduct(
+            String productName,
+            double coast,
+            Integer discountValue,
+            LocalDate discountLimit) throws Exception {
+        super(productName);
+        this.setDiscountValue(discountValue);
+        this.setDiscountLimit(discountLimit);
+
+        if (!discountLimit.isAfter(LocalDate.now())) {
+            super.setProductCoast(coast);
+        } else {
+            super.setProductCoast(coast * (1 - (double) discountValue / 100));
+        }
+    }
+    public DiscountProduct(
+            String productName,
+            double coast,
+            Integer discountValue) throws Exception {
+        super(productName);
+        this.setDiscountValue(discountValue);
+
+        if (!discountLimit.isAfter(LocalDate.now())) {
+            super.setProductCoast(coast);
+        } else {
+            super.setProductCoast(coast * (1 - (double) discountValue / 100));
+        }
+    }
+
     public void setDiscountValue(Integer discountValue) throws Exception {
         if (discountValue < 0) {
             throw new Exception("Скидка не может быть отрицательной!");
@@ -53,41 +84,6 @@ public class DiscountProduct extends Product {
     public void setDiscountLimit(Scanner scanner) {
         System.out.println("Введите, до какого числа действует скидка в формате `yyyy-mm-dd`: ");
         this.discountLimit = LocalDate.parse(scanner.next());
-    }
-    public DiscountProduct(
-        String productName,
-        double coast,
-        Integer discountValue,
-        LocalDate discountLimit) throws Exception {
-        super(productName);
-        this.setDiscountValue(discountValue);
-        this.setDiscountLimit(discountLimit);
-
-        if (!discountLimit.isAfter(LocalDate.now())) {
-            super.setProductCoast(coast);
-        } else {
-            super.setProductCoast(coast * (1 - (double) discountValue / 100));
-        }
-    }
-    public DiscountProduct(
-            String productName,
-            double coast,
-            Integer discountValue) throws Exception {
-        super(productName);
-        this.setDiscountValue(discountValue);
-
-        if (!discountLimit.isAfter(LocalDate.now())) {
-            super.setProductCoast(coast);
-        } else {
-            super.setProductCoast(coast * (1 - (double) discountValue / 100));
-        }
-    }
-    public DiscountProduct(Scanner scanner) throws Exception {
-        super();
-        super.setProductName(scanner);
-        this.setDiscountValue(scanner);
-        this.setDiscountLimit(scanner);
-        this.setProductCoast(scanner);
     }
 
     @Override

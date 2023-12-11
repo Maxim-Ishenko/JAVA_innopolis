@@ -9,6 +9,13 @@ public class Adult extends Person {
         return isCreditAvailable;
     }
 
+    public Adult() {}
+    public Adult(String name, double moneyAmount, int age) throws Exception {
+        super(name, moneyAmount);
+        this.setAge(age);
+        this.setIsCreditAvailable(this.getMoneyAmount() > 0);
+    }
+
     @Override
     public void setAge(int age) throws Exception {
         if (age < 0) {
@@ -33,18 +40,5 @@ public class Adult extends Person {
     }
     private void setIsCreditAvailable(boolean isCreditAvailable) {
         this.isCreditAvailable = isCreditAvailable;
-    }
-
-    public Adult(String name, double moneyAmount, int age) throws Exception {
-        super(name, moneyAmount);
-        this.setAge(age);
-        this.setIsCreditAvailable(this.getMoneyAmount() > 0);
-    }
-    public Adult(Scanner scanner) throws Exception {
-        super();
-        super.setName(scanner);
-        super.setMoneyAmount(scanner);
-        this.setAge(scanner);
-        this.setIsCreditAvailable(this.getMoneyAmount() > 0);
     }
 }
