@@ -1,7 +1,5 @@
 package ru.innopolis.java.homework10_addition;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class App {
     public static void main(String[] args) {
         Pair<Integer, String> pair = Pair.of(1, "hello");
