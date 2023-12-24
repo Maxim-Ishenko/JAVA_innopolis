@@ -2,7 +2,7 @@ package ru.innopolis.java.homework012_exceptions.repository.PersonsRepository;
 
 import ru.innopolis.java.homework012_exceptions.model.Person;
 
-public interface IPersonsRepository {
+public interface PersonsRepository {
     int SURNAME_INDEX = 0;
     int NAME_INDEX = 1;
     int PATRONYMIC_INDEX = 2;
@@ -36,6 +36,5 @@ public interface IPersonsRepository {
     String getPersonInfoStringFromTheEntity(Person personEntity);
     String getSpecificPersonsParamWrappedString(String somePersonsProp);
     String getSpecificPersonEntityOutputFilePath(String surName);
-    void setWriteThePersonToTheFile(String personsInfoString, String outputFilePath);
     void setWriteTheModifiedPersonStringIntoTheFile(String personsInfoString) throws Exception;
 }
