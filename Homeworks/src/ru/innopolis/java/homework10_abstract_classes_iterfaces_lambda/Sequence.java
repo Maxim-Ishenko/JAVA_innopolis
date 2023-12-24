@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 abstract class Sequence {
-    public static List<Integer> filter(int[] array, ByCondition condition) {
+    public static List<Integer> filter(Integer[] array, ByCondition condition) {
         List<Integer> resultArr = new ArrayList<>();
 
         for(int item : array) {
