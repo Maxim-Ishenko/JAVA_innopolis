@@ -1,5 +1,6 @@
 package ru.innopolis.java.homework5_git;
 
+import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class Channel {
             String name,
             int orderNumber,
             Programm programm
-    ) throws Exception {
+    ) throws IllegalArgumentException, InputMismatchException {
         this.setName(name);
         this.setOrderNumber(orderNumber);
         this.setProgramm(programm);
@@ -29,36 +30,36 @@ public class Channel {
         return programm;
     }
 
-    public void setName(String name) throws Exception {
+    public void setName(String name) throws IllegalArgumentException {
         if (Objects.equals(name, "")) {
-            throw new Exception("Название канала не может быть пустой строкой!");
+            throw new IllegalArgumentException("Название канала не может быть пустой строкой!");
         }
 
         this.name = name;
     }
-    public void setName(Scanner scanner) throws Exception {
+    public void setName(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите название канала: ");
         String name = scanner.nextLine();
 
         if (Objects.equals(name, "")) {
-            throw new Exception("Название канала не может быть пустой строкой!");
+            throw new InputMismatchException("Название канала не может быть пустой строкой!");
         }
 
         this.name = name;
     }
-    public void setOrderNumber(int orderNumber) throws Exception {
+    public void setOrderNumber(int orderNumber) throws IllegalArgumentException {
         if (orderNumber <= 0) {
-            throw new Exception("Порядковый номер канала может быть только положительным числом!");
+            throw new IllegalArgumentException("Порядковый номер канала может быть только положительным числом!");
         }
 
         this.orderNumber = orderNumber;
     }
-    public void setOrderNumber(Scanner scanner) throws Exception {
+    public void setOrderNumber(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите порядковый номер канала: ");
         int orderNumber = scanner.nextInt();
 
         if (orderNumber <= 0) {
-            throw new Exception("Порядковый номер канала может быть только положительным числом!");
+            throw new InputMismatchException("Порядковый номер канала может быть только положительным числом!");
         }
 
         this.orderNumber = orderNumber;

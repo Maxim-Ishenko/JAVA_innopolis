@@ -1,5 +1,6 @@
 package ru.innopolis.java.homework09_incapsulation_modifiers.Car;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ShowCar extends Car {
@@ -16,7 +17,7 @@ public class ShowCar extends Car {
             Integer acceleration,
             Integer suspension,
             Integer durability
-    ) throws Exception {
+    ) throws IllegalArgumentException, InputMismatchException {
         super(
                 brand,
                 model,
@@ -36,7 +37,7 @@ public class ShowCar extends Car {
             Integer suspension,
             Integer durability,
             Integer stars
-    ) throws Exception {
+    ) throws IllegalArgumentException, InputMismatchException {
         super(
                 brand,
                 model,
@@ -53,19 +54,19 @@ public class ShowCar extends Car {
         return stars;
     }
 
-    public void setStars(Integer stars) throws Exception {
+    public void setStars(Integer stars) throws IllegalArgumentException {
         if (stars < 0) {
-            throw new Exception("Значение популярности не может быть отрицательным!");
+            throw new IllegalArgumentException("Значение популярности не может быть отрицательным!");
         }
 
         this.stars = stars;
     }
-    public void setStars(Scanner scanner) throws Exception {
+    public void setStars(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите значение популярности автомобиля: ");
         int stars = scanner.nextInt();
 
         if (stars < 0) {
-            throw new Exception("Значение популярности не может быть отрицательным!");
+            throw new InputMismatchException("Значение популярности не может быть отрицательным!");
         }
 
         this.stars = stars;

@@ -3,10 +3,7 @@ package ru.innopolis.java.homework09_incapsulation_modifiers.Race;
 import ru.innopolis.java.homework09_incapsulation_modifiers.Car.Car;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class TimeLimitRace extends Race {
     private final String PARAMS_SEPARATOR = ",";
@@ -31,7 +28,7 @@ public class TimeLimitRace extends Race {
             Integer prize,
             Car[] participants,
             Integer goldTime
-    ) throws Exception {
+    ) throws IllegalArgumentException, InputMismatchException {
         super(
                 distance,
                 route,
@@ -46,7 +43,7 @@ public class TimeLimitRace extends Race {
             String route,
             Integer prize,
             Car[] participants
-    ) throws Exception {
+    ) throws IllegalArgumentException, InputMismatchException {
         super(
                 distance,
                 route,
@@ -60,9 +57,9 @@ public class TimeLimitRace extends Race {
         this.setGoldTime(goldTimeFromTheFile);
     }
 
-    public void setGoldTime(Integer goldTime) throws Exception {
+    public void setGoldTime(Integer goldTime) throws IllegalArgumentException {
         if (goldTime <= 0) {
-            throw new Exception("Значение времени должно быть положительным числом!");
+            throw new IllegalArgumentException("Значение времени должно быть положительным числом!");
         }
 
         this.goldTime = goldTime;
@@ -83,9 +80,9 @@ public class TimeLimitRace extends Race {
             System.out.println(e.getMessage());
         }
 
-    return resultString.toString().trim();
+        return resultString.toString().trim();
     }
-    public String setFieldValueFromTheString (String fieldsStringFromTheFile) throws Exception {
+    public String setFieldValueFromTheString (String fieldsStringFromTheFile) {
         StringBuilder targetValue = new StringBuilder();
 
         for (String fieldEntity: fieldsStringFromTheFile.trim().split(this.PARAMS_SEPARATOR)) {
