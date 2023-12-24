@@ -9,6 +9,7 @@ public class Main {
     static final Integer COLOR_INDEX = 2;
     static final Integer MILEAGE_INDEX = 3;
     static final Integer COAST_INDEX = 4;
+    static final int THOUSANDS_ORDER = 1000;
 
     public static void main(String[] args) throws Exception {
         String inputData = """
@@ -51,7 +52,7 @@ public class Main {
         int n = 760;
         int m = 900;
         long uniqueItemsFromAreaAmount = carCollection
-                .stream().filter(car -> car.getCoast() > n * 1000 && car.getCoast() < m * 1000)
+                .stream().filter(car -> car.getCoast() > n * THOUSANDS_ORDER && car.getCoast() < m * THOUSANDS_ORDER)
                 .distinct().count();
         System.out.println("Уникальные автомобили: " + uniqueItemsFromAreaAmount + " шт.");
 
