@@ -2,6 +2,6 @@ package ru.innopolis.java.homework012_exceptions.repository.ScannerHelperReposit
 
 import java.util.Scanner;
 
-public interface IScannerHelperRepository {
+public interface ScannerHelperRepository {
     String getThePersonsDataStringFromConsole(Scanner scanner);
 }

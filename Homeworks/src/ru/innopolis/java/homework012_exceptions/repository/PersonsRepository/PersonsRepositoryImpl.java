@@ -1,13 +1,14 @@
 package ru.innopolis.java.homework012_exceptions.repository.PersonsRepository;
 
 import ru.innopolis.java.homework012_exceptions.model.Person;
+import ru.innopolis.java.homework012_exceptions.utils.Helper;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Objects;
 
-public class PersonsRepositoryImpl implements IPersonsRepository {
+public class PersonsRepositoryImpl implements PersonsRepository {
     public PersonsRepositoryImpl() {}
     @Override
     public String[] getParsedInfoString(String infoString) throws IllegalArgumentException {
@@ -25,7 +26,7 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public String getSurName( String[] infoStringCollection) {
+    public String getSurName( String[] infoStringCollection) throws IllegalArgumentException, NullPointerException {
         if (infoStringCollection != null) {
             String surName = infoStringCollection[SURNAME_INDEX].trim();
 
@@ -45,7 +46,7 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public String getName(String[] infoStringCollection) throws Exception {
+    public String getName(String[] infoStringCollection) throws IllegalArgumentException, NullPointerException {
         if (infoStringCollection != null) {
             String name = infoStringCollection[NAME_INDEX].trim();
 
@@ -65,7 +66,7 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public String getPatronymic(String[] infoStringCollection) throws Exception {
+    public String getPatronymic(String[] infoStringCollection) throws IllegalArgumentException, NullPointerException {
         if (infoStringCollection != null) {
             String patronymic = infoStringCollection[PATRONYMIC_INDEX].trim();
 
@@ -85,7 +86,7 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public String getBirthDate(String[] infoStringCollection) throws Exception {
+    public String getBirthDate(String[] infoStringCollection) throws IllegalArgumentException, NullPointerException {
         if (infoStringCollection != null) {
             String birthDateString = infoStringCollection[BIRTH_DATE_INDEX].trim();
 
@@ -102,7 +103,7 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public Integer getPhoneNumber(String[] infoStringCollection) throws Exception {
+    public Integer getPhoneNumber(String[] infoStringCollection) throws IllegalArgumentException, NullPointerException {
         if (infoStringCollection != null) {
             String phoneNumber = infoStringCollection[PHONE_NUMBER_INDEX].trim();
 
@@ -121,7 +122,7 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public String getPersonsGender(String[] infoStringCollection) throws Exception {
+    public String getPersonsGender(String[] infoStringCollection) throws IllegalArgumentException, NullPointerException {
         if (infoStringCollection != null) {
             String gender = infoStringCollection[GENDER_INDEX].trim();
 
@@ -138,7 +139,7 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public Integer getAge(String[] infoStringCollection) throws Exception {
+    public Integer getAge(String[] infoStringCollection) throws IllegalArgumentException, NullPointerException {
         if (infoStringCollection != null) {
             String ageString = infoStringCollection[AGE_INDEX].trim();
 
@@ -155,7 +156,8 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public Person getNewPersonEntityFromTheParsedInfoString(String[] infoStringCollection) throws Exception {
+    public Person getNewPersonEntityFromTheParsedInfoString(String[] infoStringCollection)
+            throws IllegalArgumentException, NullPointerException {
             return new Person(
                     getSurName(infoStringCollection),
                     getName(infoStringCollection),
@@ -188,25 +190,13 @@ public class PersonsRepositoryImpl implements IPersonsRepository {
     }
 
     @Override
-    public void setWriteThePersonToTheFile(String personsInfoString, String outputFilePath) {
-        try {
-            BufferedWriter bufferWriter = new BufferedWriter(new FileWriter(outputFilePath, true));
-            bufferWriter.append("\n");
-            bufferWriter.append(personsInfoString);
-
-            bufferWriter.close();
-        } catch(IOException e) {
-            System.out.println("Во время записи в файл возникла проблема: " + e.getMessage());
-            e.printStackTrace(System.out);
-        }
-    }
-
-    @Override
-    public void setWriteTheModifiedPersonStringIntoTheFile(String personsInfoString) throws Exception {
+    public void setWriteTheModifiedPersonStringIntoTheFile(String personsInfoString)
+            throws IllegalArgumentException, NullPointerException {
         String[] personParamsList = getParsedInfoString(personsInfoString);
         Person personEntity = getNewPersonEntityFromTheParsedInfoString(personParamsList);
+        Helper helperMethods = new Helper();
 
-        setWriteThePersonToTheFile(
+        helperMethods.setWriteThePersonToTheFile(
                 getPersonInfoStringFromTheEntity(personEntity),
                 getSpecificPersonEntityOutputFilePath(personEntity.getSurname())
         );

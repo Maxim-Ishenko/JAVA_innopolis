@@ -3,13 +3,13 @@ package ru.innopolis.java.homework012_exceptions.model;
 import java.util.Objects;
 
 public class Person {
-    String surname;
-    String name;
-    String patronymic;
-    String birthDate;
-    Integer phoneNumber;
-    String gender;
-    Integer age;
+    private String surname;
+    private String name;
+    private String patronymic;
+    private String birthDate;
+    private Integer phoneNumber;
+    private String gender;
+    private Integer age;
 
     public Person() {}
     public Person(
