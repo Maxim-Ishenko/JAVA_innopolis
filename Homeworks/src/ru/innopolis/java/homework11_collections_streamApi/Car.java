@@ -34,17 +34,17 @@ public class Car {
         return coast;
     }
 
-    public void setNumber(String number) throws Exception {
+    public void setNumber(String number) throws IllegalArgumentException {
         // Требований к формату номера в условии не оговорено, поэтому ввел только одну проверку - для проформы
         if (number.length() != 6) {
-            throw new Exception("Номер автомобиля должен состоять из 6 знаков!");
+            throw new IllegalArgumentException("Номер автомобиля должен состоять из 6 знаков!");
         }
 
         this.number = number;
     }
-    public void setModel(String model) throws Exception {
+    public void setModel(String model) throws IllegalArgumentException {
         if (Objects.equals(model, "")) {
-            throw new Exception("Модель автомобиля не может быть пустой строкой!");
+            throw new IllegalArgumentException("Модель автомобиля не может быть пустой строкой!");
         }
 
         this.model = model;
@@ -52,16 +52,16 @@ public class Car {
     public void setColor(Colors color) {
         this.color = color;
     }
-    public void setMileage(Integer mileage) throws Exception {
+    public void setMileage(Integer mileage) throws IllegalArgumentException {
         if (mileage < 0) {
-            throw new Exception("Пробег не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Пробег не может быть отрицательным числом!");
         }
 
         this.mileage = mileage;
     }
-    public void setCoast(Double coast) throws Exception {
+    public void setCoast(Double coast) throws IllegalArgumentException {
         if (coast < 0) {
-            throw new Exception("Цена не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Цена не может быть отрицательным числом!");
         }
 
         this.coast = coast;
