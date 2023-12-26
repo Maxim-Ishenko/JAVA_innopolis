@@ -1,7 +1,7 @@
 package ru.innopolis.java.homework2_JVM.task2_two_numbers_states;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IllegalArgumentException {
         int firstNum = NumbersStatesPresenter.getIntNum(1);
         int secondNum = NumbersStatesPresenter.getIntNum(2);
 

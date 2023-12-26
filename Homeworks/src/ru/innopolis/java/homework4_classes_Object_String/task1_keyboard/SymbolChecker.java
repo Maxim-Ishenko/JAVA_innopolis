@@ -1,5 +1,6 @@
 package ru.innopolis.java.homework4_classes_Object_String.task1_keyboard;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SymbolChecker {
@@ -7,13 +8,13 @@ public class SymbolChecker {
     private static final int FIRST_CHAR_INDEX = 0;
     private static final String LAST_CHAR = "m";
 
-    public static String getInputSymbol() throws Exception {
+    public static String getInputSymbol() throws InputMismatchException {
         System.out.println("Введите символ английского алфавита: " );
         Scanner scanner = new Scanner(System.in);
         String inputEnglishSymbol = scanner.nextLine();
 
         if (!inputEnglishSymbol.matches("^[a-zA-Z]+$")) {
-            throw new Exception(
+            throw new InputMismatchException(
                 "Ожидается ввод ТОЛЬКО одной буквы АНГЛИЙСКОГО алфавита."
             );
         }

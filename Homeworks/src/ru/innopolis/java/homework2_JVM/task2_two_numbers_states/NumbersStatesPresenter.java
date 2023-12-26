@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class NumbersStatesPresenter {
     // Парам порядок и прокидывание исключения добавил чисто чтобы реализовать разные сообщения при вводе первого и второго числа, как в ождиаемы результатах задания
-    public static int getIntNum(int order) throws Exception {
+    public static int getIntNum(int order) throws IllegalArgumentException {
         if (order != 1 && order != 2)
-            throw new Exception(
+            throw new IllegalArgumentException(
                 "Данное приложение предназначенно для сравнения только двух чисел. Порядок должен быть равен 1 или 2"
             );
 

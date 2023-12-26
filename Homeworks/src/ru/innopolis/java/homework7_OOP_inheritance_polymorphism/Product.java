@@ -1,5 +1,6 @@
 package ru.innopolis.java.homework7_OOP_inheritance_polymorphism;
 
+import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -8,10 +9,10 @@ public class Product {
     private double coast;
 
    public Product() {}
-    public Product(String productName) throws Exception {
+    public Product(String productName) throws IllegalArgumentException, InputMismatchException {
         this.setProductName(productName);
     }
-    public Product(String productName, double coast) throws Exception {
+    public Product(String productName, double coast) throws IllegalArgumentException, InputMismatchException {
         this.setProductName(productName);
         this.setProductCoast(coast);
     }
@@ -23,52 +24,52 @@ public class Product {
         return coast;
     }
 
-    public void setProductName(String productName) throws Exception {
+    public void setProductName(String productName) throws IllegalArgumentException {
         if (Objects.equals(productName, "")) {
-            throw new Exception("Название продукта не может быть пустой строкой!");
+            throw new IllegalArgumentException("Название продукта не может быть пустой строкой!");
         }
 
         if (productName.length() < 3) {
-            throw new Exception("Название продукта должно содержать минимум 3 символа!");
+            throw new IllegalArgumentException("Название продукта должно содержать минимум 3 символа!");
         }
 
         if (productName.matches("\\d+")) {
-            throw new Exception("Название продукта не может состоять только из цифр!");
+            throw new IllegalArgumentException("Название продукта не может состоять только из цифр!");
         }
 
         this.productName = productName;
     }
-    public void setProductName(Scanner scanner) throws Exception {
+    public void setProductName(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите имя продукта: ");
         String productName = scanner.nextLine();
 
         if (Objects.equals(productName, "")) {
-            throw new Exception("Имя продукта не может быть пустой строкой!");
+            throw new InputMismatchException("Имя продукта не может быть пустой строкой!");
         }
 
         if (productName.length() < 3) {
-            throw new Exception("Название продукта должно содержать минимум 3 символа!");
+            throw new InputMismatchException("Название продукта должно содержать минимум 3 символа!");
         }
 
         if (productName.matches("\\d+")) {
-            throw new Exception("Название продукта не может состоять только из цифр!");
+            throw new InputMismatchException("Название продукта не может состоять только из цифр!");
         }
 
         this.productName = productName;
     }
-    public void setProductCoast(double coast) throws Exception {
+    public void setProductCoast(double coast) throws IllegalArgumentException {
         if (coast <= 0) {
-            throw new Exception("Цена должна быть положительным числом!");
+            throw new IllegalArgumentException("Цена должна быть положительным числом!");
         }
 
         this.coast = coast;
     }
-    public void setProductCoast(Scanner scanner) throws Exception {
+    public void setProductCoast(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите цену продукта: ");
         double moneyAmount = scanner.nextDouble();
 
         if (moneyAmount <= 0) {
-            throw new Exception("Цена должна быть положительным числом!");
+            throw new InputMismatchException("Цена должна быть положительным числом!");
         }
 
         this.coast = moneyAmount;

@@ -2,6 +2,7 @@ package ru.innopolis.java.homework08_objects_classes_classLoaders;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class Helper {
@@ -37,7 +38,7 @@ public class Helper {
         return List.of(resultString.toString().trim().split("\n"));
     }
 
-    public List<Person> setPersonsCollectionFormTheString (List<String> personsCollectionString) throws Exception {
+    public List<Person> setPersonsCollectionFormTheString (List<String> personsCollectionString) {
         List<Person> personsCollection = new ArrayList<>(List.of());
 
         for (String personInfo: personsCollectionString) {
@@ -63,7 +64,7 @@ public class Helper {
         return personsCollection;
     }
 
-    public List<Product> setProductsCollectionFormTheString (List<String> productsCollectionString) throws Exception {
+    public List<Product> setProductsCollectionFormTheString (List<String> productsCollectionString) throws IllegalArgumentException, InputMismatchException {
         List<Product> productsCollection = new ArrayList<>(List.of());
 
         for (String productInfo: productsCollectionString) {

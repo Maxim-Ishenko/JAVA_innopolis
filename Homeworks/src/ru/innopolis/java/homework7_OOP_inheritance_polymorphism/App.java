@@ -16,7 +16,7 @@ import java.util.*;
 LocalDate (так сканнер возвращает тип строки) */
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IllegalArgumentException, InputMismatchException {
         Scanner scanner = new Scanner(System.in);
 
         Children child = new Children("Борис", 10, 14);
