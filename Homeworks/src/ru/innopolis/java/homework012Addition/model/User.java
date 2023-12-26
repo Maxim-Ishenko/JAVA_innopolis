@@ -6,6 +6,8 @@ import ru.innopolis.java.homework012Addition.repository.WrongPasswordException;
 import java.util.Objects;
 
 public class User {
+    private static final String LOGIN_REQUIREMENTS = "^[a-zA-Z0-9-_]{1,20}$";
+    private static final String PASSWORD_REQUIREMENTS = "^[a-zA-Z0-9-_]{1,20}$";
     private String login;
     private String password;
 
@@ -29,8 +31,6 @@ public class User {
 
     public static boolean isLoginCorrect(String login) throws WrongLoginException {
         if (login != null) {
-            String LOGIN_REQUIREMENTS = "^[a-zA-Z0-9-_]{1,20}$";
-
             if (!login.trim().matches(LOGIN_REQUIREMENTS)) {
                 throw new WrongLoginException("Логин имеет неверный формат!");
             }
@@ -38,15 +38,11 @@ public class User {
             return true;
         }
 
-        throw new NullPointerException(
-                "Логин не может быть null!"
-        );
+        return false;
     }
 
     public static boolean isPasswordCorrect(String password) throws WrongPasswordException {
         if (password != null) {
-            String PASSWORD_REQUIREMENTS = "^[a-zA-Z0-9-_]{1,20}$";
-
             if (!password.trim().matches(PASSWORD_REQUIREMENTS)) {
                 throw new WrongPasswordException("Пароль имеет неверный формат!");
             }
@@ -54,9 +50,7 @@ public class User {
             return true;
         }
 
-        throw new NullPointerException(
-                "Пароль не может быть null!"
-        );
+        return false;
     }
 
     public static boolean isPasswordEqualsConfirmPassword(String password, String confirmPassword) throws WrongPasswordException {
@@ -80,7 +74,7 @@ public class User {
 
             return true;
         } catch(WrongLoginException | WrongPasswordException e) {
-            System.out.println("Вы ввели неправильные данные - попробуйте еще раз!");
+            System.out.println("Ошибка ввода данных:\n" + e.getClass().getCanonicalName() + ",\n" + e.getMessage() + ".\n") ;
             e.printStackTrace(System.out);
         }
 
@@ -96,7 +90,7 @@ public class User {
                 System.out.println("Пароль/логин обновлены!");
             }
         } catch(IllegalArgumentException e) {
-            System.out.println("Что-то не так с логином или паролем: " + e.getMessage());
+            System.out.println("Ошибка ввода данных:\n" + e.getClass().getCanonicalName() + ",\n" + e.getMessage() + ".\n") ;
             e.printStackTrace(System.out);
         }
     }

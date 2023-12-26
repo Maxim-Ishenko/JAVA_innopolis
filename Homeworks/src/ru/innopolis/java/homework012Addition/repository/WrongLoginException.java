@@ -1,9 +1,6 @@
 package ru.innopolis.java.homework012Addition.repository;
 
-public class WrongLoginException extends Exception {
-    public WrongLoginException() {
-        super();
-    }
+public class WrongLoginException extends IllegalArgumentException {
     public WrongLoginException(String errorMessage) {
         super(errorMessage);
     }

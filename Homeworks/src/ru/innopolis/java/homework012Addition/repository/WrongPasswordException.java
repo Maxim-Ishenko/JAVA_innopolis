@@ -1,9 +1,6 @@
 package ru.innopolis.java.homework012Addition.repository;
 
-public class WrongPasswordException extends Exception {
-    public WrongPasswordException() {
-        super();
-    }
+public class WrongPasswordException extends IllegalArgumentException {
     public WrongPasswordException(String errorMessage) {
         super(errorMessage);
     }
