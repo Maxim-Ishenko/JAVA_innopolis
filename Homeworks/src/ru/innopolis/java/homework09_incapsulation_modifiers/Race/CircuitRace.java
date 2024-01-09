@@ -38,7 +38,7 @@ public class CircuitRace extends Race {
             Integer prize,
             Car[] participants,
             Integer laps
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         super(
             distance,
             route,
@@ -53,7 +53,7 @@ public class CircuitRace extends Race {
         String route,
         Integer prize,
         Car[] participants
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         super(
             distance,
             route,

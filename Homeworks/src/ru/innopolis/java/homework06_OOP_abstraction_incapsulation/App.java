@@ -3,7 +3,7 @@ package ru.innopolis.java.homework06_OOP_abstraction_incapsulation;
 import java.util.*;
 
 public class App {
-    public static void main(String[] args) throws IllegalArgumentException, InputMismatchException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         Person pavelAndreich = new Person("Павел Андреевич", 10000);

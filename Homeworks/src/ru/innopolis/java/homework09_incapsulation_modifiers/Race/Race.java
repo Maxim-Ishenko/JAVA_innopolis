@@ -55,7 +55,7 @@ public class Race {
         String route,
         Integer prize,
         Car[] participants
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         this.setDistance(distance);
         this.setPrize(prize);
         this.setRoute(route);

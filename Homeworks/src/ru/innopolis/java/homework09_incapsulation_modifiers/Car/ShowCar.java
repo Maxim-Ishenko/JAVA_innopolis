@@ -17,7 +17,7 @@ public class ShowCar extends Car {
             Integer acceleration,
             Integer suspension,
             Integer durability
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         super(
                 brand,
                 model,
@@ -37,7 +37,7 @@ public class ShowCar extends Car {
             Integer suspension,
             Integer durability,
             Integer stars
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         super(
                 brand,
                 model,
@@ -61,12 +61,12 @@ public class ShowCar extends Car {
 
         this.stars = stars;
     }
-    public void setStars(Scanner scanner) throws InputMismatchException {
+    public void setStars(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите значение популярности автомобиля: ");
         int stars = scanner.nextInt();
 
         if (stars < 0) {
-            throw new InputMismatchException("Значение популярности не может быть отрицательным!");
+            throw new IllegalArgumentException("Значение популярности не может быть отрицательным!");
         }
 
         this.stars = stars;

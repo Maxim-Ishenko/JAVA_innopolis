@@ -9,7 +9,7 @@ public class Product {
     private double coast;
 
    public Product() {}
-    public Product(String productName, double coast) throws IllegalArgumentException, InputMismatchException {
+    public Product(String productName, double coast) throws IllegalArgumentException {
         this.setProductName(productName);
         this.setProductCoast(coast);
     }
@@ -28,12 +28,12 @@ public class Product {
 
         this.productName = productName;
     }
-    public void setProductName(Scanner scanner) throws InputMismatchException {
+    public void setProductName(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите имя продукта: ");
         String productName = scanner.nextLine();
 
         if (Objects.equals(productName, "")) {
-            throw new InputMismatchException("Имя продукта не может быть пустой строкой!");
+            throw new IllegalArgumentException("Имя продукта не может быть пустой строкой!");
         }
 
         this.productName = productName;
@@ -45,12 +45,12 @@ public class Product {
 
         this.coast = coast;
     }
-    public void setProductCoast(Scanner scanner) throws InputMismatchException {
+    public void setProductCoast(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите цену продукта: ");
         double moneyAmount = scanner.nextDouble();
 
         if (moneyAmount < 0) {
-            throw new InputMismatchException("Цена не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Цена не может быть отрицательным числом!");
         }
 
         this.coast = moneyAmount;

@@ -22,7 +22,7 @@ public class Car {
             Integer acceleration,
             Integer suspension,
             Integer durability
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         this.setBrand(brand);
         this.setModel(model);
         this.setYear(year);
@@ -37,7 +37,7 @@ public class Car {
             Integer year,
             Integer acceleration,
             Integer durability
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         this.setBrand(brand);
         this.setModel(model);
         this.setYear(year);
@@ -73,12 +73,12 @@ public class Car {
         }
         this.brand = brand;
     }
-    public void setBrand(Scanner scanner) throws InputMismatchException {
+    public void setBrand(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите марку автомобиля: ");
         String brand = scanner.nextLine();
 
         if (Objects.equals(brand, "")) {
-            throw new InputMismatchException("Марка автомобиля не может быть пустой строкой!");
+            throw new IllegalArgumentException("Марка автомобиля не может быть пустой строкой!");
         }
         this.brand = brand;
     }
@@ -88,12 +88,12 @@ public class Car {
         }
         this.model = model;
     }
-    public void setModel(Scanner scanner) throws InputMismatchException {
+    public void setModel(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите модель автомобиля: ");
         String model = scanner.nextLine();
 
         if (Objects.equals(model, "")) {
-            throw new InputMismatchException("Модель автомобиля не может быть пустой строкой!");
+            throw new IllegalArgumentException("Модель автомобиля не может быть пустой строкой!");
         }
         this.model = model;
     }
@@ -103,12 +103,12 @@ public class Car {
         }
         this.year = year;
     }
-    public void setYear(Scanner scanner) throws InputMismatchException {
+    public void setYear(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите год выпуска автомобиля: ");
         int year = scanner.nextInt();
 
         if (year <= 0) {
-            throw new InputMismatchException("Год выпуска может быть только положительным числом!");
+            throw new IllegalArgumentException("Год выпуска может быть только положительным числом!");
         }
         this.year = year;
     }
@@ -118,12 +118,12 @@ public class Car {
         }
         this.power = power;
     }
-    public void setPower(Scanner scanner) throws InputMismatchException {
+    public void setPower(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите мощность автомобиля: ");
         int power = scanner.nextInt();
 
         if (power <= 0) {
-            throw new InputMismatchException("Мощность может быть только положительным числом!");
+            throw new IllegalArgumentException("Мощность может быть только положительным числом!");
         }
         this.power = power;
     }
@@ -133,12 +133,12 @@ public class Car {
         }
         this.durability = durability;
     }
-    public void setDurability(Scanner scanner) throws InputMismatchException {
+    public void setDurability(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите надежность автомобиля: ");
         int durability = scanner.nextInt();
 
         if (durability < 0) {
-            throw new InputMismatchException("Долговечность не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Долговечность не может быть отрицательным числом!");
         }
         this.durability = durability;
     }
@@ -148,12 +148,12 @@ public class Car {
         }
         this.suspension = suspension;
     }
-    public void setSuspension(Scanner scanner) throws InputMismatchException {
+    public void setSuspension(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите значение подвески автомобиля: ");
         int suspension = scanner.nextInt();
 
         if (suspension <= 0) {
-            throw new InputMismatchException("Значение подвески может быть только положительным числом!");
+            throw new IllegalArgumentException("Значение подвески может быть только положительным числом!");
         }
         this.suspension = suspension;
     }
@@ -163,12 +163,12 @@ public class Car {
         }
         this.acceleration = acceleration;
     }
-    public void setAcceleration(Scanner scanner) throws InputMismatchException {
+    public void setAcceleration(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите ускорение автомобиля: ");
         int acceleration = scanner.nextInt();
 
         if (acceleration <= 0) {
-            throw new InputMismatchException("Ускорение может быть только положительным числом!");
+            throw new IllegalArgumentException("Ускорение может быть только положительным числом!");
         }
         this.acceleration = acceleration;
     }

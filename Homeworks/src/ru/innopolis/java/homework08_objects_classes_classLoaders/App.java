@@ -5,7 +5,7 @@ import java.util.*;
 
 public class App {
     static String END = "END";
-    public static void main(String[] args) throws IllegalArgumentException, InputMismatchException, IOException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         String personsStorePath = "src/ru/innopolis/java/homework08_objects_classes_classLoaders/data/persons.txt";

@@ -28,7 +28,7 @@ public class TimeLimitRace extends Race {
             Integer prize,
             Car[] participants,
             Integer goldTime
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         super(
                 distance,
                 route,
@@ -43,7 +43,7 @@ public class TimeLimitRace extends Race {
             String route,
             Integer prize,
             Car[] participants
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         super(
                 distance,
                 route,

@@ -14,7 +14,7 @@ public class CasualRace extends Race {
         String route,
         Integer prize,
         Car[] participants
-    ) throws IllegalArgumentException, InputMismatchException {
+    ) throws IllegalArgumentException {
         super(
             distance,
             route,
