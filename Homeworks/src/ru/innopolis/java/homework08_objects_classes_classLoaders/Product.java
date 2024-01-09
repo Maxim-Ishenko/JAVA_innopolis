@@ -1,5 +1,6 @@
 package ru.innopolis.java.homework08_objects_classes_classLoaders;
 
+import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Product {
     private double coast;
 
    public Product() {}
-    public Product(String productName, double coast) throws Exception {
+    public Product(String productName, double coast) throws IllegalArgumentException {
         this.setProductName(productName);
         this.setProductCoast(coast);
     }
@@ -20,36 +21,36 @@ public class Product {
         return coast;
     }
 
-    public void setProductName(String productName) throws Exception {
+    public void setProductName(String productName) throws IllegalArgumentException {
         if (Objects.equals(productName, "")) {
-            throw new Exception("Имя продукта не может быть пустой строкой!");
+            throw new IllegalArgumentException("Имя продукта не может быть пустой строкой!");
         }
 
         this.productName = productName;
     }
-    public void setProductName(Scanner scanner) throws Exception {
+    public void setProductName(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите имя продукта: ");
         String productName = scanner.nextLine();
 
         if (Objects.equals(productName, "")) {
-            throw new Exception("Имя продукта не может быть пустой строкой!");
+            throw new IllegalArgumentException("Имя продукта не может быть пустой строкой!");
         }
 
         this.productName = productName;
     }
-    public void setProductCoast(double coast) throws Exception {
+    public void setProductCoast(double coast) throws IllegalArgumentException {
         if (coast < 0) {
-            throw new Exception("Цена не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Цена не может быть отрицательным числом!");
         }
 
         this.coast = coast;
     }
-    public void setProductCoast(Scanner scanner) throws Exception {
+    public void setProductCoast(Scanner scanner) throws IllegalArgumentException {
         System.out.println("Введите цену продукта: ");
         double moneyAmount = scanner.nextDouble();
 
         if (moneyAmount < 0) {
-            throw new Exception("Цена не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Цена не может быть отрицательным числом!");
         }
 
         this.coast = moneyAmount;

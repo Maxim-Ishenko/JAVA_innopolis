@@ -7,7 +7,7 @@ public class SubstringSorter {
     private static final String SPACE = "\\s+";
     private static final String EMPTY_SPACE = " ";
 
-    public static String getInputString(Scanner input) throws Exception {
+    public static String getInputString(Scanner input) {
         System.out.println("Введите входную строку, состоящую из букв английского алфавита: ");
 
         return input.nextLine();

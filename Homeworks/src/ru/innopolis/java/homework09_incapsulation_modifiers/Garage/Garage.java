@@ -20,30 +20,30 @@ public class Garage {
         this.parkedCars = parkedCars;
     }
 
-    public void modifyPower(Car car, Integer power) throws Exception {
+    public void modifyPower(Car car, Integer power) throws IllegalArgumentException {
         if (power <= 0) {
-            throw new Exception("Мощность может быть только положительным числом!");
+            throw new IllegalArgumentException("Мощность может быть только положительным числом!");
         }
 
         car.setPower(power);
     }
-    public void modifyAcceleration(Car car, Integer acceleration) throws Exception {
+    public void modifyAcceleration(Car car, Integer acceleration) throws IllegalArgumentException {
         if (acceleration <= 0) {
-            throw new Exception("Ускорение может быть только положительным числом!");
+            throw new IllegalArgumentException("Ускорение может быть только положительным числом!");
         }
 
         car.setAcceleration(acceleration);
     }
-    public void modifySuspension(Car car, Integer suspension) throws Exception {
+    public void modifySuspension(Car car, Integer suspension) throws IllegalArgumentException {
         if (suspension <= 0) {
-            throw new Exception("Значение подвески может быть только положительным числом!");
+            throw new IllegalArgumentException("Значение подвески может быть только положительным числом!");
         }
 
         car.setSuspension(suspension);
     }
-    public void modifyDurability(Car car, Integer durability) throws Exception {
+    public void modifyDurability(Car car, Integer durability) throws IllegalArgumentException {
         if (durability < 0) {
-            throw new Exception("Долговечность не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Долговечность не может быть отрицательным числом!");
         }
 
         car.setDurability(durability);

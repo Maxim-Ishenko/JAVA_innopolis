@@ -1,9 +1,6 @@
 package ru.innopolis.java.homework7_OOP_inheritance_polymorphism;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Person {
     private String name;
@@ -13,11 +10,11 @@ public class Person {
 
     // HW7
     public Person() {}
-    public Person(String name, double moneyAmount) throws Exception {
+    public Person(String name, double moneyAmount) throws IllegalArgumentException, InputMismatchException {
         this.setName(name);
         this.setMoneyAmount(moneyAmount);
     }
-    public Person(String name, double moneyAmount, int age) throws Exception {
+    public Person(String name, double moneyAmount, int age) throws IllegalArgumentException, InputMismatchException {
         this.setName(name);
         this.setMoneyAmount(moneyAmount);
         this.setAge(age);
@@ -34,41 +31,41 @@ public class Person {
     }
     public int getAge() { return this.age; };
 
-    public void setName(String name) throws Exception {
+    public void setName(String name) throws IllegalArgumentException {
         if (Objects.equals(name, "")) {
-            throw new Exception("Имя пользователя не может быть пустой строкой!");
+            throw new IllegalArgumentException("Имя пользователя не может быть пустой строкой!");
         }
 
         this.name = name;
     }
-    public void setName(Scanner scanner) throws Exception {
+    public void setName(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите имя пользователя: ");
         String name = scanner.nextLine();
 
         if (Objects.equals(name, "")) {
-            throw new Exception("Имя пользователя не может быть пустой строкой!");
+            throw new InputMismatchException("Имя пользователя не может быть пустой строкой!");
         }
 
         this.name = name;
     }
-    public void setMoneyAmount(double moneyAmount) throws Exception {
+    public void setMoneyAmount(double moneyAmount) throws IllegalArgumentException {
         if (moneyAmount < 0) {
-            throw new Exception("Сумма не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Сумма не может быть отрицательным числом!");
         }
 
         this.moneyAmount = moneyAmount;
     }
-    public void setMoneyAmount(Scanner scanner) throws Exception {
+    public void setMoneyAmount(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите сумму денег, доступную пользователю: ");
         double moneyAmount = scanner.nextDouble();
 
         if (moneyAmount < 0) {
-            throw new Exception("Сумма не может быть отрицательным числом!");
+            throw new InputMismatchException("Сумма не может быть отрицательным числом!");
         }
 
         this.moneyAmount = moneyAmount;
     }
-    public void setProductToPackage(Product product) throws Exception {
+    public void setProductToPackage(Product product) {
         if (this.moneyAmount < product.getCoast()) {
             System.out.println(
                 this.name + " не может позволить себе " + product.getProductName()
@@ -85,19 +82,19 @@ public class Person {
         }
     }
     // HW7
-    public void setAge(int age) throws Exception {
+    public void setAge(int age) throws IllegalArgumentException {
         if (age < 0) {
-            throw new Exception("Возраст не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Возраст не может быть отрицательным числом!");
         }
 
         this.age = age;
     }
-    public void setAge(Scanner scanner) throws Exception {
+    public void setAge(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите возраст пользователя: ");
         int age = scanner.nextInt();
 
         if (age < 0) {
-            throw new Exception("Возраст не может быть отрицательным числом!");
+            throw new InputMismatchException("Возраст не может быть отрицательным числом!");
         }
 
         this.age = age;

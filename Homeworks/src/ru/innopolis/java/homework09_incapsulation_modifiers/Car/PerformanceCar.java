@@ -1,6 +1,7 @@
 package ru.innopolis.java.homework09_incapsulation_modifiers.Car;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ public class PerformanceCar extends Car {
             Integer acceleration,
             Integer suspension,
             Integer durability
-    ) throws Exception {
+    ) throws IllegalArgumentException, InputMismatchException {
         super(
                 brand,
                 model,
@@ -46,7 +47,7 @@ public class PerformanceCar extends Car {
             Integer suspension,
             Integer durability,
             String[] addOns
-    ) throws Exception {
+    ) throws IllegalArgumentException, InputMismatchException {
         super(
                 brand,
                 model,
@@ -60,39 +61,39 @@ public class PerformanceCar extends Car {
     }
 
     @Override
-    public void setPower(Integer power) throws Exception {
+    public void setPower(Integer power) throws IllegalArgumentException {
         if (power <= 0) {
-            throw new Exception("Мощность может быть только положительным числом!");
+            throw new IllegalArgumentException("Мощность может быть только положительным числом!");
         }
 
         super.setPower((int) (power + power * 0.5));
     }
     @Override
-    public void setPower(Scanner scanner) throws Exception {
+    public void setPower(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите мощность автомобиля: ");
         int power = scanner.nextInt();
 
         if (power <= 0) {
-            throw new Exception("Мощность может быть только положительным числом!");
+            throw new InputMismatchException("Мощность может быть только положительным числом!");
         }
 
         super.setPower((int) (power + power * 0.5));
     }
     @Override
-    public void setSuspension(Integer suspension) throws Exception {
+    public void setSuspension(Integer suspension) throws IllegalArgumentException {
         if (suspension <= 0) {
-            throw new Exception("Значение подвески может быть только положительным числом!");
+            throw new IllegalArgumentException("Значение подвески может быть только положительным числом!");
         }
 
         super.setSuspension((int) (suspension - suspension * 0.25));
     }
     @Override
-    public void setSuspension(Scanner scanner) throws Exception {
+    public void setSuspension(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите значение подвески автомобиля: ");
         int suspension = scanner.nextInt();
 
         if (suspension <= 0) {
-            throw new Exception("Значение подвески может быть только положительным числом!");
+            throw new InputMismatchException("Значение подвески может быть только положительным числом!");
         }
 
         super.setSuspension((int) (suspension - suspension * 0.25));

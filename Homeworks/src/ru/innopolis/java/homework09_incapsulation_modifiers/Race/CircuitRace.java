@@ -4,6 +4,7 @@ import ru.innopolis.java.homework09_incapsulation_modifiers.Car.Car;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Objects;
 
 public class CircuitRace extends Race {
@@ -20,9 +21,9 @@ public class CircuitRace extends Race {
         return laps;
     }
 
-    public void setLaps(Integer laps) throws Exception {
+    public void setLaps(Integer laps) throws IllegalArgumentException {
         if (laps <= 0) {
-            throw new Exception("Количество кругов должно быть положительным числом!");
+            throw new IllegalArgumentException("Количество кругов должно быть положительным числом!");
         }
 
         this.laps = laps;
@@ -37,7 +38,7 @@ public class CircuitRace extends Race {
             Integer prize,
             Car[] participants,
             Integer laps
-    ) throws Exception {
+    ) throws IllegalArgumentException {
         super(
             distance,
             route,
@@ -52,7 +53,7 @@ public class CircuitRace extends Race {
         String route,
         Integer prize,
         Car[] participants
-    ) throws Exception {
+    ) throws IllegalArgumentException {
         super(
             distance,
             route,
@@ -83,7 +84,7 @@ public class CircuitRace extends Race {
 
         return resultString.toString().trim();
     }
-    public String setFieldValueFromTheString (String fieldsStringFromTheFile) throws Exception {
+    public String setFieldValueFromTheString (String fieldsStringFromTheFile) {
         StringBuilder targetValue = new StringBuilder();
 
         for (String fieldEntity: fieldsStringFromTheFile.trim().split(this.PARAMS_SEPARATOR)) {

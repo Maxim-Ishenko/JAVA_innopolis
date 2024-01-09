@@ -6,9 +6,11 @@ import ru.innopolis.java.homework09_incapsulation_modifiers.Car.ShowCar;
 import ru.innopolis.java.homework09_incapsulation_modifiers.Garage.Garage;
 import ru.innopolis.java.homework09_incapsulation_modifiers.Race.*;
 
+import java.util.InputMismatchException;
+
 public class App {
     static String outputFilePath = "src/ru/innopolis/java/homework09_incapsulation_modifiers/data/output.txt";
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Car opel = new Car("opel", "34fwsf", 1987, 67, 1, 54, 33);
         PerformanceCar mockvich = new PerformanceCar("mockvich", "412", 1980, 50, 78, 5, 45);
         PerformanceCar mockvichWithAddons = new PerformanceCar("mockvich", "412", 1980, 50, 78, 5, 45, new String[]{"as", "aas"});

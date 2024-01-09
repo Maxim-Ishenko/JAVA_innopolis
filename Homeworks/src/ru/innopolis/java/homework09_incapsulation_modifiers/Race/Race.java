@@ -3,6 +3,7 @@ package ru.innopolis.java.homework09_incapsulation_modifiers.Race;
 import ru.innopolis.java.homework09_incapsulation_modifiers.Car.Car;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Objects;
 
 public class Race {
@@ -24,22 +25,22 @@ public class Race {
         return participants;
     }
 
-    public void setDistance(Integer distance) throws Exception {
+    public void setDistance(Integer distance) throws IllegalArgumentException {
         if (distance <= 0) {
-            throw new Exception("Длина трассы может быть только положительным числом!");
+            throw new IllegalArgumentException("Длина трассы может быть только положительным числом!");
         }
         this.distance = distance;
     }
-    public void setRoute(String route) throws Exception {
+    public void setRoute(String route) throws IllegalArgumentException {
         if (Objects.equals(route, "")) {
-            throw new Exception("Маршрут не может быть пустой строкой!");
+            throw new IllegalArgumentException("Маршрут не может быть пустой строкой!");
         }
 
         this.route = route;
     }
-    public void setPrize(Integer prize) throws Exception {
+    public void setPrize(Integer prize) throws IllegalArgumentException {
         if (distance < 0) {
-            throw new Exception("Приз не может быть отрицательным числом!");
+            throw new IllegalArgumentException("Приз не может быть отрицательным числом!");
         }
 
         this.prize = prize;
@@ -54,7 +55,7 @@ public class Race {
         String route,
         Integer prize,
         Car[] participants
-    ) throws Exception {
+    ) throws IllegalArgumentException {
         this.setDistance(distance);
         this.setPrize(prize);
         this.setRoute(route);

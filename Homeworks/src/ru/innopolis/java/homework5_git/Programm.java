@@ -1,5 +1,6 @@
 package ru.innopolis.java.homework5_git;
 
+import java.util.InputMismatchException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class Programm {
     public Programm(
             String name,
             double rating,
-            long audience) throws Exception {
+            long audience) throws IllegalArgumentException, InputMismatchException {
         this.setName(name);
         this.setRating(rating);
         this.setAudience(audience);
@@ -28,19 +29,19 @@ public class Programm {
         return audience;
     }
 
-    public void setName(String name) throws Exception {
+    public void setName(String name) throws IllegalArgumentException {
         if (Objects.equals(name, "")) {
-            throw new Exception("Название программы не может быть пустой строкой!");
+            throw new IllegalArgumentException("Название программы не может быть пустой строкой!");
         }
 
         this.name = name;
     }
-    public void setName(Scanner scanner) throws Exception {
+    public void setName(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите название программы: ");
         String name = scanner.nextLine();
 
         if (Objects.equals(name, "")) {
-            throw new Exception("Название программы не может быть пустой строкой!");
+            throw new InputMismatchException("Название программы не может быть пустой строкой!");
         }
 
         this.name = name;
@@ -48,24 +49,24 @@ public class Programm {
     public void setRating(double rating) {
         this.rating = rating;
     }
-    public void setRating(Scanner scanner) throws Exception {
+    public void setRating(Scanner scanner) {
         System.out.println("Введите рейтинг: ");
 
         this.rating = scanner.nextDouble();
     }
-    public void setAudience(long audience) throws Exception {
+    public void setAudience(long audience) throws IllegalArgumentException {
         if (audience < 0) {
-            throw new Exception("Аудитория не может быть отрицательной!");
+            throw new IllegalArgumentException("Аудитория не может быть отрицательной!");
         }
 
         this.audience = audience;
     }
-    public void setAudience(Scanner scanner) throws Exception {
+    public void setAudience(Scanner scanner) throws InputMismatchException {
         System.out.println("Введите размер аудитории: ");
         long audience = scanner.nextLong();
 
         if (audience < 0) {
-            throw new Exception("Аудитория не может быть отрицательной!");
+            throw new InputMismatchException("Аудитория не может быть отрицательной!");
         }
 
         this.audience = audience;

@@ -3,7 +3,7 @@ package ru.innopolis.java.homework4_classes_Object_String.task3_substrings_sorti
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         String inputString = SubstringSorter.getInputString(input);
