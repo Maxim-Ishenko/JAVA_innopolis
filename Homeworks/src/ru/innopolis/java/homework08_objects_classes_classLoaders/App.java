@@ -1,6 +1,5 @@
 package ru.innopolis.java.homework08_objects_classes_classLoaders;
 
-import java.io.IOException;
 import java.util.*;
 
 public class App {
