@@ -39,7 +39,7 @@ class PersonProductRepositoryImplTest {
     void tearDown() {
     }
 
-//    @ParameterizedTest(name = "{index} - {0} is a palindrome")
+//    @ParameterizedTest(name = "{index} - {0} is a ...")
     @ParameterizedTest(name = "Класс Person создается с корректными данными")
     @CsvSource({
             "Павел, 30000",
