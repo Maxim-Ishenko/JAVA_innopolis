@@ -1,15 +1,15 @@
 package ru.innopolis.java.attestation01.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
+import static ru.innopolis.java.attestation01.repository.UsersRepository.LOCAL_DATE_FORMATTER_PATTERN;
+import static ru.innopolis.java.attestation01.repository.UsersRepository.USER_PARAMS_DIVIDER;
+
 public class User {
-    /**
-     * Поля класса
-     *
-    */
     private String id;
-    private LocalDate localDateTime = LocalDate.now();
+    private LocalDateTime localDateTime = LocalDateTime.now();
     private String login;
     private String password;
     private String confirmPassword;
@@ -34,7 +34,7 @@ public class User {
      */
     public User(
             String id,
-            LocalDate localDateTime,
+            LocalDateTime localDateTime,
             String login,
             String password,
             String confirmPassword,
@@ -63,10 +63,10 @@ public class User {
         this.id = id;
     }
 
-    public LocalDate getLocalDateTime() {
+    public LocalDateTime getLocalDateTime() {
         return localDateTime;
     }
-    public void setLocalDateTime(LocalDate localDateTime) {
+    public void setLocalDateTime(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
     }
 
@@ -128,18 +128,18 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", localDateTime='" + localDateTime + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", confirmPassword='" + confirmPassword + '\'' +
-                ", surname='" + surname + '\'' +
-                ", name='" + name + '\'' +
-                ", patronymic='" + patronymic + '\'' +
-                ", age=" + age +
-                ", isWorker=" + isWorker +
-                '}';
+        String localDateTimeString = localDateTime.format(DateTimeFormatter.ofPattern(LOCAL_DATE_FORMATTER_PATTERN));
+
+        return id + USER_PARAMS_DIVIDER +
+                localDateTimeString + USER_PARAMS_DIVIDER +
+                login + USER_PARAMS_DIVIDER +
+                password + USER_PARAMS_DIVIDER +
+                confirmPassword + USER_PARAMS_DIVIDER +
+                surname + USER_PARAMS_DIVIDER +
+                name + USER_PARAMS_DIVIDER +
+                patronymic + USER_PARAMS_DIVIDER +
+                age + USER_PARAMS_DIVIDER +
+                isWorker;
     }
     @Override
     public boolean equals(Object o) {
