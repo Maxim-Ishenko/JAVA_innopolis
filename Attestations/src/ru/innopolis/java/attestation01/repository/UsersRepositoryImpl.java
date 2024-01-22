@@ -19,43 +19,41 @@ public class UsersRepositoryImpl implements UsersRepository {
         FileWorkHelper.writeTheUserToTheFile(user.toString(), DATA_FILE_PATH, true);
     }
 
-    // Поиск пользователя в файле по идентификатору
     @Override
     public User findById(String id) {
-//        try {
-//            ArrayList<User> usersCollection = setUsersCollectionFromTheFile();
-//            User targetUser = usersCollection.stream().filter(user -> Objects.equals(id, user.getId()))
-//                    .findAny()
-//                    .orElse(null);
-//
-//            if (targetUser == null) {
-//                throw new UserNotFoundException("Пользователя с заданным идентификатором не существует");
-//            }
-//        } catch(UserNotFoundException error) {
-//            System.out.println(error.getMessage());
-//            error.printStackTrace(System.out);
-//        }
+        try {
+            ArrayList<User> usersCollection = setUsersCollectionFromTheFile();
+            User targetUser = usersCollection.stream().filter(user -> Objects.equals(id, user.getId()))
+                    .findAny()
+                    .orElse(null);
 
-        ArrayList<User> usersCollection = setUsersCollectionFromTheFile();
-        User targetUser = usersCollection.stream().filter(user -> Objects.equals(id, user.getId()))
-                .findAny()
-                .orElse(null);
+            if (Objects.isNull(targetUser)) {
+                throw new UserNotFoundException();
+            }
 
-        if (Objects.isNull(targetUser)) {
-            throw new UserNotFoundException("Пользователя с заданным идентификатором не существует");
+            return targetUser;
+        } catch(UserNotFoundException error) {
+            System.err.println("Ошибка при запросе пользователя:\n" + error.getMessage() + "\n") ;
+            error.printStackTrace(System.out);
         }
 
-        return targetUser;
+        return null;
     }
 
     @Override
     public List<User> findAll() {
-        return setUsersCollectionFromTheFile();
+        try {
+            return setUsersCollectionFromTheFile();
+        } catch(IllegalArgumentException error) {
+            System.err.println("Ошибка при запросе списка пользователей:\n" + error.getMessage() + "\n") ;
+            error.printStackTrace(System.out);
+        }
+
+        return null;
     }
 
     @Override
     public void update(User user) {
-        System.out.println("user-" + user);
         try {
             ArrayList<User> usersCollection = setUsersCollectionFromTheFile();
 
@@ -85,7 +83,7 @@ public class UsersRepositoryImpl implements UsersRepository {
                 System.out.println("Обновление пользователя по id прошло успешно");
             }
         } catch(Exception e) {
-            System.out.println("Ошибка при обновлении:\n" + e.getMessage() + "\n") ;
+            System.err.println("Ошибка при обновлении:\n" + e.getMessage() + "\n") ;
             e.printStackTrace(System.out);
         }
     }
@@ -97,7 +95,7 @@ public class UsersRepositoryImpl implements UsersRepository {
             User targetUser = findById(id);
 
             if (Objects.isNull(targetUser)) {
-                throw new UserNotFoundException("Пользователя с заданным идентификатором не существует");
+                throw new UserNotFoundException();
             }
 
             List<User> updatedUsersCollection = usersCollection.stream().filter(
@@ -112,7 +110,7 @@ public class UsersRepositoryImpl implements UsersRepository {
 
             System.out.println("Удаление пользователя по id и обновление списка прошли успешно");
         } catch(Exception e) {
-            System.out.println("Ошибка при удалении:\n" + e.getMessage() + "\n") ;
+            System.err.println("Ошибка при удалении:\n" + e.getMessage() + "\n") ;
             e.printStackTrace(System.out);
         }
     }
@@ -337,7 +335,7 @@ public class UsersRepositoryImpl implements UsersRepository {
     public boolean isLoginCorrect(String login) {
         if (login != null) {
             if (!login.trim().matches(LOGIN_REQUIREMENTS)) {
-                throw new WrongLoginException("Логин имеет неверный формат!");
+                throw new WrongLoginException();
             }
 
             return true;
@@ -351,7 +349,7 @@ public class UsersRepositoryImpl implements UsersRepository {
     public boolean isPasswordCorrect(String password) {
         if (password != null) {
             if (!password.trim().matches(PASSWORD_REQUIREMENTS)) {
-                throw new WrongPasswordException("Пароль имеет неверный формат!");
+                throw new WrongPasswordException();
             }
 
             return true;
