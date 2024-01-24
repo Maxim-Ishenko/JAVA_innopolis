@@ -69,7 +69,6 @@ public class DataHandlerParserHelper {
         );
     }
 
-
     /**
      * Методы получения сепарированных полей пользователя из строки
      *
