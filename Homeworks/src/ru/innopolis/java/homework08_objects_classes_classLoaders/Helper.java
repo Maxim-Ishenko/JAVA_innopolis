@@ -1,5 +1,7 @@
 package ru.innopolis.java.homework08_objects_classes_classLoaders;
 
+import ru.innopolis.java.homework08_objects_classes_classLoaders.utils.InputDataHandler;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -39,6 +41,7 @@ public class Helper {
     }
 
     public List<Person> setPersonsCollectionFormTheString (List<String> personsCollectionString) {
+        InputDataHandler inputDataHandler = new InputDataHandler();
         List<Person> personsCollection = new ArrayList<>(List.of());
 
         for (String personInfo: personsCollectionString) {
@@ -52,7 +55,9 @@ public class Helper {
                     name = person.substring(person.indexOf(PERSON_NAME_SIBSTRING) + PERSON_NAME_SUBSTRING_OFFSET);
                 } else if (person.contains(PERSON_MONEY_AMOUNT_SUBSTRING)) {
                     String moneyAmountString = person.substring(person.indexOf(PERSON_MONEY_AMOUNT_SUBSTRING) + PERSON_MONEY_AMOUNT_SUBSTRING_OFFSET);
-                    moneyAmount = Double.parseDouble(moneyAmountString);
+
+                    System.out.println("moneyAmountString: " + moneyAmountString);
+                    moneyAmount = inputDataHandler.validateNumber(moneyAmountString);
                 }
             }
 
