@@ -16,7 +16,7 @@ public class App {
         );
 
         System.out.println("Коллекция до: " + usersMethodsStore.findAll());
-        System.out.println("Поиск пользователя по id: " + usersMethodsStore.findById("f5asdgsf9-4b3b-8a65-4353534dffb9d2"));
+        System.out.println("Поиск пользователя по id: " + usersMethodsStore.findById("f5a8a3cb-4ac9-4b3b-8a65-c424e129b9d2"));
         usersMethodsStore.deleteById("f5a8a3cb-4ac9-4b3b-8a65-c424e129b9d2");
         System.out.println("Коллекция после удалению пользователя по id: " + usersMethodsStore.findAll());
         usersMethodsStore.deleteAll();

@@ -277,9 +277,42 @@ public class DataHandlerParserHelper {
     public static String readUsersFromTheFile() {
         return FileWorkHelper.readUsersDataStringFromTheFile(DATA_FILE_PATH);
     }
+    public static String readUsersFromTheFile(String path) {
+        return FileWorkHelper.readUsersDataStringFromTheFile(path);
+    }
 
     public static ArrayList<User> setUsersCollectionFromTheFile() {
         String dataString = readUsersFromTheFile();
+        ArrayList<User> usersCollection = new ArrayList<>();
+        List<String> dataStringCollection = new ArrayList<>(Arrays.asList(dataString.split("\n")))
+                .stream().filter(item -> !item.isEmpty()).toList();
+
+        for(String currentUserString: dataStringCollection) {
+            List<String> specificUserInputParams = new ArrayList<>(List.of(currentUserString.split("\\|")));
+
+            User specificCarEntity = new User(
+                    getIdFromInfoString(specificUserInputParams),
+                    LocalDateTime.parse(
+                            getLocalDateTimeFromInfoString(specificUserInputParams),
+                            DateTimeFormatter.ofPattern(LOCAL_DATE_FORMATTER_PATTERN)
+                    ),
+                    getLoginFromInfoString(specificUserInputParams),
+                    getPasswordFromInfoString(specificUserInputParams),
+                    getConfirmPasswordFromInfoString(specificUserInputParams),
+                    getSurNameFromInfoString(specificUserInputParams),
+                    getNameFromInfoString(specificUserInputParams),
+                    getPatronymicFromInfoString(specificUserInputParams),
+                    getAgeFromInfoString(specificUserInputParams),
+                    getIsWorkerFromInfoString(specificUserInputParams)
+            );
+
+            Collections.addAll(usersCollection, specificCarEntity);
+        }
+
+        return usersCollection;
+    }
+    public static ArrayList<User> setUsersCollectionFromTheFile(String path) {
+        String dataString = readUsersFromTheFile(path);
         ArrayList<User> usersCollection = new ArrayList<>();
         List<String> dataStringCollection = new ArrayList<>(Arrays.asList(dataString.split("\n")))
                 .stream().filter(item -> !item.isEmpty()).toList();

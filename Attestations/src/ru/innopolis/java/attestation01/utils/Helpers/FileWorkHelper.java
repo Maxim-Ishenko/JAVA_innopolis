@@ -21,15 +21,6 @@ public class FileWorkHelper {
         return resultString.toString();
     }
 
-//    public static void writeTheUserToTheFile(String usersInfoString, String outputFilePath) {
-//        try(BufferedWriter bufferWriter = new BufferedWriter(new FileWriter(outputFilePath, true))) {
-//            bufferWriter.append("\n");
-//            bufferWriter.append(usersInfoString);
-//        } catch(IOException e) {
-//            System.out.println("Во время записи в файл возникла проблема: " + e.getMessage());
-//            e.printStackTrace(System.out);
-//        }
-//    }
     public static void writeTheUserToTheFile(String usersInfoString, String outputFilePath, Boolean shouldAppendFlag) {
         try(BufferedWriter bufferWriter = new BufferedWriter(new FileWriter(outputFilePath, shouldAppendFlag))) {
             bufferWriter.append("\n");
