@@ -25,18 +25,10 @@ public class Person {
     }
 
     public void setName(String name) throws IllegalArgumentException {
-        if (Objects.equals(name, "")) {
-            throw new IllegalArgumentException("Имя пользователя не может быть пустой строкой!");
-        }
-
         this.name = name;
     }
 
     public void setMoneyAmount(double moneyAmount) throws IllegalArgumentException {
-        if (moneyAmount < 0) {
-            throw new IllegalArgumentException("Сумма не может быть отрицательным числом!");
-        }
-
         this.moneyAmount = moneyAmount;
     }
 

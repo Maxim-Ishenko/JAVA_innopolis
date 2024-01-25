@@ -22,18 +22,10 @@ public class Product {
     }
 
     public void setProductName(String productName) throws IllegalArgumentException {
-        if (Objects.equals(productName, "")) {
-            throw new IllegalArgumentException("Имя продукта не может быть пустой строкой!");
-        }
-
         this.productName = productName;
     }
 
     public void setProductCoast(double coast) throws IllegalArgumentException {
-        if (coast < 0) {
-            throw new IllegalArgumentException("Цена не может быть отрицательным числом!");
-        }
-
         this.coast = coast;
     }
 
