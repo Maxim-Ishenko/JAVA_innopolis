@@ -6,15 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homeworks/test/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/test/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,7 +72,8 @@
     "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "coverage"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -92,10 +93,24 @@
           <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.App" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl" />
+          <option name="ENABLED" value="true" />
+        </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,6 +126,22 @@
       <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
       <option name="METHOD_NAME" value="createNewPerson" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonProductRepositoryImplTest.createNewPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="createNewPerson(ru.innopolis.java.homework014_unit_tests_HW6.model.Person)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonProductRepositoryImplTest.createNewPersonWithWrongName (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonProductRepositoryImplTest.getProductCoast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
@@ -142,35 +173,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
-      <option name="METHOD_NAME" value="createNewPersonWithWrongName" />
+      <option name="METHOD_NAME" value="getProductCoast" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonProductRepositoryImplTest.createNewPersonWithWrongName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
-      <option name="METHOD_NAME" value="createNewPersonWithWrongName(java.lang.String,double)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.getProductCoast" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
-        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" />
-        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongName (1)" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
-        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongName" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest.getProductCoast" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +232,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="merged attestation/attestation1 into the current homeworks/homework14" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest.ic" NAME="PersonProductRepositoryImplTest Coverage Results" MODIFIED="1706244732855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest.ic" NAME="PersonProductRepositoryImplTest Coverage Results" MODIFIED="1706247221948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.*</FILTER>
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.App</FILTER>
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_getProductCoast.ic" NAME="PersonProductRepositoryImplTest.getProductCoast Coverage Results" MODIFIED="1706247373437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_createNewPerson__1_.ic" NAME="PersonProductRepositoryImplTest.createNewPerson (1) Coverage Results" MODIFIED="1706248838028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
     </SUITE>
   </component>

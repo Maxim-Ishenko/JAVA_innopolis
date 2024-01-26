@@ -3,8 +3,6 @@ package ru.innopolis.java.homework014_unit_tests_HW6.repository;
 import ru.innopolis.java.homework014_unit_tests_HW6.model.Person;
 import ru.innopolis.java.homework014_unit_tests_HW6.model.Product;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class PersonProductRepositoryImpl implements PersonProductRepository {

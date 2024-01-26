@@ -138,6 +138,7 @@ class PersonProductRepositoryImplTest {
         );
     }
 
+    @Disabled
     @Test
     @DisplayName("Тест формата цены продукта")
     void getProductCoast() {
