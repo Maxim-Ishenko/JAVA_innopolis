@@ -8,10 +8,6 @@ public interface PersonProductRepository {
     Product createNewProduct(String name, double coast);
     public String getPersonName(String name);
     public Double getPersonMoneyAmount(Double moneyAmount);
-    public Product[] getPersonProductToPackage(
-            Product product,
-            Double currentPersonMoneyAmount
-    );
     public String getProductName(String productName);
     public Double getProductCoast(Double coast);
 }

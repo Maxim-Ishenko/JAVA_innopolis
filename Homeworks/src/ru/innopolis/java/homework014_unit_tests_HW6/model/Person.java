@@ -35,7 +35,7 @@ public class Person {
     public void setProductToPackage(Product product) {
         if (this.moneyAmount < product.getCoast()) {
             System.out.println(
-                this.name + " не может позволить себе " + product.getProductName()
+                    this.name + " не может позволить себе " + product.getProductName()
             );
         } else {
             ArrayList<Product> productsList = new ArrayList<>(Arrays.asList(productsPackage));

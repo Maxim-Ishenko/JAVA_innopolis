@@ -3,13 +3,15 @@ package ru.innopolis.java.homework014_unit_tests_HW6.repository;
 import ru.innopolis.java.homework014_unit_tests_HW6.model.Person;
 import ru.innopolis.java.homework014_unit_tests_HW6.model.Product;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class PersonProductRepositoryImpl implements PersonProductRepository {
     /**
-     * @param name
-     * @param moneyAmount
-     * @return
+     * @param name - имя пользователя
+     * @param moneyAmount - сумма денег
+     * @return - нового пользователя
      */
     @Override
     public Person createNewPerson(String name, double moneyAmount) {
@@ -17,18 +19,18 @@ public class PersonProductRepositoryImpl implements PersonProductRepository {
     }
 
     /**
-     * @param name
-     * @param coast
-     * @return
+     * @param name - название продукта
+     * @param coast - цена продукта
+     * @return - новый продукт
      */
     @Override
     public Product createNewProduct(String name, double coast) {
-        return new Product(name, coast);
+        return new Product(getProductName(name), getProductCoast(coast));
     }
 
     /**
-     * @param name
-     * @return
+     * @param name - имя пользователя
+     * @return - имя или исключение
      */
     @Override
     public String getPersonName(String name) {
@@ -39,13 +41,13 @@ public class PersonProductRepositoryImpl implements PersonProductRepository {
 
             return name;
         } catch(IllegalArgumentException error) {
-            throw new IllegalArgumentException("Имя пользователя не может быть пустой строкой!", error);
+            throw new IllegalArgumentException(error.getMessage());
         }
     }
 
     /**
-     * @param moneyAmount
-     * @return
+     * @param moneyAmount - сумма денег
+     * @return - сумма денег или исключение
      */
     @Override
     public Double getPersonMoneyAmount(Double moneyAmount) {
@@ -56,23 +58,13 @@ public class PersonProductRepositoryImpl implements PersonProductRepository {
 
             return moneyAmount;
         } catch(IllegalArgumentException error) {
-            throw new IllegalArgumentException("Сумма не может быть отрицательным числом!", error);
+            throw new IllegalArgumentException(error.getMessage());
         }
     }
 
     /**
-     * @param product
-     * @param currentPersonMoneyAmount
-     * @return
-     */
-    @Override
-    public Product[] getPersonProductToPackage(Product product, Double currentPersonMoneyAmount) {
-        return new Product[0];
-    }
-
-    /**
-     * @param productName
-     * @return
+     * @param productName - название продукта
+     * @return - название или исключение
      */
     @Override
     public String getProductName(String productName) {
@@ -83,13 +75,13 @@ public class PersonProductRepositoryImpl implements PersonProductRepository {
 
             return productName;
         } catch(IllegalArgumentException error) {
-            throw new IllegalArgumentException("Имя продукта не может быть пустой строкой!", error);
+            throw new IllegalArgumentException(error.getMessage());
         }
     }
 
     /**
-     * @param coast
-     * @return
+     * @param coast - цена продукта
+     * @return - цена или исключение
      */
     @Override
     public Double getProductCoast(Double coast) {
@@ -100,7 +92,7 @@ public class PersonProductRepositoryImpl implements PersonProductRepository {
 
             return coast;
         } catch(IllegalArgumentException error) {
-            throw new IllegalArgumentException("Цена не может быть отрицательным числом!", error);
+            throw new IllegalArgumentException(error.getMessage());
         }
     }
 

@@ -69,20 +69,20 @@ class PersonProductRepositoryImplTest {
         assertEquals(TEST_CORRECT_PRODUCT_COAST, testCorrectProduct.getCoast());
     }
     @Test
-    @DisplayName("Тест создания пользователя с некорректным именем")
+    @DisplayName("Тест создания продукта с некорректным названием")
     void createNewProductWithWrongName() {
         IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
-            PERSON_PRODUCT_METHODS_STORE.createNewPerson(
+            PERSON_PRODUCT_METHODS_STORE.createNewProduct(
                     TEST_WRONG_PRODUCT_NAME, TEST_CORRECT_PRODUCT_COAST
             );
         });
         assertEquals(WRONG_PRODUCT_NAME_EXCEPTION_MESSAGE, thrown.getMessage());
     }
     @Test
-    @DisplayName("Тест создания пользователя с некорректной суммой")
+    @DisplayName("Тест создания продукта с некорректной ценой")
     void createNewProductWithWrongCoast() {
         IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
-            PERSON_PRODUCT_METHODS_STORE.createNewPerson(
+            PERSON_PRODUCT_METHODS_STORE.createNewProduct(
                     TEST_CORRECT_PRODUCT_NAME, TEST_WRONG_PRODUCT_COAST
             );
         });
@@ -120,10 +120,6 @@ class PersonProductRepositoryImplTest {
                 WRONG_MONEY_AMOUNT_EXCEPTION_MESSAGE,
                 thrown.getMessage()
         );
-    }
-
-    @Test
-    void getPersonProductToPackage() {
     }
 
     @Test

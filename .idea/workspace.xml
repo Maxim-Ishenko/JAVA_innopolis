@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/.idea/libraries/junit_jupiter.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/.idea/libraries/mockito_junit_jupiter.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/Homeworks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/Homeworks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homeworks/test/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/test/ru/innopolis/java/homework014_unit_tests_HW6/repository/PersonProductRepositoryImplTest.java" afterDir="false" />
@@ -89,7 +84,7 @@
       <recent name="ru.innopolis.java.attestation01.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount">
+  <component name="RunManager" selected="JUnit.PersonProductRepositoryImplTest">
     <configuration name="PersonProductRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homeworks" />
       <extension name="coverage">
@@ -171,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongName (1)" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongName" />
-        <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +210,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="merged attestation/attestation1 into the current homeworks/homework14" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest.ic" NAME="PersonProductRepositoryImplTest Coverage Results" MODIFIED="1706164167252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest.ic" NAME="PersonProductRepositoryImplTest Coverage Results" MODIFIED="1706244732855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
     </SUITE>
   </component>
