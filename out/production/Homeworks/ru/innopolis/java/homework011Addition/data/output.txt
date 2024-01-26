@@ -1,0 +1,12 @@
+
+Номера автомобилей по цвету или пробегу: Car{number=a123me, model='Mercedes', color='White', mileage=0, coast=8300000.0}
+
+Номера автомобилей по цвету или пробегу: Car{number=b873of, model='Volga', color='Black', mileage=0, coast=673000.0}
+
+Номера автомобилей по цвету или пробегу: Car{number=c987ss, model='Toyota', color='White', mileage=254000, coast=761000.0}
+
+Номера автомобилей по цвету или пробегу: Car{number=p146op, model='BMW', color='White', mileage=271000, coast=850000.0}
+
+Уникальные автомобили: 3 шт.
+Цвет авто с минимальной стоимостью: Purple
+Средняя стоимость модели Toyota : 744200.0
