@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="" />
+    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/homework016_attestation1_maven.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/repository/UsersRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/repository/UsersRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/utils/CustomExceptions/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/utils/CustomExceptions/WrongLoginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/utils/CustomExceptions/WrongPasswordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/utils/Helpers/DataHandlerParserHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/utils/Helpers/FileWorkHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/java/ru/innopolis/utils/Helpers/ScannerWorkHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/main/resources/users.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/test/java/ru/innopolis/UsersRepositoryImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/test/resources/users.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/target/classes/users.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Homeworks/ru/innopolis/java/homework016_maven_jar/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Homeworks/ru/innopolis/java/homework016_maven_jar/src/main/java/ru/innopolis/attestation1/resources/users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation01/resources/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation01/resources/users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homeworks/Homeworks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/Homeworks.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Attestations/ru/innopolis/java/attestation01/resources/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Attestations/ru/innopolis/java/attestation01/resources/users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Attestations/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Attestations/users.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="attestation/attestation01" />
+        <entry key="$PROJECT_DIR$" value="homeworks/homework014_unit_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,9 +59,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2bLG0834SXRNkPCRgpqc8zxvKSU" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,35 +70,70 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path": "C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Attestations\\lib",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "homeworks/homework013__compilation__runtime__exceptions",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Attestations\\lib&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homeworks/homework016__maven__jar&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/src/test&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_attestation1_maven\src\test" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_attestation1_maven\src\main\resources" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_maven_jar" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_attestation1_maven\src\main\resources" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_attestation1_maven\src\main\java\ru\innopolis\resources" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_attestation1_maven\src\main\java\ru\innopolis" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_attestation1_maven\src\main" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\Homeworks\src\ru\innopolis\java\homework016_attestation1_maven\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.innopolis" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.innopolis.java.homework016_maven_jar.src.test" />
       <recent name="ru.innopolis.java.attestation01.repository" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.innopolis.java.homework016_maven_jar.src.test.java.ru.innopolis.attestation1" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersRepositoryImplTest">
+  <component name="RunManager" selected="JAR Application.homework016_attestation1_maven-1.0-SNAPSHOT.jar (1)">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.App" />
+      <module name="homework016_attestation1_maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsersRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Attestations" />
       <extension name="coverage">
@@ -83,77 +149,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersRepositoryImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="create" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="homework016_attestation1_maven-1.0-SNAPSHOT.jar (1)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/artifacts/homework016_attestation1_maven-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
-    <configuration name="UsersRepositoryImplTest.createFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="createFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="homework016_attestation1_maven-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven/target/homework016_attestation1_maven-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
-    <configuration name="UsersRepositoryImplTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findById(java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="homework016_attestation1_maven [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework016_attestation1_maven" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
-    <configuration name="UsersRepositoryImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JAR Application.homework016_attestation1_maven-1.0-SNAPSHOT.jar" />
+      <item itemvalue="JAR Application.homework016_attestation1_maven-1.0-SNAPSHOT.jar (1)" />
+      <item itemvalue="JUnit.UsersRepositoryImplTest" />
+      <item itemvalue="Maven.homework016_attestation1_maven [clean]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.homework016_attestation1_maven-1.0-SNAPSHOT.jar (1)" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="JAR Application.homework016_attestation1_maven-1.0-SNAPSHOT.jar" />
+        <item itemvalue="Maven.homework016_attestation1_maven [clean]" />
         <item itemvalue="JUnit.UsersRepositoryImplTest" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest.findById" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest.create" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest.createFail" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest.update" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +226,21 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest.ic" NAME="PersonProductRepositoryImplTest Coverage Results" MODIFIED="1706247221948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.*</FILTER>
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.App</FILTER>
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_getProductCoast.ic" NAME="PersonProductRepositoryImplTest.getProductCoast Coverage Results" MODIFIED="1706247373437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_createNewPerson__1_.ic" NAME="PersonProductRepositoryImplTest.createNewPerson (1) Coverage Results" MODIFIED="1706248838028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
+    </SUITE>
   </component>
 </project>
