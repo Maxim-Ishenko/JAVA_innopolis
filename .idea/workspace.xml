@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Car/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Car/PerformanceCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Car/ShowCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Garage/Garage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Race/CasualRace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Race/CircuitRace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Race/DragRace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Race/DriftRace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Race/Race.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/model/Race/TimeLimitRace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/repository/CarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/repository/CarRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/utils/CarDataHandlerParserHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/utils/FileWorkHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/java/ru/innopolis/utils/RaceDataHandlerParserHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/resources/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/main/resources/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/test/java/ru/innopolis/repository/CarRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/test/resources/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/src/test/resources/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homeworks/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Attestations/ru/innopolis/java/attestation01/resources/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Attestations/ru/innopolis/java/attestation01/resources/users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Attestations/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Attestations/users.txt" afterDir="false" />
-    </list>
+    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
