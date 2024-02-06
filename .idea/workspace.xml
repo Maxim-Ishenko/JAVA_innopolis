@@ -52,29 +52,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homeworks/homework014__unit__test&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;coverage&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path": "C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib",
+    "Downloaded.Files.Path.Enabled": "true",
+    "OverrideImplement.generate.javadoc": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "homeworks/homework014__unit__test",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "coverage"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -84,100 +84,114 @@
       <recent name="ru.innopolis.java.attestation01.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersRepositoryImplTest">
-    <configuration name="UsersRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
+  <component name="RunManager" selected="JUnit.PersonProductRepositoryImplTest">
+    <configuration name="PersonProductRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.App" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersRepositoryImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
+    <configuration name="PersonProductRepositoryImplTest.createNewPerson (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="create" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="createNewPerson" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersRepositoryImplTest.createFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
+    <configuration name="PersonProductRepositoryImplTest.createNewPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="createFail" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="createNewPerson(ru.innopolis.java.homework014_unit_tests_HW6.model.Person)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersRepositoryImplTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
+    <configuration name="PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findById(java.lang.String)" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="createNewPersonWithWrongMoneyAmount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersRepositoryImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Attestations" />
+    <configuration name="PersonProductRepositoryImplTest.getProductCoast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.attestation01.repository.*" />
+          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.attestation01.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.attestation01.repository.UsersRepositoryImplTest" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
+      <option name="METHOD_NAME" value="getProductCoast" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UsersRepositoryImplTest" />
-      <item itemvalue="JUnit.UsersRepositoryImplTest.create" />
-      <item itemvalue="JUnit.UsersRepositoryImplTest.createFail" />
-      <item itemvalue="JUnit.UsersRepositoryImplTest.findById" />
-      <item itemvalue="JUnit.UsersRepositoryImplTest.update" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.getProductCoast" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
+      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsersRepositoryImplTest.update" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest.findById" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest.createFail" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest.create" />
-        <item itemvalue="JUnit.UsersRepositoryImplTest" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest.getProductCoast" />
+        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" />
       </list>
     </recent_temporary>
   </component>
