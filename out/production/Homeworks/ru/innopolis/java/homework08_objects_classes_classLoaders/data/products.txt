@@ -1,0 +1,5 @@
+productName: Хлеб, coast: 15
+productName: Хрен, coast: 300
+productName: Редька, coast: 45
+productName: Сахар, coast: 32
+productName: Фисташковое пралине, coast: 150
