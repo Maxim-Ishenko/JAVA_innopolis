@@ -7,6 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/out" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/innopolis/java/homework016_attestation1_maven/target/classes/ru" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/innopolis/java/homework016_attestation1_maven/target/generated-sources" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/innopolis/java/homework016_attestation1_maven/target/generated-test-sources" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/innopolis/java/homework016_attestation1_maven/target/test-classes/ru" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
