@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +68,8 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "homeworks/homework016__maven__jar",
     "ignore.virus.scanning.warn.message": "true",
+    "git-widget-placeholder": "homeworks/homework017__modern__ide",
+    "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis",
     "project.structure.last.edited": "Modules",
@@ -82,6 +87,10 @@
       <recent name="ru.innopolis.java.attestation01.repository" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.CarRepositoryImplTest">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.App" />
+      <module name="homework017_maven_hw09" />
   <component name="RunManager" selected="JUnit.PersonProductRepositoryImplTest">
     <configuration name="PersonProductRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homeworks" />
@@ -100,6 +109,7 @@
         </pattern>
         <pattern>
           <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl" />
+          <option name="PATTERN" value="ru.innopolis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,14 +122,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CarRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework017_maven_hw09" />
     <configuration name="PersonProductRepositoryImplTest.createNewPerson (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="ru.innopolis.repository.*" />
           <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.repository.CarRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
       <option name="METHOD_NAME" value="createNewPerson" />
@@ -128,14 +144,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CarRepositoryImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework017_maven_hw09" />
     <configuration name="PersonProductRepositoryImplTest.createNewPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="ru.innopolis.repository.*" />
           <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.repository.CarRepositoryImplTest" />
+      <option name="METHOD_NAME" value="create" />
       <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
       <option name="METHOD_NAME" value="createNewPerson(ru.innopolis.java.homework014_unit_tests_HW6.model.Person)" />
@@ -146,28 +168,40 @@
     </configuration>
     <configuration name="PersonProductRepositoryImplTest.createNewPersonWithWrongMoneyAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homeworks" />
+    <configuration name="CarRepositoryImplTest.deleteAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework017_maven_hw09" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
+          <option name="PATTERN" value="ru.innopolis.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
       <option name="METHOD_NAME" value="createNewPersonWithWrongMoneyAmount" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.repository.CarRepositoryImplTest" />
+      <option name="METHOD_NAME" value="deleteAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CarRepositoryImplTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework017_maven_hw09" />
     <configuration name="PersonProductRepositoryImplTest.getProductCoast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homeworks" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="ru.innopolis.repository.*" />
           <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.repository" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.repository.CarRepositoryImplTest" />
+      <option name="METHOD_NAME" value="findAll" />
       <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
       <option name="METHOD_NAME" value="getProductCoast" />
@@ -177,6 +211,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.CarRepositoryImplTest" />
+      <item itemvalue="JUnit.CarRepositoryImplTest.create" />
+      <item itemvalue="JUnit.CarRepositoryImplTest.deleteAll" />
+      <item itemvalue="JUnit.CarRepositoryImplTest.findAll" />
+    </list>
+    <list>
       <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
       <item itemvalue="JUnit.PersonProductRepositoryImplTest.getProductCoast" />
       <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
@@ -185,6 +226,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CarRepositoryImplTest.findAll" />
+        <item itemvalue="JUnit.CarRepositoryImplTest.deleteAll" />
+        <item itemvalue="JUnit.CarRepositoryImplTest.create" />
+        <item itemvalue="JUnit.CarRepositoryImplTest" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
