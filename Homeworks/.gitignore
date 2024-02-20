@@ -28,3 +28,7 @@ bin/
 ### Mac OS ###
 .DS_Store
 /src/ru/innopolis/java/homework016_attestation1_maven/target/
+
+# IDE settings files
+*.iml
+*.xml
