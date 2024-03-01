@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="merged attestation/attestation1 into the current homeworks/homework14" />
+    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed">
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/Attestattion03Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Appointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Office.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Specialities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/TimeSlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/test/java/ru/innopolis/attestattion03/Attestattion03ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/59f373ed-43bd-40ac-aada-23abd1cc7355.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/59f373ed-43bd-40ac-aada-23abd1cc7355.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homeworks/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Homeworks/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,6 +90,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Database Script.schema.sql.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib",
     "Downloaded.Files.Path.Enabled": "true",
@@ -74,17 +104,20 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "attestation/attestation03",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/Attestations/attestation3/SpringBootFullAppIntroExample_part2",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -192,12 +225,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Attestattion03Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="attestattion03" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.innopolis.attestattion03.Attestattion03Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Database Script.schema.sql" />
       <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
       <item itemvalue="JUnit.PersonProductRepositoryImplTest.getProductCoast" />
       <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
       <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
+      <item itemvalue="Spring Boot.Attestattion03Application" />
     </list>
     <recent_temporary>
       <list>
@@ -224,6 +265,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705986721038</updated>
+      <workItem from="1708489744323" duration="1188000" />
+      <workItem from="1708578118474" duration="3421000" />
+      <workItem from="1708924432227" duration="592000" />
+      <workItem from="1709100342213" duration="12557000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />
@@ -233,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706154103821</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="setting files changed">
+      <option name="closed" value="true" />
+      <created>1708406628508</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708406628508</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,8 +304,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="merged attestation/attestation1 into the current homeworks/homework14" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged attestation/attestation1 into the current homeworks/homework14" />
+    <MESSAGE value="setting files changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting files changed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest.ic" NAME="PersonProductRepositoryImplTest Coverage Results" MODIFIED="1706247221948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
