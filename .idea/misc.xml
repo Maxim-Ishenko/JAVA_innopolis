@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
-<<<<<<< Updated upstream
-=======
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_modern_ide/untitled/pom.xml" />
-        <option value="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_modern_ide/homework017_maven_hw09/pom.xml" />
-        <option value="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_maven_hw09/pom.xml" />
-        <option value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation2/pom.xml" />
+        <option value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/pom.xml" />
         <option value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation02/pom.xml" />
+        <option value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation2/pom.xml" />
-        <option value="$PROJECT_DIR$/Homeworks/src/ru/innopolis/java/homework017_modern_ide/untitled/pom.xml" />
-      </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
->>>>>>> Stashed changes
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>
