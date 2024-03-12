@@ -15,14 +15,14 @@ import java.util.List;
 @Entity
 @Table(name="doctor")
 public class Doctor {
+    static public String DOCTOR_NOT_FOUND_EXCEPTION_MESSAGE = "Доктора с таким идентификатором не существует";
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="doctor", nullable = false)
     private Long id;
 
-    @Enumerated(value = EnumType.STRING)
     @Column(name="speciality", nullable = false)
-    private Specialities speciality;
+    private Integer speciality;
 
     @Column(name="first_name", nullable = false)
     private String firstName;
@@ -31,12 +31,17 @@ public class Doctor {
     @Column(name="patronymic")
     private String patronymic;
 
-    @Column(name="phone_number", unique = true)
+    @Column(name="phone_number", nullable = false)
     private Long phoneNumber;
 
     @OneToMany(mappedBy = "doctor")
+    @Column(name="time_slots")
     private List<TimeSlot> timeSlotsList;
 
     @OneToMany(mappedBy = "doctor")
+    @Column(name="appointments")
     private List<Appointment> appointmentList;
+
+    @Column(name="has_removed")
+    private Boolean hasRemoved;
 }

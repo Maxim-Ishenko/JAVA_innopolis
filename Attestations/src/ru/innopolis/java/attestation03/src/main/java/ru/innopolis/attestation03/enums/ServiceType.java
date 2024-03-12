@@ -1,4 +1,4 @@
-package ru.innopolis.attestation03.models;
+package ru.innopolis.attestation03.enums;
 
 import lombok.Getter;
 

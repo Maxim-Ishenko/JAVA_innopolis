@@ -5,37 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed">
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/ServiceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/AppointmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/DoctorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/PatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/TimeSlotController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/DoctorDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/enums/ResultsMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/exceptions/CustomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/AppointmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/DoctorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/TimeSlotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/AppointmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/DoctorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/TimeSlotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/AppointmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/DoctorServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/PatientServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/TimeSlotServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/shop.9to1AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/shop.9to1AA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33d6dc77-c0f6-4b71-a6ea-ff0c4a93bfc7/storage_v2/_src_/database/shop.9to1AA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54/storage_v2/_src_/database/appointments.tBiWWg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54/storage_v2/_src_/database/appointments.tBiWWg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/Attestattion03Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/Attestation03Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/ServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Appointment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Office.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/Specialities.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Specialities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/java/ru/innopolis/attestattion03/models/TimeSlot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/resources/schema.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/test/java/ru/innopolis/attestattion03/Attestattion03ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/Attestation03ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/utils/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/ServiceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/enums/ServiceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Specialities.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/enums/Specialities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +60,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,9 +79,9 @@
       <run-configuration type="JUnit" name="PersonProductRepositoryImplTest" />
     </enabled-run-configurations>
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -102,6 +114,8 @@
     "Database Script.schema.sql.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib",
     "Downloaded.Files.Path.Enabled": "true",
+    "HTTP Request.Attestation03Application | #1.executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
     "Maven.attestation02 [clean].executor": "Run",
     "Maven.attestation03 [clean].executor": "Run",
     "Maven.attestation03 [install].executor": "Run",
@@ -133,7 +147,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -157,6 +171,9 @@
       <recent name="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
       <recent name="ru.innopolis.java.attestation01.repository" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.innopolis.attestation03.exceptions" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Attestation03Application">
     <configuration name="schema.sql (1)" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
@@ -168,6 +185,12 @@
       <script-file value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation02/src/main/resources/schema.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="59f373ed-43bd-40ac-aada-23abd1cc7355" namespace="database/&quot;shop&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attestation03Application | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/Attestation03Application.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="PersonProductRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -199,38 +222,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonProductRepositoryImplTest.createNewPerson (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
-      <option name="METHOD_NAME" value="createNewPerson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonProductRepositoryImplTest.createNewPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
-      <option name="METHOD_NAME" value="createNewPerson(ru.innopolis.java.homework014_unit_tests_HW6.model.Person)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Attestation03Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="attestation03" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.innopolis.attestation03.Attestation03Application" />
@@ -248,19 +239,19 @@
     <list>
       <item itemvalue="Database Script.schema.sql (1)" />
       <item itemvalue="Database Script.schema.sql" />
-      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
+      <item itemvalue="HTTP Request.Attestation03Application | #1" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
-      <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
       <item itemvalue="Spring Boot.Attestation03Application" />
       <item itemvalue="Spring Boot.Attestattion03Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.Attestation03Application | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Database Script.schema.sql (1)" />
         <item itemvalue="Database Script.schema.sql" />
         <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
-        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson" />
-        <item itemvalue="JUnit.PersonProductRepositoryImplTest.createNewPerson (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +273,8 @@
       <workItem from="1708489744323" duration="1188000" />
       <workItem from="1708578118474" duration="3421000" />
       <workItem from="1708924432227" duration="592000" />
-      <workItem from="1709100342213" duration="40736000" />
+      <workItem from="1709100342213" duration="64503000" />
+      <workItem from="1709883862755" duration="35655000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.innopolis.attestation03.enums.ServiceType;
 
 import java.time.LocalDate;
 
@@ -38,4 +39,7 @@ public class Appointment {
     @Enumerated(value = EnumType.STRING)
     @Column(name="service_type", nullable = false)
     private ServiceType serviceType;
+
+    @Column(name="has_removed")
+    private Boolean hasRemoved;
 }

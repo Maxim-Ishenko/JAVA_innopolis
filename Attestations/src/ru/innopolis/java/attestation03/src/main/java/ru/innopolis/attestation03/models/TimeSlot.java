@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -42,4 +41,7 @@ public class TimeSlot {
 
     @Column(name="availability", nullable = false)
     private Boolean availability;
+
+    @Column(name="has_removed")
+    private Boolean hasRemoved;
 }

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.innopolis.attestation03.utils.Address;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -43,4 +44,7 @@ public class Patient {
 
     @OneToMany(mappedBy = "patient")
     private List<Appointment> appointment;
+
+    @Column(name="has_removed")
+    private Boolean hasRemoved;
 }

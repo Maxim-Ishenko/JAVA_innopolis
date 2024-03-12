@@ -1,4 +1,4 @@
-package ru.innopolis.attestation03.models;
+package ru.innopolis.attestation03.utils;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
