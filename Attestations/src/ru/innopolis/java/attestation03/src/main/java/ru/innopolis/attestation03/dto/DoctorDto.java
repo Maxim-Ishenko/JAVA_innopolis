@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.innopolis.attestation03.enums.Specialities;
 import ru.innopolis.attestation03.models.Appointment;
 import ru.innopolis.attestation03.models.Doctor;
 import ru.innopolis.attestation03.models.TimeSlot;
