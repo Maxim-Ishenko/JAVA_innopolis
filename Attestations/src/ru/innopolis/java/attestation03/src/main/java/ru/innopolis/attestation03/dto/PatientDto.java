@@ -8,6 +8,7 @@ import ru.innopolis.attestation03.models.Appointment;
 import ru.innopolis.attestation03.models.Patient;
 import ru.innopolis.attestation03.utils.Address;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,10 +21,8 @@ public class PatientDto {
     private String firstName;
     private String lastName;
     private String patronymic;
-    private String birthdate;
-    private String gender;
+    private LocalDate birthdate;
     private Long phoneNumber;
-    private Long email;
     private Address address;
     private List<Appointment> appointment;
 
@@ -34,9 +33,7 @@ public class PatientDto {
                 .lastName(patient.getLastName())
                 .patronymic(patient.getPatronymic())
                 .birthdate(patient.getBirthdate())
-                .gender(patient.getGender())
                 .phoneNumber(patient.getPhoneNumber())
-                .email(patient.getEmail())
                 .address(patient.getAddress())
                 .appointment(patient.getAppointment())
                 .build();

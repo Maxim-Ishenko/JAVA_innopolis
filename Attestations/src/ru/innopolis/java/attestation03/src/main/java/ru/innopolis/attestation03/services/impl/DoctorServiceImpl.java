@@ -117,7 +117,8 @@ public class DoctorServiceImpl implements DoctorService {
 
             doctorRepository.deleteById(id);
         } catch(CustomException err) {
-            throw new CustomException(ResultsMessages.DOCTOR_NOT_FOUND);
+            err.getStackTrace();
+            throw new CustomException(err.getMessage());
         }
     }
 
@@ -146,8 +147,8 @@ public class DoctorServiceImpl implements DoctorService {
             doctor.setHasRemoved(true);
             from(doctorRepository.save(doctor));
         } catch(CustomException err) {
-            throw new CustomException(ResultsMessages.DOCTOR_NOT_FOUND);
+            err.getStackTrace();
+            throw new CustomException(err.getMessage());
         }
-
     }
 }

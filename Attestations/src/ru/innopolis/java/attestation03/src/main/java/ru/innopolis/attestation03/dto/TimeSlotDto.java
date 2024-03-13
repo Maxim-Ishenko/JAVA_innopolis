@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.innopolis.attestation03.models.Appointment;
 import ru.innopolis.attestation03.models.Doctor;
-import ru.innopolis.attestation03.models.Patient;
 import ru.innopolis.attestation03.models.TimeSlot;
 
 import java.time.LocalDate;

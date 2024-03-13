@@ -17,9 +17,6 @@ import java.util.List;
 @Entity
 @Table(name="patient")
 public class Patient {
-    @Temporal(TemporalType.DATE)
-    private LocalDate registrationDate;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,17 +29,17 @@ public class Patient {
     private String patronymic;
 
     @Temporal(TemporalType.DATE)
-    private String birthdate;
-
-    private String gender;
+    @Column(name="birthdate")
+    private LocalDate birthdate;
 
     @Column(name="phone_number", unique = true, nullable = false)
     private Long phoneNumber;
 
-    private Long email;
+    @Column(name="address")
     private Address address;
 
     @OneToMany(mappedBy = "patient")
+    @Column(name="appointments")
     private List<Appointment> appointment;
 
     @Column(name="has_removed")
