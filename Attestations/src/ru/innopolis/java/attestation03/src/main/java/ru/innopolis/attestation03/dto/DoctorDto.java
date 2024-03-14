@@ -33,8 +33,6 @@ public class DoctorDto {
                 .lastName(doctor.getLastName())
                 .patronymic(doctor.getPatronymic())
                 .phoneNumber(doctor.getPhoneNumber())
-                .appointmentList(doctor.getAppointmentList())
-                .timeSlotsList(doctor.getTimeSlotsList())
                 .build();
     }
 

@@ -1,8 +1,9 @@
 package ru.innopolis.attestation03.services;
 
-import ru.innopolis.attestation03.models.TimeSlot;
+import ru.innopolis.attestation03.dto.AddTimeSlotDto;
+import ru.innopolis.attestation03.dto.TimeSlotDto;
+import ru.innopolis.attestation03.enums.ResultsMessages;
 
-import java.io.IOException;
 import java.util.List;
 
 public interface TimeSlotService {
@@ -10,35 +11,55 @@ public interface TimeSlotService {
      * Выгрузка всех окон записи из БД
      * @return List<TimeSlot>
      */
-    List<TimeSlot> findAll();
+    List<TimeSlotDto> findAll();
 
     /**
      * Поиск окна записи в БД по идентификатору
      * @return TimeSlot
      */
-    TimeSlot findById(String id);
+    TimeSlotDto findById(Long id);
 
     /**
      * Создание сущности окна записи и запись его в БД
-     * @return void
+     * @return TimeSlotDto
      */
-    void create(TimeSlot timeSlot);
+    TimeSlotDto create(AddTimeSlotDto timeSlot);
 
     /**
      * Обновление полей существующего в БД окна записи
-     * @return void
+     * @return TimeSlotDto
      */
-    void update(TimeSlot timeSlot);
+    TimeSlotDto update(Long timeSlotId, TimeSlotDto timeSlot);
 
     /**
      * Удаление окна записи из БД по идентификатору
      * @return void
      */
-    void deleteById(String id);
+    void deleteById(Long id);
 
     /**
      * Удаление всех окон записи из БД
+     * @return ResultsMessages
+     */
+    ResultsMessages deleteAll();
+
+    /**
+     * Обратимое удаление доктора из БД по идентификатору
+     *
+     * @param id
      * @return void
      */
-    void deleteAll() throws IOException;
+    void softDeleteById(Long id);
+
+    /**
+     * Поиск всех временных слотов по конкретному доктору
+     * @return TimeSlot
+     */
+    List<TimeSlotDto> findAllByDoctorId(Long doctorId);
+
+    /**
+     * Поиск всех свободных временных слотов по конкретному доктору
+     * @return List<TimeSlot>
+     */
+    List<TimeSlotDto> findAllAvailableByDoctorId(Long doctorId);
 }

@@ -29,8 +29,6 @@ public class TimeSlotDto {
     public static TimeSlotDto from(TimeSlot timeSlot) {
         return TimeSlotDto.builder()
                 .id(timeSlot.getId())
-                .doctor(timeSlot.getDoctor())
-                .appointment(timeSlot.getAppointment())
                 .date(timeSlot.getDate())
                 .startTime(timeSlot.getStartTime())
                 .endTime(timeSlot.getEndTime())

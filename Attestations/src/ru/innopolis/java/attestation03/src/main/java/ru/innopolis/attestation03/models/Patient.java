@@ -33,7 +33,7 @@ public class Patient {
     private LocalDate birthdate;
 
     @Column(name="phone_number", unique = true, nullable = false)
-    private Long phoneNumber;
+    private Integer phoneNumber;
 
     @Column(name="address")
     private Address address;

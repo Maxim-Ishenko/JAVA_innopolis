@@ -125,11 +125,12 @@ public class PatientServiceImpl implements PatientService {
     public ResultsMessages deleteAll() {
         try {
             patientRepository.deleteAll();
+
+            return ResultsMessages.PATIENTS_LIST_REMOVE_SUCCESS;
         } catch(CustomException err) {
+            err.getStackTrace();
             return ResultsMessages.PATIENTS_LIST_REMOVE_ERROR;
         }
-
-        return ResultsMessages.PATIENTS_LIST_REMOVE_SUCCESS;
     }
 
     /**

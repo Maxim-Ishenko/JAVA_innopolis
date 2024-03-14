@@ -28,13 +28,14 @@ public class DoctorServiceImpl implements DoctorService {
         try {
             return from(doctorRepository.findAllNotRemovedDoctors());
         } catch(CustomException err) {
+            err.getStackTrace();
             throw new CustomException(ResultsMessages.DOCTOR_LIST_REQ_ERR);
         }
     }
 
     /**
      * @param id
-     * @return Doctor
+     * @return DoctorDto
      */
     @Override
     public DoctorDto findById(Long id) {
@@ -55,7 +56,7 @@ public class DoctorServiceImpl implements DoctorService {
 
     /**
      * @param doctor
-     * @return
+     * @return DoctorDto
      */
     @Override
     public DoctorDto create(DoctorDto doctor) {
@@ -75,14 +76,14 @@ public class DoctorServiceImpl implements DoctorService {
             );
         } catch(CustomException err) {
             err.getStackTrace();
-            throw new CustomException(ResultsMessages.DOCTOR_CREATING_ERROR);
+            throw new CustomException(err.getMessage());
         }
     }
 
     /**
      * @param doctorId
      * @param editedDoctorEntity
-     * @return
+     * @return DoctorDto
      */
     @Transactional
     @Override
@@ -129,11 +130,12 @@ public class DoctorServiceImpl implements DoctorService {
     public ResultsMessages deleteAll() {
         try {
             doctorRepository.deleteAll();
+
+            return ResultsMessages.DOCTORS_LIST_REMOVE_SUCCESS;
         } catch(CustomException err) {
+            err.getStackTrace();
             return ResultsMessages.DOCTORS_LIST_REMOVE_ERROR;
         }
-
-        return ResultsMessages.DOCTORS_LIST_REMOVE_SUCCESS;
     }
 
     /**

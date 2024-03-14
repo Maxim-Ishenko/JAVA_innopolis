@@ -24,6 +24,7 @@ public interface DoctorService {
      * Создание сущности доктора и запись его в БД
      *
      * @param doctor
+     * @return DoctorDto
      */
     DoctorDto create(DoctorDto doctor);
 
@@ -45,7 +46,7 @@ public interface DoctorService {
     /**
      * Удаление всех докторов из БД
      *
-     * @return void
+     * @return ResultsMessages
      */
     ResultsMessages deleteAll();
 

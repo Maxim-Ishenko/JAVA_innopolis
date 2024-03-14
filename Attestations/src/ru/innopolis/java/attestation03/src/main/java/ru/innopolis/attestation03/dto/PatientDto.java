@@ -22,7 +22,7 @@ public class PatientDto {
     private String lastName;
     private String patronymic;
     private LocalDate birthdate;
-    private Long phoneNumber;
+    private Integer phoneNumber;
     private Address address;
     private List<Appointment> appointment;
 
@@ -35,7 +35,6 @@ public class PatientDto {
                 .birthdate(patient.getBirthdate())
                 .phoneNumber(patient.getPhoneNumber())
                 .address(patient.getAddress())
-                .appointment(patient.getAppointment())
                 .build();
     }
 
