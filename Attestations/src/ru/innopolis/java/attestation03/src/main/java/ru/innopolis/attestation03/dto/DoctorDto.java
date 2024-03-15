@@ -22,8 +22,8 @@ public class DoctorDto {
     private String lastName;
     private String patronymic;
     private Long phoneNumber;
-    private List<Appointment> appointmentList;
-    private List<TimeSlot> timeSlotsList;
+//    private List<Appointment> appointmentList;
+//    private List<TimeSlot> timeSlotsList;
 
     public static DoctorDto from(Doctor doctor) {
         return DoctorDto.builder()
@@ -33,6 +33,8 @@ public class DoctorDto {
                 .lastName(doctor.getLastName())
                 .patronymic(doctor.getPatronymic())
                 .phoneNumber(doctor.getPhoneNumber())
+//                .timeSlotsList(doctor.getTimeSlotsList())
+//                .appointmentList(doctor.getAppointmentList())
                 .build();
     }
 

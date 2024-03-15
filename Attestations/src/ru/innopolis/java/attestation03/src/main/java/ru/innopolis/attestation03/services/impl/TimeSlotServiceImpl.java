@@ -14,7 +14,6 @@ import ru.innopolis.attestation03.repositories.DoctorRepository;
 import ru.innopolis.attestation03.repositories.TimeSlotRepository;
 import ru.innopolis.attestation03.services.TimeSlotService;
 
-import javax.print.Doc;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -66,23 +65,40 @@ public class TimeSlotServiceImpl implements TimeSlotService {
      * @param timeSlot
      * @return TimeSlotDto
      */
+//    @Override
+//    public TimeSlotDto create(AddTimeSlotDto timeSlot) {
+//        try {
+//            Doctor doctor = doctorRepository
+//                    .findById(timeSlot.getDoctorId())
+//                    .orElseThrow((Supplier<RuntimeException>) ()
+//                        -> new CustomException(ResultsMessages.DOCTOR_NOT_FOUND));
+//
+//            TimeSlot newTimeSlot = TimeSlot.builder()
+//                    .doctor(doctor)
+//                    .date(timeSlot.getDate())
+//                    .startTime(timeSlot.getStartTime())
+//                    .endTime(timeSlot.getEndTime())
+//                    .availability(true)
+//                    .hasRemoved(false)
+//                    .build();
+//
+//            return from(timeSlotRepository.save(newTimeSlot));
+//        } catch(CustomException err) {
+//            err.getStackTrace();
+//            throw new CustomException(err.getMessage());
+//        }
+//    }
     @Override
-    public TimeSlotDto create(AddTimeSlotDto timeSlot) {
+    public TimeSlotDto create(Long doctorId, TimeSlot timeSlot) {
         try {
-            Doctor doctor = doctorRepository
-                    .findById(timeSlot.getDoctorId())
+            return from(doctorRepository
+                    .findById(doctorId)
+                    .map(currentDoctor -> {
+                        timeSlot.setDoctor(currentDoctor);
+                        return timeSlotRepository.save(timeSlot);
+                    })
                     .orElseThrow((Supplier<RuntimeException>) ()
-                        -> new CustomException(ResultsMessages.DOCTOR_NOT_FOUND));
-
-            TimeSlot newTimeSlot = TimeSlot.builder()
-                    .doctor(doctor)
-                    .date(timeSlot.getDate())
-                    .startTime(timeSlot.getStartTime())
-                    .endTime(timeSlot.getEndTime())
-                    .availability(true)
-                    .build();
-
-            return TimeSlotDto.from(timeSlotRepository.save(newTimeSlot));
+                            -> new CustomException(ResultsMessages.DOCTOR_NOT_FOUND)));
         } catch(CustomException err) {
             err.getStackTrace();
             throw new CustomException(err.getMessage());
@@ -103,7 +119,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
             timeSlot.setStartTime(editedTimeSlotEntity.getStartTime());
             timeSlot.setEndTime(editedTimeSlotEntity.getEndTime());
             timeSlot.setAvailability(editedTimeSlotEntity.getAvailability());
-            timeSlot.setDoctor(editedTimeSlotEntity.getDoctor());
+//            timeSlot.setDoctor(editedTimeSlotEntity.getDoctor());
             timeSlot.setAppointment(editedTimeSlotEntity.getAppointment());
 
             return from(timeSlotRepository.save(timeSlot));
@@ -172,8 +188,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
                     .findAllNotRemovedTimeSlots()
                     .stream()
                     .map(TimeSlotDto::from)
-                    .filter(currentTimeSlot ->
-                            Objects.equals(currentTimeSlot.getDoctor().getId(), doctorId))
+//                    .filter(currentTimeSlot ->
+//                            Objects.equals(currentTimeSlot.getDoctor().getId(), doctorId))
                     .toList();
         } catch(CustomException err) {
             err.getStackTrace();
@@ -192,9 +208,9 @@ public class TimeSlotServiceImpl implements TimeSlotService {
                     .findAllNotRemovedTimeSlots()
                     .stream()
                     .map(TimeSlotDto::from)
-                    .filter(currentTimeSlot ->
-                            Objects.equals(currentTimeSlot.getDoctor().getId(), doctorId)
-                            && currentTimeSlot.getAvailability())
+//                    .filter(currentTimeSlot ->
+//                            Objects.equals(currentTimeSlot.getDoctor().getId(), doctorId)
+//                            && currentTimeSlot.getAvailability())
                     .toList();
         } catch(CustomException err) {
             err.getStackTrace();

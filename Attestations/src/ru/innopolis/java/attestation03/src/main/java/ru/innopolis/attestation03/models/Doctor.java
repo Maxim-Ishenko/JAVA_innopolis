@@ -34,8 +34,10 @@ public class Doctor {
     @Column(name="phone_number", nullable = false)
     private Long phoneNumber;
 
-    @OneToMany(mappedBy = "doctor")
-    @Column(name="time_slots")
+//    @OneToMany(mappedBy = "doctor")
+//    @Column(name="time_slots")
+//    private List<TimeSlot> timeSlotsList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "doctor", fetch = FetchType.LAZY)
     private List<TimeSlot> timeSlotsList;
 
     @OneToMany(mappedBy = "doctor")

@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed">
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/AddTimeSlotDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54/storage_v2/_src_/database/appointments.tBiWWg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54/storage_v2/_src_/database/appointments.tBiWWg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/TimeSlotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/TimeSlotController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/DoctorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/DoctorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/PatientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/PatientDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/TimeSlotDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/TimeSlotDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/enums/ResultsMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/enums/ResultsMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/TimeSlotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/TimeSlotRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/DoctorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/TimeSlotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/TimeSlotService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/DoctorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/DoctorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/PatientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/PatientServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/TimeSlotServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/TimeSlotServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,61 +79,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Database Script.schema.sql.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;HTTP Request.Attestation03Application | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.attestation02 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.attestation03 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.attestation03 [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.attestattion03 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.attestattion03 [install].executor&quot;: &quot;Run&quot;,
-    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Attestation03Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Attestattion03Application.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;attestation/attestation03&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Максим/Documents/Java_School_Innopolis/Attestations/attestation3/SpringBootFullAppIntroExample_part2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Database Script.schema.sql.executor": "Run",
+    "Downloaded.Files.Path": "C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib",
+    "Downloaded.Files.Path.Enabled": "true",
+    "HTTP Request.Attestation03Application | #1.executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "Maven.attestation02 [clean].executor": "Run",
+    "Maven.attestation03 [clean].executor": "Run",
+    "Maven.attestation03 [install].executor": "Run",
+    "Maven.attestattion03 [clean].executor": "Run",
+    "Maven.attestattion03 [install].executor": "Run",
+    "OverrideImplement.generate.javadoc": "true",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Attestation03Application.executor": "Run",
+    "Spring Boot.Attestattion03Application.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "attestation/attestation03",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/Attestations/attestation3/SpringBootFullAppIntroExample_part2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;59f373ed-43bd-40ac-aada-23abd1cc7355&quot;,
-      &quot;59f373ed-43bd-40ac-aada-23abd1cc7355/database/\&quot;shop\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "59f373ed-43bd-40ac-aada-23abd1cc7355",
+      "59f373ed-43bd-40ac-aada-23abd1cc7355/database/\"shop\""
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -248,7 +246,7 @@
       <workItem from="1708924432227" duration="592000" />
       <workItem from="1709100342213" duration="64503000" />
       <workItem from="1709883862755" duration="47933000" />
-      <workItem from="1710387969216" duration="10140000" />
+      <workItem from="1710387969216" duration="32851000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />

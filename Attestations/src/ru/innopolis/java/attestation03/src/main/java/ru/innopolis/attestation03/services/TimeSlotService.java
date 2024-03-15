@@ -3,6 +3,7 @@ package ru.innopolis.attestation03.services;
 import ru.innopolis.attestation03.dto.AddTimeSlotDto;
 import ru.innopolis.attestation03.dto.TimeSlotDto;
 import ru.innopolis.attestation03.enums.ResultsMessages;
+import ru.innopolis.attestation03.models.TimeSlot;
 
 import java.util.List;
 
@@ -23,8 +24,8 @@ public interface TimeSlotService {
      * Создание сущности окна записи и запись его в БД
      * @return TimeSlotDto
      */
-    TimeSlotDto create(AddTimeSlotDto timeSlot);
-
+//    TimeSlotDto create(AddTimeSlotDto timeSlot);
+    TimeSlotDto create(Long doctorId, TimeSlot timeSlot);
     /**
      * Обновление полей существующего в БД окна записи
      * @return TimeSlotDto
