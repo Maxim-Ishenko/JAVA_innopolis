@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed">
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/AddDoctorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/TimeSlotServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/TimeSlotServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,7 +232,7 @@
       <workItem from="1708924432227" duration="592000" />
       <workItem from="1709100342213" duration="64503000" />
       <workItem from="1709883862755" duration="47933000" />
-      <workItem from="1710387969216" duration="35390000" />
+      <workItem from="1710387969216" duration="35726000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />
@@ -286,6 +280,11 @@
           <url>file://$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/TimeSlotController.java</url>
           <line>44</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/TimeSlotController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

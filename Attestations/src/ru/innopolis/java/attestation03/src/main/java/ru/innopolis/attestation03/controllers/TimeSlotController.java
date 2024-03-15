@@ -39,7 +39,7 @@ public class TimeSlotController {
 //    public ResponseEntity<List<TimeSlotDto>> getTimeSlotsByDoctor(@PathVariable("doctorId") Long doctorId) {
 //        return ResponseEntity.ok(timeSlotService.findAllByDoctorId(doctorId));
 //    }
-    @GetMapping("/doctors/{doctorId}/timeSlots")
+    @GetMapping("/doctors/{doctorId}")
     public Page<TimeSlot> getAllTimeSlotsByDoctorId(@PathVariable (value = "doctorId") Long doctorId,
                                                     Pageable pageable) {
         return timeSlotRepository.findByDoctorId(doctorId, pageable);
