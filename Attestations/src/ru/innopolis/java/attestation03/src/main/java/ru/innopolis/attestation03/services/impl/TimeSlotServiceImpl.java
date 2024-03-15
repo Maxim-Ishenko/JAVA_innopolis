@@ -54,7 +54,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
                 throw new NotFoundException();
             }
 
-            return TimeSlotDto.from(targetTimeSlot);
+            return from(targetTimeSlot);
         } catch(CustomException err) {
             err.getStackTrace();
             throw new CustomException(err.getMessage());
@@ -95,6 +95,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
                     .findById(doctorId)
                     .map(currentDoctor -> {
                         timeSlot.setDoctor(currentDoctor);
+                        timeSlot.setHasRemoved(false);
+
                         return timeSlotRepository.save(timeSlot);
                     })
                     .orElseThrow((Supplier<RuntimeException>) ()
@@ -119,7 +121,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
             timeSlot.setStartTime(editedTimeSlotEntity.getStartTime());
             timeSlot.setEndTime(editedTimeSlotEntity.getEndTime());
             timeSlot.setAvailability(editedTimeSlotEntity.getAvailability());
-//            timeSlot.setDoctor(editedTimeSlotEntity.getDoctor());
+            timeSlot.setDoctor(editedTimeSlotEntity.getDoctor());
             timeSlot.setAppointment(editedTimeSlotEntity.getAppointment());
 
             return from(timeSlotRepository.save(timeSlot));
@@ -170,7 +172,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
             TimeSlot timeSlot = timeSlotRepository.findById(id).orElseThrow(NotFoundException::new);
 
             timeSlot.setHasRemoved(true);
-            TimeSlotDto.from(timeSlotRepository.save(timeSlot));
+            from(timeSlotRepository.save(timeSlot));
         } catch(CustomException err) {
             err.getStackTrace();
             throw new CustomException(err.getMessage());

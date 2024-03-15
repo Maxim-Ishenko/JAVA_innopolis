@@ -37,8 +37,8 @@ public class Doctor {
 //    @OneToMany(mappedBy = "doctor")
 //    @Column(name="time_slots")
 //    private List<TimeSlot> timeSlotsList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "doctor", fetch = FetchType.LAZY)
-    private List<TimeSlot> timeSlotsList;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "doctor", fetch = FetchType.LAZY)
+//    private List<TimeSlot> timeSlotsList;
 
     @OneToMany(mappedBy = "doctor")
     @Column(name="appointments")
