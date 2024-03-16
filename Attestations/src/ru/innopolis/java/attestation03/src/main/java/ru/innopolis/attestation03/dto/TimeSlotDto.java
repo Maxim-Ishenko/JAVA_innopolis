@@ -4,14 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.innopolis.attestation03.models.Appointment;
-import ru.innopolis.attestation03.models.Doctor;
 import ru.innopolis.attestation03.models.TimeSlot;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Data
 @AllArgsConstructor
@@ -19,8 +16,8 @@ import java.util.stream.Collectors;
 @Builder
 public class TimeSlotDto {
     private Long id;
-    private Doctor doctor;
-    private Appointment appointment;
+    private Long doctorId;
+    private String doctorName;
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -29,16 +26,16 @@ public class TimeSlotDto {
     public static TimeSlotDto from(TimeSlot timeSlot) {
         return TimeSlotDto.builder()
                 .id(timeSlot.getId())
-                .doctor(timeSlot.getDoctor())
+                .doctorId(timeSlot.getDoctor().getId())
+                .doctorName(timeSlot.getDoctor().getLastName())
                 .date(timeSlot.getDate())
                 .startTime(timeSlot.getStartTime())
                 .endTime(timeSlot.getEndTime())
                 .availability(timeSlot.getAvailability())
-                .appointment(timeSlot.getAppointment())
                 .build();
     }
 
     public static List<TimeSlotDto> from(List<TimeSlot> timeSlots) {
-        return timeSlots.stream().map(TimeSlotDto::from).collect(Collectors.toList());
+        return timeSlots.stream().map(TimeSlotDto::from).toList();
     }
 }

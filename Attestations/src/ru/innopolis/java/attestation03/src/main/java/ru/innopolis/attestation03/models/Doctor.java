@@ -34,15 +34,11 @@ public class Doctor {
     @Column(name="phone_number", nullable = false)
     private Long phoneNumber;
 
-//    @OneToMany(mappedBy = "doctor")
-//    @Column(name="time_slots")
-//    private List<TimeSlot> timeSlotsList;
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "doctor", fetch = FetchType.LAZY)
-//    private List<TimeSlot> timeSlotsList;
-
     @OneToMany(mappedBy = "doctor")
-    @Column(name="appointments")
-    private List<Appointment> appointmentList;
+    private List<TimeSlot> timeSlots;
+
+//    @OneToMany(mappedBy = "doctor")
+//    private List<Appointment> appointments;
 
     @Column(name="has_removed")
     private Boolean hasRemoved;

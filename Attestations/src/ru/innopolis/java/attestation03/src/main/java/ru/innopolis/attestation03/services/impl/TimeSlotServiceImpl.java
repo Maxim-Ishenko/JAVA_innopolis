@@ -2,13 +2,10 @@ package ru.innopolis.attestation03.services.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.innopolis.attestation03.dto.AddTimeSlotDto;
-import ru.innopolis.attestation03.dto.DoctorDto;
 import ru.innopolis.attestation03.dto.TimeSlotDto;
 import ru.innopolis.attestation03.enums.ResultsMessages;
 import ru.innopolis.attestation03.exceptions.CustomException;
 import ru.innopolis.attestation03.exceptions.NotFoundException;
-import ru.innopolis.attestation03.models.Doctor;
 import ru.innopolis.attestation03.models.TimeSlot;
 import ru.innopolis.attestation03.repositories.DoctorRepository;
 import ru.innopolis.attestation03.repositories.TimeSlotRepository;
@@ -65,29 +62,6 @@ public class TimeSlotServiceImpl implements TimeSlotService {
      * @param timeSlot
      * @return TimeSlotDto
      */
-//    @Override
-//    public TimeSlotDto create(AddTimeSlotDto timeSlot) {
-//        try {
-//            Doctor doctor = doctorRepository
-//                    .findById(timeSlot.getDoctorId())
-//                    .orElseThrow((Supplier<RuntimeException>) ()
-//                        -> new CustomException(ResultsMessages.DOCTOR_NOT_FOUND));
-//
-//            TimeSlot newTimeSlot = TimeSlot.builder()
-//                    .doctor(doctor)
-//                    .date(timeSlot.getDate())
-//                    .startTime(timeSlot.getStartTime())
-//                    .endTime(timeSlot.getEndTime())
-//                    .availability(true)
-//                    .hasRemoved(false)
-//                    .build();
-//
-//            return from(timeSlotRepository.save(newTimeSlot));
-//        } catch(CustomException err) {
-//            err.getStackTrace();
-//            throw new CustomException(err.getMessage());
-//        }
-//    }
     @Override
     public TimeSlotDto create(Long doctorId, TimeSlot timeSlot) {
         try {
@@ -121,8 +95,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
             timeSlot.setStartTime(editedTimeSlotEntity.getStartTime());
             timeSlot.setEndTime(editedTimeSlotEntity.getEndTime());
             timeSlot.setAvailability(editedTimeSlotEntity.getAvailability());
-            timeSlot.setDoctor(editedTimeSlotEntity.getDoctor());
-            timeSlot.setAppointment(editedTimeSlotEntity.getAppointment());
+//            timeSlot.setDoctor(editedTimeSlotEntity.getDoctor());
+//            timeSlot.setAppointment(editedTimeSlotEntity.getAppointment());
 
             return from(timeSlotRepository.save(timeSlot));
         } catch (CustomException err) {
@@ -190,8 +164,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
                     .findAllNotRemovedTimeSlots()
                     .stream()
                     .map(TimeSlotDto::from)
-//                    .filter(currentTimeSlot ->
-//                            Objects.equals(currentTimeSlot.getDoctor().getId(), doctorId))
+                    .filter(currentTimeSlot ->
+                            Objects.equals(currentTimeSlot.getDoctorId(), doctorId))
                     .toList();
         } catch(CustomException err) {
             err.getStackTrace();
@@ -210,9 +184,9 @@ public class TimeSlotServiceImpl implements TimeSlotService {
                     .findAllNotRemovedTimeSlots()
                     .stream()
                     .map(TimeSlotDto::from)
-//                    .filter(currentTimeSlot ->
-//                            Objects.equals(currentTimeSlot.getDoctor().getId(), doctorId)
-//                            && currentTimeSlot.getAvailability())
+                    .filter(currentTimeSlot ->
+                            Objects.equals(currentTimeSlot.getDoctorId(), doctorId)
+                                    && currentTimeSlot.getAvailability())
                     .toList();
         } catch(CustomException err) {
             err.getStackTrace();

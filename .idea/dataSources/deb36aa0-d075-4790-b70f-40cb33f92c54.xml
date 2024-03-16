@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.51">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>3295</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3666</IntrospectionStateNumber>
       <ServerVersion>14.10</ServerVersion>
       <StartupTime>1710311854</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>3295</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3666</IntrospectionStateNumber>
       <ObjectId>16551</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4236,26 +4236,26 @@ false Zulu
     <schema id="263" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>3295</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-03-15.06:43:37</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>3666</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-03-16.03:42:05</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <sequence id="264" parent="263" name="appointment_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>34832</ObjectId>
+      <ObjectId>35809</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="265" parent="263" name="doctor_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>34842</ObjectId>
+      <ObjectId>35819</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="266" parent="263" name="doctor_seq">
@@ -4268,10 +4268,10 @@ false Zulu
     </sequence>
     <sequence id="267" parent="263" name="patient_id_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>34851</ObjectId>
+      <ObjectId>35828</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="268" parent="263" name="pk_sequence">
@@ -4284,60 +4284,60 @@ false Zulu
     </sequence>
     <sequence id="269" parent="263" name="time_slot_time_slot_seq">
       <DasType>bigint|0s</DasType>
-      <ObjectId>34862</ObjectId>
+      <ObjectId>35839</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="270" parent="263" name="appointment">
-      <ObjectId>34833</ObjectId>
-      <StateNumber>3285</StateNumber>
+      <ObjectId>35810</ObjectId>
+      <StateNumber>3655</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="271" parent="263" name="doctor">
-      <ObjectId>34843</ObjectId>
-      <StateNumber>3285</StateNumber>
+      <ObjectId>35820</ObjectId>
+      <StateNumber>3655</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="272" parent="263" name="patient">
-      <ObjectId>34852</ObjectId>
-      <StateNumber>3286</StateNumber>
+      <ObjectId>35829</ObjectId>
+      <StateNumber>3656</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="273" parent="263" name="time_slot">
-      <ObjectId>34863</ObjectId>
-      <StateNumber>3287</StateNumber>
+      <ObjectId>35840</ObjectId>
+      <StateNumber>3657</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <check id="274" parent="270" name="appointment_service_type_check">
       <ColNames>service_type</ColNames>
-      <ObjectId>34837</ObjectId>
+      <ObjectId>35814</ObjectId>
       <Predicate>(service_type)::text = ANY ((ARRAY[&apos;ONLINE&apos;::character varying, &apos;LIVE&apos;::character varying])::text[])</Predicate>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
     </check>
     <column id="275" parent="270" name="date">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="276" parent="270" name="has_removed">
       <DasType>boolean|0s</DasType>
       <Position>2</Position>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="277" parent="270" name="doctor_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="278" parent="270" name="id">
@@ -4345,93 +4345,93 @@ false Zulu
       <DefaultExpression>nextval(&apos;appointment_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>3281</StateNumber>
-      <SequenceId>34832</SequenceId>
+      <StateNumber>3651</StateNumber>
+      <SequenceId>35809</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="279" parent="270" name="patient_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="280" parent="270" name="time_slot_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="281" parent="270" name="service_type">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <foreign-key id="282" parent="270" name="fkoeb98n82eph1dx43v3y2bcmsl">
       <ColNames>doctor_id</ColNames>
-      <ObjectId>34869</ObjectId>
-      <StateNumber>3285</StateNumber>
+      <ObjectId>35846</ObjectId>
+      <StateNumber>3655</StateNumber>
       <RefKeyColPositions>3</RefKeyColPositions>
-      <RefTableId>34843</RefTableId>
+      <RefTableId>35820</RefTableId>
     </foreign-key>
     <foreign-key id="283" parent="270" name="fk4apif2ewfyf14077ichee8g06">
       <ColNames>patient_id</ColNames>
-      <ObjectId>34874</ObjectId>
-      <StateNumber>3286</StateNumber>
+      <ObjectId>35851</ObjectId>
+      <StateNumber>3656</StateNumber>
       <RefKeyColPositions>4</RefKeyColPositions>
-      <RefTableId>34852</RefTableId>
+      <RefTableId>35829</RefTableId>
     </foreign-key>
     <foreign-key id="284" parent="270" name="fkdisg12iwrghlj6oanfi2oxmys">
       <ColNames>time_slot_id</ColNames>
-      <ObjectId>34879</ObjectId>
-      <StateNumber>3287</StateNumber>
+      <ObjectId>35856</ObjectId>
+      <StateNumber>3657</StateNumber>
       <RefKeyColPositions>7</RefKeyColPositions>
-      <RefTableId>34863</RefTableId>
+      <RefTableId>35840</RefTableId>
     </foreign-key>
     <index id="285" parent="270" name="appointment_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34838</ObjectId>
+      <ObjectId>35815</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3281</StateNumber>
+      <StateNumber>3651</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="286" parent="270" name="appointment_time_slot_id_key">
       <ColNames>time_slot_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34840</ObjectId>
-      <StateNumber>3281</StateNumber>
+      <ObjectId>35817</ObjectId>
+      <StateNumber>3651</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="287" parent="270" name="appointment_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34839</ObjectId>
+      <ObjectId>35816</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3281</StateNumber>
-      <UnderlyingIndexId>34838</UnderlyingIndexId>
+      <StateNumber>3651</StateNumber>
+      <UnderlyingIndexId>35815</UnderlyingIndexId>
     </key>
     <key id="288" parent="270" name="appointment_time_slot_id_key">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34841</ObjectId>
-      <StateNumber>3281</StateNumber>
-      <UnderlyingIndexId>34840</UnderlyingIndexId>
+      <ObjectId>35818</ObjectId>
+      <StateNumber>3651</StateNumber>
+      <UnderlyingIndexId>35817</UnderlyingIndexId>
     </key>
     <column id="289" parent="271" name="has_removed">
       <DasType>boolean|0s</DasType>
       <Position>1</Position>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="290" parent="271" name="speciality">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="291" parent="271" name="id">
@@ -4439,70 +4439,70 @@ false Zulu
       <DefaultExpression>nextval(&apos;doctor_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>3282</StateNumber>
-      <SequenceId>34842</SequenceId>
+      <StateNumber>3652</StateNumber>
+      <SequenceId>35819</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="292" parent="271" name="phone_number">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="293" parent="271" name="first_name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="294" parent="271" name="last_name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="295" parent="271" name="patronymic">
       <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="296" parent="271" name="doctor_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34849</ObjectId>
+      <ObjectId>35826</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3282</StateNumber>
+      <StateNumber>3652</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="297" parent="271" name="doctor_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34850</ObjectId>
+      <ObjectId>35827</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3282</StateNumber>
-      <UnderlyingIndexId>34849</UnderlyingIndexId>
+      <StateNumber>3652</StateNumber>
+      <UnderlyingIndexId>35826</UnderlyingIndexId>
     </key>
     <column id="298" parent="272" name="birthdate">
       <DasType>date|0s</DasType>
       <Position>1</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="299" parent="272" name="has_removed">
       <DasType>boolean|0s</DasType>
       <Position>2</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="300" parent="272" name="phone_number">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="301" parent="272" name="id">
@@ -4510,110 +4510,110 @@ false Zulu
       <DefaultExpression>nextval(&apos;patient_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>3283</StateNumber>
-      <SequenceId>34851</SequenceId>
+      <StateNumber>3653</StateNumber>
+      <SequenceId>35828</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <column id="302" parent="272" name="first_name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="303" parent="272" name="last_name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="304" parent="272" name="patronymic">
       <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="305" parent="272" name="permanent_address">
       <DasType>varchar(255)|0s</DasType>
       <Position>8</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="306" parent="272" name="residential_address">
       <DasType>varchar(255)|0s</DasType>
       <Position>9</Position>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="307" parent="272" name="patient_phone_number_key">
       <ColNames>phone_number</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34860</ObjectId>
-      <StateNumber>3283</StateNumber>
+      <ObjectId>35837</ObjectId>
+      <StateNumber>3653</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="308" parent="272" name="patient_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34858</ObjectId>
+      <ObjectId>35835</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3283</StateNumber>
+      <StateNumber>3653</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="309" parent="272" name="patient_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34859</ObjectId>
+      <ObjectId>35836</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3283</StateNumber>
-      <UnderlyingIndexId>34858</UnderlyingIndexId>
+      <StateNumber>3653</StateNumber>
+      <UnderlyingIndexId>35835</UnderlyingIndexId>
     </key>
     <key id="310" parent="272" name="patient_phone_number_key">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34861</ObjectId>
-      <StateNumber>3283</StateNumber>
-      <UnderlyingIndexId>34860</UnderlyingIndexId>
+      <ObjectId>35838</ObjectId>
+      <StateNumber>3653</StateNumber>
+      <UnderlyingIndexId>35837</UnderlyingIndexId>
     </key>
     <column id="311" parent="273" name="availability">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="312" parent="273" name="date">
       <DasType>date|0s</DasType>
       <Position>2</Position>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="313" parent="273" name="end_time">
       <DasType>time(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <TypeId>1083</TypeId>
     </column>
     <column id="314" parent="273" name="has_removed">
       <DasType>boolean|0s</DasType>
       <Position>4</Position>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="315" parent="273" name="start_time">
       <DasType>time(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <TypeId>1083</TypeId>
     </column>
     <column id="316" parent="273" name="doctor_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="317" parent="273" name="time_slot">
@@ -4621,32 +4621,32 @@ false Zulu
       <DefaultExpression>nextval(&apos;time_slot_time_slot_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StateNumber>3284</StateNumber>
-      <SequenceId>34862</SequenceId>
+      <StateNumber>3654</StateNumber>
+      <SequenceId>35839</SequenceId>
       <TypeId>20</TypeId>
     </column>
     <foreign-key id="318" parent="273" name="fk5867d0eaoobx26gnw2dvp6irw">
       <ColNames>doctor_id</ColNames>
-      <ObjectId>34884</ObjectId>
-      <StateNumber>3288</StateNumber>
+      <ObjectId>35861</ObjectId>
+      <StateNumber>3658</StateNumber>
       <RefKeyColPositions>3</RefKeyColPositions>
-      <RefTableId>34843</RefTableId>
+      <RefTableId>35820</RefTableId>
     </foreign-key>
     <index id="319" parent="273" name="time_slot_pkey">
       <ColNames>time_slot</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34867</ObjectId>
+      <ObjectId>35844</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3284</StateNumber>
+      <StateNumber>3654</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="320" parent="273" name="time_slot_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>34868</ObjectId>
+      <ObjectId>35845</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>3284</StateNumber>
-      <UnderlyingIndexId>34867</UnderlyingIndexId>
+      <StateNumber>3654</StateNumber>
+      <UnderlyingIndexId>35844</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

@@ -2,16 +2,11 @@ package ru.innopolis.attestation03.controllers;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.innopolis.attestation03.dto.AddTimeSlotDto;
 import ru.innopolis.attestation03.dto.TimeSlotDto;
 import ru.innopolis.attestation03.models.TimeSlot;
-import ru.innopolis.attestation03.repositories.DoctorRepository;
-import ru.innopolis.attestation03.repositories.TimeSlotRepository;
 import ru.innopolis.attestation03.services.TimeSlotService;
 
 import java.util.List;
@@ -21,9 +16,6 @@ import java.util.List;
 @RequestMapping(("/timeSlots"))
 public class TimeSlotController {
     private final TimeSlotService timeSlotService;
-
-    private final TimeSlotRepository timeSlotRepository;
-//    private final DoctorRepository doctorRepository;
 
     @GetMapping
     public ResponseEntity<List<TimeSlotDto>> getTimeSlotsList() {
@@ -35,28 +27,12 @@ public class TimeSlotController {
         return ResponseEntity.ok(timeSlotService.findById(timeSlotId));
     }
 
-//    @GetMapping("/bySpecificDoctor/{doctorId}")
-//    public ResponseEntity<List<TimeSlotDto>> getTimeSlotsByDoctor(@PathVariable("doctorId") Long doctorId) {
-//        return ResponseEntity.ok(timeSlotService.findAllByDoctorId(doctorId));
-//    }
     @GetMapping("/doctors/{doctorId}")
-    public Page<TimeSlot> getAllTimeSlotsByDoctorId(@PathVariable (value = "doctorId") Long doctorId,
-                                                    Pageable pageable) {
-        return timeSlotRepository.findByDoctorId(doctorId, pageable);
+    public ResponseEntity<List<TimeSlotDto>> getAllByDoctorId(@PathVariable (value = "doctorId") Long doctorId) {
+        return ResponseEntity.ok(timeSlotService.findAllByDoctorId(doctorId));
     }
 
-    @GetMapping("/bySpecificDoctor/{doctorId}/available")
-    public ResponseEntity<List<TimeSlotDto>> getAvailableTimeSlotsByDoctor(@PathVariable("doctorId") Long doctorId) {
-        return ResponseEntity.ok(timeSlotService.findAllAvailableByDoctorId(doctorId));
-    }
-
-//    @PostMapping("/addTimeSlot")
-//    public ResponseEntity<TimeSlotDto> addTimeSlot(@Valid @RequestBody AddTimeSlotDto timeSlot) {
-//        return ResponseEntity
-//                .status(HttpStatus.CREATED)
-//                .body(timeSlotService.create(timeSlot));
-//    }
-    @PostMapping("/doctors/{doctorId}/timeSlots")
+    @PostMapping("/doctors/{doctorId}")
     public ResponseEntity<TimeSlotDto> addTimeSlot(
             @PathVariable (value = "doctorId") Long doctorId,
             @Valid @RequestBody TimeSlot timeSlot
