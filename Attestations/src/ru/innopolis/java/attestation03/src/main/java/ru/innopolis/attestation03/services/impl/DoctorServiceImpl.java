@@ -26,7 +26,7 @@ public class DoctorServiceImpl implements DoctorService {
     @Override
     public List<DoctorDto> findAll() {
         try {
-            return from(doctorRepository.findAllNotRemovedDoctors());
+            return from(doctorRepository.findAllByHasRemovedFalse());
         } catch(CustomException err) {
             err.getStackTrace();
             throw new CustomException(ResultsMessages.DOCTOR_LIST_REQ_ERR);

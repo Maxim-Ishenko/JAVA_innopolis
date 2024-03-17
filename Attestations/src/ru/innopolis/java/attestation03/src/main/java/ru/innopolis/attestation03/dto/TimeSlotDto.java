@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.innopolis.attestation03.models.TimeSlot;
+import ru.innopolis.attestation03.utils.Helper;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -17,7 +18,7 @@ import java.util.List;
 public class TimeSlotDto {
     private Long id;
     private Long doctorId;
-    private String doctorName;
+    private String doctorFullName;
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -27,7 +28,13 @@ public class TimeSlotDto {
         return TimeSlotDto.builder()
                 .id(timeSlot.getId())
                 .doctorId(timeSlot.getDoctor().getId())
-                .doctorName(timeSlot.getDoctor().getLastName())
+                .doctorFullName(
+                        Helper.getFullName(
+                                timeSlot.getDoctor().getLastName(),
+                                timeSlot.getDoctor().getFirstName(),
+                                timeSlot.getDoctor().getPatronymic()
+                        )
+                )
                 .date(timeSlot.getDate())
                 .startTime(timeSlot.getStartTime())
                 .endTime(timeSlot.getEndTime())

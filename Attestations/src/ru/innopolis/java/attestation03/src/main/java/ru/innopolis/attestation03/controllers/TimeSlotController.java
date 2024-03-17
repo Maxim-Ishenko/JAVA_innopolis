@@ -9,6 +9,7 @@ import ru.innopolis.attestation03.dto.TimeSlotDto;
 import ru.innopolis.attestation03.models.TimeSlot;
 import ru.innopolis.attestation03.services.TimeSlotService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -30,6 +31,20 @@ public class TimeSlotController {
     @GetMapping("/doctors/{doctorId}")
     public ResponseEntity<List<TimeSlotDto>> getAllByDoctorId(@PathVariable (value = "doctorId") Long doctorId) {
         return ResponseEntity.ok(timeSlotService.findAllByDoctorId(doctorId));
+    }
+
+    @GetMapping("/doctors/{doctorId}/available")
+    public ResponseEntity<List<TimeSlotDto>> getAllAvailableByDoctorId(@PathVariable (value = "doctorId") Long doctorId) {
+        return ResponseEntity.ok(timeSlotService.findAllAvailableByDoctorId(doctorId));
+    }
+
+    @GetMapping("/doctors")
+    public ResponseEntity<List<TimeSlotDto>> getAllAvailableByDoctorIdAndDateRange(
+            @RequestParam (value = "doctorId") Long doctorId,
+            @RequestParam (value = "to") LocalDate to,
+            @RequestParam (value = "from") LocalDate from
+    ) {
+        return ResponseEntity.ok(timeSlotService.findAllAvailableByDoctorIdAndDateRange(doctorId, to, from));
     }
 
     @PostMapping("/doctors/{doctorId}")

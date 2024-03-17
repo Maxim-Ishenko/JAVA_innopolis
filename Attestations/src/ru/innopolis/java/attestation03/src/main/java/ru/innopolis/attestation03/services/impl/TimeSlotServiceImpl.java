@@ -11,8 +11,8 @@ import ru.innopolis.attestation03.repositories.DoctorRepository;
 import ru.innopolis.attestation03.repositories.TimeSlotRepository;
 import ru.innopolis.attestation03.services.TimeSlotService;
 
+import java.time.LocalDate;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Supplier;
 
 import static ru.innopolis.attestation03.dto.TimeSlotDto.from;
@@ -95,8 +95,6 @@ public class TimeSlotServiceImpl implements TimeSlotService {
             timeSlot.setStartTime(editedTimeSlotEntity.getStartTime());
             timeSlot.setEndTime(editedTimeSlotEntity.getEndTime());
             timeSlot.setAvailability(editedTimeSlotEntity.getAvailability());
-//            timeSlot.setDoctor(editedTimeSlotEntity.getDoctor());
-//            timeSlot.setAppointment(editedTimeSlotEntity.getAppointment());
 
             return from(timeSlotRepository.save(timeSlot));
         } catch (CustomException err) {
@@ -161,11 +159,9 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     public List<TimeSlotDto> findAllByDoctorId(Long doctorId) {
         try {
             return timeSlotRepository
-                    .findAllNotRemovedTimeSlots()
+                    .findAllByHasRemovedFalseAndDoctorId(doctorId)
                     .stream()
                     .map(TimeSlotDto::from)
-                    .filter(currentTimeSlot ->
-                            Objects.equals(currentTimeSlot.getDoctorId(), doctorId))
                     .toList();
         } catch(CustomException err) {
             err.getStackTrace();
@@ -181,13 +177,32 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     public List<TimeSlotDto> findAllAvailableByDoctorId(Long doctorId) {
         try {
             return timeSlotRepository
-                    .findAllNotRemovedTimeSlots()
+                    .findAllByHasRemovedFalseAndAvailabilityTrueAndDoctorId(doctorId)
                     .stream()
                     .map(TimeSlotDto::from)
-                    .filter(currentTimeSlot ->
-                            Objects.equals(currentTimeSlot.getDoctorId(), doctorId)
-                                    && currentTimeSlot.getAvailability())
                     .toList();
+        } catch(CustomException err) {
+            err.getStackTrace();
+            throw new CustomException(err.getMessage());
+        }
+    }
+
+    /**
+     * @param doctorId
+     * @param to
+     * @param from
+     * @return List<TimeSlotDto>
+     */
+    @Override
+    public List<TimeSlotDto> findAllAvailableByDoctorIdAndDateRange(Long doctorId, LocalDate to, LocalDate from) {
+        try {
+                return timeSlotRepository
+                        .findAllByHasRemovedFalseAndAvailabilityTrueAndDoctorIdAndDateBetween(
+                                doctorId, to, from
+                        )
+                        .stream()
+                        .map(TimeSlotDto::from)
+                        .toList();
         } catch(CustomException err) {
             err.getStackTrace();
             throw new CustomException(err.getMessage());

@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface DoctorRepository extends JpaRepository<Doctor, Long> {
     @Query(value="SELECT doctors FROM Doctor doctors WHERE doctors.hasRemoved = false")
-    List<Doctor> findAllNotRemovedDoctors();
+    List<Doctor> findAllByHasRemovedFalse();
 }

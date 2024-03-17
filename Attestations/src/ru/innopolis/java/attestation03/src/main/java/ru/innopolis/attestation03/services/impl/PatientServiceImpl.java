@@ -25,7 +25,7 @@ public class PatientServiceImpl implements PatientService {
     @Override
     public List<PatientDto> findAll() {
         try {
-            return from(patientRepository.findAllNotRemovedPatients());
+            return from(patientRepository.findAllByHasRemovedFalse());
         } catch(CustomException err) {
             throw new CustomException(ResultsMessages.DOCTOR_LIST_REQ_ERR);
         }

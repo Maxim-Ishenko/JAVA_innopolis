@@ -4,6 +4,7 @@ import ru.innopolis.attestation03.dto.TimeSlotDto;
 import ru.innopolis.attestation03.enums.ResultsMessages;
 import ru.innopolis.attestation03.models.TimeSlot;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface TimeSlotService {
@@ -53,13 +54,23 @@ public interface TimeSlotService {
 
     /**
      * Поиск всех временных слотов по конкретному доктору
-     * @return TimeSlot
+     * @return TimeSlotDto
      */
     List<TimeSlotDto> findAllByDoctorId(Long doctorId);
 
     /**
      * Поиск всех свободных временных слотов по конкретному доктору
-     * @return List<TimeSlot>
+     * @param doctorId
+     * @return List<TimeSlotDto>
      */
     List<TimeSlotDto> findAllAvailableByDoctorId(Long doctorId);
+
+    /**
+     * Поиск всех свободных временных слотов по конкретному доктору и в конкретном диапазоне дат
+     * @param doctorId
+     * @param to
+     * @param from
+     * @return List<TimeSlotDto>
+     */
+    List<TimeSlotDto> findAllAvailableByDoctorIdAndDateRange(Long doctorId, LocalDate to, LocalDate from);
 }

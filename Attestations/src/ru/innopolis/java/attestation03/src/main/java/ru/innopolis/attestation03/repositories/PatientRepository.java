@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface PatientRepository extends JpaRepository<Patient, Long> {
     @Query(value="SELECT patients FROM Patient patients WHERE patients.hasRemoved = false")
-    List<Patient> findAllNotRemovedPatients();
+    List<Patient> findAllByHasRemovedFalse();
 }
