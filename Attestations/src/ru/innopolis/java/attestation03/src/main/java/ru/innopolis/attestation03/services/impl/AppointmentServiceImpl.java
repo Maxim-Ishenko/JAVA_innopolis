@@ -3,8 +3,6 @@ package ru.innopolis.attestation03.services.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.innopolis.attestation03.dto.AppointmentDto;
-import ru.innopolis.attestation03.dto.DoctorDto;
-import ru.innopolis.attestation03.dto.TimeSlotDto;
 import ru.innopolis.attestation03.enums.ResultsMessages;
 import ru.innopolis.attestation03.exceptions.CustomException;
 import ru.innopolis.attestation03.exceptions.NotFoundException;
@@ -21,7 +19,6 @@ import ru.innopolis.attestation03.services.AppointmentService;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import java.util.function.Supplier;
 
 import static ru.innopolis.attestation03.dto.AppointmentDto.from;
 
@@ -53,7 +50,8 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public AppointmentDto findById(Long id) {
         try {
-            Appointment targetAppointment = appointmentRepository.findById(id).orElseThrow(NotFoundException::new);
+            Appointment targetAppointment =
+                    appointmentRepository.findById(id).orElseThrow(NotFoundException::new);
 
             if (targetAppointment.getHasRemoved()) {
                 throw new NotFoundException();
@@ -67,21 +65,18 @@ public class AppointmentServiceImpl implements AppointmentService {
     }
 
     /**
-     * @param doctorId    - Идентификатор доктора
-     * @param patientId   - Идентификатор пациента
-     * @param timeSlotId  - Идентификатор временного слота
      * @param appointment - Объект записи на прием
      * @return AppointmentDto
      */
     @Override
-    public AppointmentDto create(Long doctorId, Long patientId, Long timeSlotId, AppointmentDto appointment) {
+    public AppointmentDto create(AppointmentDto appointment) {
         try {
             Doctor targetDoctor = doctorRepository
-                    .findById(doctorId).orElseThrow(NotFoundException::new);
+                    .findById(appointment.getDoctorId()).orElseThrow(NotFoundException::new);
             Patient targetPatient = patientRepository
-                    .findById(patientId).orElseThrow(NotFoundException::new);
+                    .findById(appointment.getPatientId()).orElseThrow(NotFoundException::new);
             TimeSlot targetTimeSlot = timeSlotRepository
-                    .findById(timeSlotId)
+                    .findById(appointment.getTimeSlotId())
                     .orElseThrow(NotFoundException::new);
 
             targetTimeSlot.setAvailability(false);
@@ -136,7 +131,8 @@ public class AppointmentServiceImpl implements AppointmentService {
         try {
             AppointmentDto appointment = findById(id);
 
-            if (appointment == null) throw new CustomException(ResultsMessages.APPOINTMENT_NOT_FOUND);
+            if (appointment == null)
+                throw new CustomException(ResultsMessages.APPOINTMENT_NOT_FOUND);
 
             TimeSlot timeSlot = timeSlotRepository.getReferenceById(appointment.getTimeSlotId());
 
@@ -189,8 +185,10 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public void softDeleteById(Long id) {
         try {
-            Appointment targetAppointment = appointmentRepository.findById(id).orElseThrow(NotFoundException::new);
-            TimeSlot timeSlot = timeSlotRepository.getReferenceById(targetAppointment.getTimeSlot().getId());
+            Appointment targetAppointment =
+                    appointmentRepository.findById(id).orElseThrow(NotFoundException::new);
+            TimeSlot timeSlot =
+                    timeSlotRepository.getReferenceById(targetAppointment.getTimeSlot().getId());
 
             if (
                     timeSlot.getDate().isAfter(LocalDate.now())
@@ -263,7 +261,9 @@ public class AppointmentServiceImpl implements AppointmentService {
      * @return List<Appointment>
      */
     @Override
-    public List<Appointment> findAllByDoctorIdAndDate(Long doctorId, LocalDate localDate) {
+    public List<Appointment> findAllByDoctorIdAndDate(
+            Long doctorId, LocalDate localDate
+    ) {
         try {
             return appointmentRepository.findAllByDoctorIdAndDate(doctorId, localDate);
         } catch(CustomException err) {
@@ -278,7 +278,9 @@ public class AppointmentServiceImpl implements AppointmentService {
      * @return List<Appointment>
      */
     @Override
-    public List<Appointment> findAllByPatientIdAndDate(Long patientId, LocalDate localDate) {
+    public List<Appointment> findAllByPatientIdAndDate(
+            Long patientId, LocalDate localDate
+    ) {
         try {
             return appointmentRepository.findAllByPatientIdAndDate(patientId, localDate);
         } catch(CustomException err) {
@@ -293,7 +295,9 @@ public class AppointmentServiceImpl implements AppointmentService {
      * @return List<Appointment>
      */
     @Override
-    public List<Appointment> findAllByDoctorIdAndPatientId(Long doctorId, Long patientId) {
+    public List<Appointment> findAllByDoctorIdAndPatientId(
+            Long doctorId, Long patientId
+    ) {
         try {
             return appointmentRepository.findAllByDoctorIdAndPatientId(doctorId, patientId);
         } catch(CustomException err) {

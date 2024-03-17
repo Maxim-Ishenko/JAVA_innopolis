@@ -24,17 +24,23 @@ public class TimeSlotController {
     }
 
     @GetMapping("/{timeSlotId}")
-    public ResponseEntity<TimeSlotDto> getTimeSlot(@PathVariable("timeSlotId") Long timeSlotId) {
+    public ResponseEntity<TimeSlotDto> getTimeSlot(
+            @PathVariable("timeSlotId") Long timeSlotId
+    ) {
         return ResponseEntity.ok(timeSlotService.findById(timeSlotId));
     }
 
     @GetMapping("/doctors/{doctorId}")
-    public ResponseEntity<List<TimeSlotDto>> getAllByDoctorId(@PathVariable (value = "doctorId") Long doctorId) {
+    public ResponseEntity<List<TimeSlotDto>> getAllByDoctorId(
+            @PathVariable (value = "doctorId") Long doctorId
+    ) {
         return ResponseEntity.ok(timeSlotService.findAllByDoctorId(doctorId));
     }
 
     @GetMapping("/doctors/{doctorId}/available")
-    public ResponseEntity<List<TimeSlotDto>> getAllAvailableByDoctorId(@PathVariable (value = "doctorId") Long doctorId) {
+    public ResponseEntity<List<TimeSlotDto>> getAllAvailableByDoctorId(
+            @PathVariable (value = "doctorId") Long doctorId
+    ) {
         return ResponseEntity.ok(timeSlotService.findAllAvailableByDoctorId(doctorId));
     }
 
@@ -44,7 +50,9 @@ public class TimeSlotController {
             @RequestParam (value = "to") LocalDate to,
             @RequestParam (value = "from") LocalDate from
     ) {
-        return ResponseEntity.ok(timeSlotService.findAllAvailableByDoctorIdAndDateRange(doctorId, to, from));
+        return ResponseEntity.ok(
+                timeSlotService.findAllAvailableByDoctorIdAndDateRange(doctorId, to, from)
+        );
     }
 
     @PostMapping("/doctors/{doctorId}")
@@ -58,22 +66,28 @@ public class TimeSlotController {
     }
 
     @PutMapping("/{timeSlotId}")
-    public ResponseEntity<TimeSlotDto> editTimeSlot(@PathVariable("timeSlotId") Long timeSlotId,
-                                                @RequestBody TimeSlotDto editedDoctorEntity) {
+    public ResponseEntity<TimeSlotDto> editTimeSlot(
+            @PathVariable("timeSlotId") Long timeSlotId,
+            @RequestBody TimeSlotDto editedDoctorEntity
+    ) {
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
                 .body(timeSlotService.update(timeSlotId, editedDoctorEntity));
     }
 
     @DeleteMapping("/{timeSlotId}")
-    public ResponseEntity<TimeSlotDto> deleteTimeSlot(@PathVariable("timeSlotId") Long timeSlotId) {
+    public ResponseEntity<TimeSlotDto> deleteTimeSlot(
+            @PathVariable("timeSlotId") Long timeSlotId
+    ) {
         timeSlotService.deleteById(timeSlotId);
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED).build();
     }
 
     @DeleteMapping("/softDelete/{timeSlotId}")
-    public ResponseEntity<?> softDeleteTimeSlot(@PathVariable("timeSlotId") Long timeSlotId) {
+    public ResponseEntity<?> softDeleteTimeSlot(
+            @PathVariable("timeSlotId") Long timeSlotId
+    ) {
         timeSlotService.softDeleteById(timeSlotId);
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED).build();

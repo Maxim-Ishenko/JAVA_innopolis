@@ -23,18 +23,10 @@ public interface AppointmentService {
 
     /**
      * Создание сущности приема и запись его в БД
-     * @param doctorId - Идентификатор доктора
-     * @param patientId - Идентификатор пациента
-     * @param timeSlotId - Идентификатор временного слота
      * @param appointment - Объект записи на прием
      * @return AppointmentDto
      */
-    AppointmentDto create(
-            Long doctorId,
-            Long patientId,
-            Long timeSlotId,
-            AppointmentDto appointment
-    );
+    AppointmentDto create(AppointmentDto appointment);
 
     /**
      * Обновление полей существующего в БД приема
