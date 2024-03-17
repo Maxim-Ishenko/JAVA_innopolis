@@ -17,7 +17,6 @@ import java.util.function.Supplier;
 
 import static ru.innopolis.attestation03.dto.TimeSlotDto.from;
 
-
 @RequiredArgsConstructor
 @Service
 public class TimeSlotServiceImpl implements TimeSlotService {
@@ -34,7 +33,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
             return from(timeSlotRepository.findAllNotRemovedTimeSlots());
         } catch(CustomException err) {
             err.getStackTrace();
-            throw new CustomException(ResultsMessages.TIMESLOT_LIST_REQ_ERR);
+            throw new CustomException(err.getMessage());
         }
     }
 

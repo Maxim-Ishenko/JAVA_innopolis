@@ -66,7 +66,6 @@ public class PatientServiceImpl implements PatientService {
                             .birthdate(patient.getBirthdate())
                             .phoneNumber(patient.getPhoneNumber())
                             .address(patient.getAddress())
-                            .appointment(patient.getAppointment())
                             .hasRemoved(false)
                             .build()
             ));
@@ -92,7 +91,6 @@ public class PatientServiceImpl implements PatientService {
             patient.setBirthdate(editedPatientEntity.getBirthdate());
             patient.setPhoneNumber(editedPatientEntity.getPhoneNumber());
             patient.setAddress(editedPatientEntity.getAddress());
-            patient.setAppointment(editedPatientEntity.getAppointment());
 
             return PatientDto.from(patientRepository.save(patient));
         } catch (CustomException err) {

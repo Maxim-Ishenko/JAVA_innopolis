@@ -7,8 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.innopolis.attestation03.enums.ServiceType;
 
-import java.time.LocalDate;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -19,10 +17,6 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "date", nullable = false)
-    private LocalDate date;
 
     @ManyToOne
     @JoinColumn(name = "doctor_id", nullable = false)

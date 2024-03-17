@@ -33,22 +33,18 @@ public interface AppointmentService {
             Long doctorId,
             Long patientId,
             Long timeSlotId,
-            Appointment appointment
+            AppointmentDto appointment
     );
 
     /**
      * Обновление полей существующего в БД приема
-     * @param doctorId - Идентификатор доктора
-     * @param patientId - Идентификатор пациента
-     * @param timeSlotId - Идентификатор временного слота
-     * @param appointment - Объект записи на прием
+     * @param appointmentId  - Идентификатор приема
+     * @param editedAppointmentEntity - Объект записи на прием
      * @return AppointmentDto
      */
     AppointmentDto update(
-            Long doctorId,
-            Long patientId,
-            Long timeSlotId,
-            Appointment appointment
+            Long appointmentId,
+            AppointmentDto editedAppointmentEntity
     );
 
     /**
@@ -89,13 +85,29 @@ public interface AppointmentService {
      * @param timeSlotId - Идентификатор временного слота
      * @return AppointmentDto
      */
-    AppointmentDto findByTimeSlotId(Long timeSlotId);
+    Appointment findByTimeSlotId(Long timeSlotId);
 
     /**
-     * Поиск приема в БД по идентификатору временного слота
+     * Поиск приема в БД по идентификатору доктора и целевой дате приема
      * @param doctorId - Идентификатор доктора
      * @param localDate - Целевая дата приема
-     * @return AppointmentDto
+     * @return List<Appointment>
      */
-    AppointmentDto findAllByDoctorIdAndDate(Long doctorId, LocalDate localDate);
+    List<Appointment> findAllByDoctorIdAndDate(Long doctorId, LocalDate localDate);
+
+    /**
+     * Поиск приема в БД по идентификатору пациента и целевой дате приема
+     * @param patientId - Идентификатор пациента
+     * @param localDate - Целевая дата приема
+     * @return List<Appointment>
+     */
+    List<Appointment> findAllByPatientIdAndDate(Long patientId, LocalDate localDate);
+
+    /**
+     * Поиск приема в БД по идентификатору доктора и идентификатору пациента
+     * @param doctorId - Идентификатор пациента
+     * @param patientId - Целевая дата приема
+     * @return List<Appointment>
+     */
+    List<Appointment> findAllByDoctorIdAndPatientId(Long doctorId, Long patientId);
 }

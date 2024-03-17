@@ -39,8 +39,7 @@ public class Patient {
     private Address address;
 
     @OneToMany(mappedBy = "patient")
-    @Column(name="appointments")
-    private List<Appointment> appointment;
+    private List<Appointment> appointments;
 
     @Column(name="has_removed")
     private Boolean hasRemoved;

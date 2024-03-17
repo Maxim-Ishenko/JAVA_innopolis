@@ -37,8 +37,8 @@ public class Doctor {
     @OneToMany(mappedBy = "doctor")
     private List<TimeSlot> timeSlots;
 
-//    @OneToMany(mappedBy = "doctor")
-//    private List<Appointment> appointments;
+    @OneToMany(mappedBy = "doctor")
+    private List<Appointment> appointments;
 
     @Column(name="has_removed")
     private Boolean hasRemoved;
