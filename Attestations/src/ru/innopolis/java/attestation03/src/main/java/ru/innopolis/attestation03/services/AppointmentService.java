@@ -1,8 +1,10 @@
 package ru.innopolis.attestation03.services;
 
+import ru.innopolis.attestation03.dto.AppointmentDto;
+import ru.innopolis.attestation03.enums.ResultsMessages;
 import ru.innopolis.attestation03.models.Appointment;
 
-import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 public interface AppointmentService {
@@ -14,31 +16,86 @@ public interface AppointmentService {
 
     /**
      * Поиск приема в БД по идентификатору
-     * @return Appointment
+     * @param id - Идентификатор приема
+     * @return AppointmentDto
      */
-    Appointment findById(String id);
+    AppointmentDto findById(Long id);
 
     /**
      * Создание сущности приема и запись его в БД
-     * @return void
+     * @param doctorId - Идентификатор доктора
+     * @param patientId - Идентификатор пациента
+     * @param timeSlotId - Идентификатор временного слота
+     * @param appointment - Объект записи на прием
+     * @return AppointmentDto
      */
-    void create(Appointment appointment);
+    AppointmentDto create(
+            Long doctorId,
+            Long patientId,
+            Long timeSlotId,
+            Appointment appointment
+    );
 
     /**
      * Обновление полей существующего в БД приема
-     * @return void
+     * @param doctorId - Идентификатор доктора
+     * @param patientId - Идентификатор пациента
+     * @param timeSlotId - Идентификатор временного слота
+     * @param appointment - Объект записи на прием
+     * @return AppointmentDto
      */
-    void update(Appointment appointment);
+    AppointmentDto update(
+            Long doctorId,
+            Long patientId,
+            Long timeSlotId,
+            Appointment appointment
+    );
 
     /**
      * Удаление приема из БД по идентификатору
-     * @return void
+     * @param id - Идентификатор приема
      */
-    void deleteById(String id);
+    void deleteById(Long id);
 
     /**
      * Удаление всех приемов из БД
-     * @return void
+     * @return ResultsMessages
      */
-    void deleteAll() throws IOException;
+    ResultsMessages deleteAll();
+
+    /**
+     * Обратимое удаление приема из БД по идентификатору
+     *
+     * @param id - Идентификатор приема
+     */
+    void softDeleteById(Long id);
+
+    /**
+     * Поиск всех приемов по конкретному доктору
+     * @param doctorId - Идентификатор доктора
+     * @return AppointmentDto
+     */
+    List<AppointmentDto> findAllByDoctorId(Long doctorId);
+
+    /**
+     * Поиск всех приемов по конкретному пациенту
+     * @param patientId - Идентификатор пациента
+     * @return AppointmentDto
+     */
+    List<AppointmentDto> findAllByPatientId(Long patientId);
+
+    /**
+     * Поиск приема в БД по идентификатору временного слота
+     * @param timeSlotId - Идентификатор временного слота
+     * @return AppointmentDto
+     */
+    AppointmentDto findByTimeSlotId(Long timeSlotId);
+
+    /**
+     * Поиск приема в БД по идентификатору временного слота
+     * @param doctorId - Идентификатор доктора
+     * @param localDate - Целевая дата приема
+     * @return AppointmentDto
+     */
+    AppointmentDto findAllByDoctorIdAndDate(Long doctorId, LocalDate localDate);
 }

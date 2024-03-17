@@ -15,7 +15,7 @@ public interface DoctorService {
     /**
      * Поиск доктора в БД по идентификатору
      *
-     * @param id
+     * @param id - Идентификатор доктора
      * @return DoctorDto
      */
     DoctorDto findById(Long id);
@@ -23,23 +23,23 @@ public interface DoctorService {
     /**
      * Создание сущности доктора и запись его в БД
      *
-     * @param doctor
+     * @param doctor - Объект доктора
      * @return DoctorDto
      */
     DoctorDto create(DoctorDto doctor);
 
     /**
      * Обновление полей существующего в БД доктора
-     * * @param doctor
      *
+     * @param doctorId - Идентификатор доктора
+     * @param editedDoctorEntity - Обновленный объект доктора
      * @return DoctorDto
      */
     DoctorDto update(Long doctorId, DoctorDto editedDoctorEntity);
 
     /**
      * Удаление доктора из БД по идентификатору
-     * @param id
-     * @return void
+     * @param id - Идентификатор доктора
      */
     void deleteById(Long id);
 
@@ -53,8 +53,7 @@ public interface DoctorService {
     /**
      * Обратимое удаление доктора из БД по идентификатору
      *
-     * @param id
-     * @return void
+     * @param id - Идентификатор доктора
      */
     void softDeleteById(Long id);
 }
