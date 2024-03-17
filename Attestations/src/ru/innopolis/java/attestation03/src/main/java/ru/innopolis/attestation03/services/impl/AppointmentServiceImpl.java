@@ -265,7 +265,7 @@ public class AppointmentServiceImpl implements AppointmentService {
             Long doctorId, LocalDate localDate
     ) {
         try {
-            return appointmentRepository.findAllByDoctorIdAndDate(doctorId, localDate);
+            return appointmentRepository.findAllByDoctorIdAndTimeSlotDate(doctorId, localDate);
         } catch(CustomException err) {
             err.getStackTrace();
             throw new CustomException(err.getMessage());
@@ -282,7 +282,7 @@ public class AppointmentServiceImpl implements AppointmentService {
             Long patientId, LocalDate localDate
     ) {
         try {
-            return appointmentRepository.findAllByPatientIdAndDate(patientId, localDate);
+            return appointmentRepository.findAllByPatientIdAndTimeSlotDate(patientId, localDate);
         } catch(CustomException err) {
             err.getStackTrace();
             throw new CustomException(err.getMessage());

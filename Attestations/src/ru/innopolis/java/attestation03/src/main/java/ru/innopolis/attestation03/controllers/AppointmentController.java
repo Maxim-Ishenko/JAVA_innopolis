@@ -52,7 +52,7 @@ public class AppointmentController {
         return ResponseEntity.ok(appointmentService.findByTimeSlotId(timeSlotId));
     }
 
-    @GetMapping
+    @GetMapping("/byDoctorAndDate")
     public ResponseEntity<List<Appointment>> getAppointmentsByDoctorAndDate(
             @RequestParam (value = "doctorId") Long doctorId,
             @RequestParam (value = "date") LocalDate date
@@ -62,7 +62,7 @@ public class AppointmentController {
         );
     }
 
-    @GetMapping
+    @GetMapping("/byPatientAndDate")
     public ResponseEntity<List<Appointment>> getAppointmentsByPatientAndDate(
             @RequestParam (value = "patientId") Long patientId,
             @RequestParam (value = "date") LocalDate date
@@ -72,7 +72,7 @@ public class AppointmentController {
         );
     }
 
-    @GetMapping
+    @GetMapping("/byDoctorAndPatient")
     public ResponseEntity<List<Appointment>> getAppointmentsByDoctorAndPatient(
             @RequestParam (value = "doctorId") Long doctorId,
             @RequestParam (value = "patientId") Long patientId

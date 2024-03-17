@@ -8,7 +8,6 @@ import ru.innopolis.attestation03.enums.ServiceType;
 import ru.innopolis.attestation03.models.Appointment;
 import ru.innopolis.attestation03.utils.Helper;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +22,6 @@ public class AppointmentDto {
     private Long patientId;
     private String patientFullName;
     private Long timeSlotId;
-    private LocalDate date;
     private ServiceType serviceType;
 
     public static AppointmentDto from(Appointment appointment) {
@@ -45,6 +43,7 @@ public class AppointmentDto {
                                 appointment.getPatient().getPatronymic()
                         )
                 )
+                .timeSlotId(appointment.getTimeSlot().getId())
                 .serviceType(appointment.getServiceType())
                 .build();
     }

@@ -39,7 +39,7 @@ public class TimeSlot {
     @Column(name="end_time", nullable = false)
     private LocalTime endTime;
 
-    @Column(name="availability", nullable = false)
+    @Column(name="availability", nullable = false, columnDefinition = "Boolean default true")
     private Boolean availability;
 
     @Column(name="has_removed")
