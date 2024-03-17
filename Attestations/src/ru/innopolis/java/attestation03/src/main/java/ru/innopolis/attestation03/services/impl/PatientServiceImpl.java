@@ -32,8 +32,8 @@ public class PatientServiceImpl implements PatientService {
     }
 
     /**
-     * @param id
-     * @return
+     * @param id - Идентификатор пациента
+     * @return PatientDto
      */
     @Override
     public PatientDto findById(Long id) {
@@ -52,8 +52,8 @@ public class PatientServiceImpl implements PatientService {
     }
 
     /**
-     * @param patient
-     * @return
+     * @param patient - Объект пациента
+     * @return PatientDto
      */
     @Override
     public PatientDto create(PatientDto patient) {
@@ -77,9 +77,9 @@ public class PatientServiceImpl implements PatientService {
     }
 
     /**
-     * @param patientId
-     * @param editedPatientEntity
-     * @return
+     * @param patientId - Идентификатор пациента
+     * @param editedPatientEntity - Обновленный объект пациента
+     * @return PatientDto
      */
     @Override
     public PatientDto update(Long patientId, PatientDto editedPatientEntity) {
@@ -102,7 +102,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор пациента
      */
     @Override
     public void deleteById(Long id) {
@@ -119,7 +119,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
     /**
-     * @return
+     * @return ResultsMessages
      */
     @Override
     public ResultsMessages deleteAll() {
@@ -134,7 +134,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор пациента
      */
     @Override
     public void softDeleteById(Long id) {

@@ -34,7 +34,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор доктора
      * @return DoctorDto
      */
     @Override
@@ -55,7 +55,7 @@ public class DoctorServiceImpl implements DoctorService {
 
 
     /**
-     * @param doctor
+     * @param doctor - Объект доктора
      * @return DoctorDto
      */
     @Override
@@ -68,8 +68,6 @@ public class DoctorServiceImpl implements DoctorService {
                             .lastName(doctor.getLastName())
                             .patronymic(doctor.getPatronymic())
                             .phoneNumber(doctor.getPhoneNumber())
-//                            .appointmentList(doctor.getAppointmentList())
-//                            .timeSlotsList(doctor.getTimeSlotsList())
                             .hasRemoved(false)
                             .build()
                     )
@@ -81,8 +79,8 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     /**
-     * @param doctorId
-     * @param editedDoctorEntity
+     * @param doctorId - Идентификатор доктора
+     * @param editedDoctorEntity - Обновленный объект доктора
      * @return DoctorDto
      */
     @Transactional
@@ -96,8 +94,6 @@ public class DoctorServiceImpl implements DoctorService {
             doctor.setLastName(editedDoctorEntity.getLastName());
             doctor.setPatronymic(editedDoctorEntity.getPatronymic());
             doctor.setPhoneNumber(editedDoctorEntity.getPhoneNumber());
-//            doctor.setAppointmentList(editedDoctorEntity.getAppointmentList());
-//            doctor.setTimeSlotsList(editedDoctorEntity.getTimeSlotsList());
 
             return from(doctorRepository.save(doctor));
         } catch (CustomException err) {
@@ -107,7 +103,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор доктора
      */
     @Override
     public void deleteById(Long id) {
@@ -139,7 +135,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор доктора
      */
     @Override
     public void softDeleteById(Long id) {

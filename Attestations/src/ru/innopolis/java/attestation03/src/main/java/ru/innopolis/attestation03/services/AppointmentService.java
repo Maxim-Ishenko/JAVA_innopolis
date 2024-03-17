@@ -10,9 +10,9 @@ import java.util.List;
 public interface AppointmentService {
     /**
      * Выгрузка всех приемов из БД
-     * @return List<Appointment>
+     * @return List<AppointmentDto>
      */
-    List<Appointment> findAll();
+    List<AppointmentDto> findAll();
 
     /**
      * Поиск приема в БД по идентификатору

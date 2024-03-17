@@ -39,7 +39,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор временного слота
      * @return TimeSlotDto
      */
     @Override
@@ -59,7 +59,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param timeSlot
+     * @param doctorId - Идентификатор доктора
+     * @param timeSlot - Идентификатор временного слота
      * @return TimeSlotDto
      */
     @Override
@@ -82,8 +83,8 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param timeSlotId
-     * @param editedTimeSlotEntity
+     * @param timeSlotId - Идентификатор временного слота
+     * @param editedTimeSlotEntity - Объект временного слота
      * @return TimeSlotDto
      */
     @Override
@@ -104,7 +105,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор временного слота
      */
     @Override
     public void deleteById(Long id) {
@@ -136,7 +137,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param id
+     * @param id - Идентификатор временного слота
      */
     @Override
     public void softDeleteById(Long id) {
@@ -152,7 +153,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param doctorId
+     * @param doctorId - Идентификатор доктора
      * @return List<TimeSlotDto>
      */
     @Override
@@ -170,7 +171,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param doctorId
+     * @param doctorId - Идентификатор доктора
      * @return List<TimeSlotDto>
      */
     @Override
@@ -188,9 +189,9 @@ public class TimeSlotServiceImpl implements TimeSlotService {
     }
 
     /**
-     * @param doctorId
-     * @param to
-     * @param from
+     * @param doctorId - Идентификатор доктора
+     * @param to - Врехняя граница целевого диапазона дат
+     * @param from - Нижняя граница целевого диапазона дат
      * @return List<TimeSlotDto>
      */
     @Override
