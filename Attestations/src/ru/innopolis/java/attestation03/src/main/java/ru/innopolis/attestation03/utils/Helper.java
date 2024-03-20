@@ -1,7 +1,12 @@
 package ru.innopolis.attestation03.utils;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 public class Helper {
     static String SPACE = " ";
+
     public static String getFullName(
             String lastName,
             String firstName,
@@ -22,5 +27,14 @@ public class Helper {
         }
 
         return fullName.toString();
+    }
+
+    public static String asJsonString(final Object obj) {
+        try {
+            return new ObjectMapper().registerModule(new JavaTimeModule())
+                    .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false).writeValueAsString(obj);
+        } catch (Exception error) {
+            throw new RuntimeException(error);
+        }
     }
 }

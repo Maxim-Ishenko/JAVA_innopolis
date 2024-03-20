@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed">
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/AppointmentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/DoctorControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/PatientControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/TimeSlotControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/controllers/AppointmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/AppointmentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/dto/AppointmentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/TimeSlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/repositories/AppointmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/AppointmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/services/impl/AppointmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/models/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/utils/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/Attestation03ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/Attestation03ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +41,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="PersonProductRepositoryImplTest" />
-    </enabled-run-configurations>
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -80,6 +79,32 @@
     "Downloaded.Files.Path.Enabled": "true",
     "HTTP Request.Attestation03Application | #1.executor": "Run",
     "HTTP Request.generated-requests | #1.executor": "Run",
+    "JUnit.AppointmentControllerTest.executor": "Coverage",
+    "JUnit.AppointmentControllerTest.findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient.executor": "Run",
+    "JUnit.AppointmentControllerTest.findAllByTimeSlotIdShouldReturnAppointmentsReferencedWithSpecificTimeSlot.executor": "Run",
+    "JUnit.AppointmentControllerTest.findByIdShouldReturnSpecificValidAppointment.executor": "Run",
+    "JUnit.Attestation03ApplicationTests.executor": "Coverage",
+    "JUnit.DoctorControllerTest.createShouldAddValidDoctorToCollection.executor": "Run",
+    "JUnit.DoctorControllerTest.deleteShouldDeleteDoctorFromCollection.executor": "Run",
+    "JUnit.DoctorControllerTest.editShouldUpdateDoctorFromCollection.executor": "Run",
+    "JUnit.DoctorControllerTest.executor": "Coverage",
+    "JUnit.DoctorControllerTest.findAllShouldReturnAllDoctors.executor": "Coverage",
+    "JUnit.DoctorControllerTest.findByIdShouldReturnExceptionForNotValidDoctor.executor": "Run",
+    "JUnit.DoctorControllerTest.findByIdShouldReturnSpecificValidDoctor.executor": "Run",
+    "JUnit.DoctorControllerTest.saveShouldAddValidDoctorToCollection.executor": "Run",
+    "JUnit.DoctorControllerTest.softDeleteShouldUpdateHasRemovedFlag.executor": "Run",
+    "JUnit.PatientControllerTest.createShouldAddValidPatientToCollection.executor": "Run",
+    "JUnit.PatientControllerTest.editShouldUpdatePatientFromCollection.executor": "Run",
+    "JUnit.PatientControllerTest.executor": "Coverage",
+    "JUnit.PatientControllerTest.findAllShouldReturnAllPatients.executor": "Run",
+    "JUnit.PatientControllerTest.findByIdShouldReturnSpecificValidPatient.executor": "Run",
+    "JUnit.TimeSlotControllerTest.createShouldAddValidDoctorToCollection.executor": "Run",
+    "JUnit.TimeSlotControllerTest.deleteShouldDeleteTimeSlotFromCollection.executor": "Run",
+    "JUnit.TimeSlotControllerTest.editShouldUpdateTimeSlotFromCollection.executor": "Run",
+    "JUnit.TimeSlotControllerTest.findAllAllAvailableByDoctorIdAndDateRangeShouldReturnCorrectCollection.executor": "Run",
+    "JUnit.TimeSlotControllerTest.findAllAvailableByDoctorIdShouldReturnAvailableTimeSlotsReferencedWithSpecificDoctor.executor": "Run",
+    "JUnit.TimeSlotControllerTest.findAllByDoctorIdShouldReturnTimeSlotsReferencedWithSpecificDoctor.executor": "Run",
+    "JUnit.TimeSlotControllerTest.softDeleteShouldUpdateHasRemovedFlag.executor": "Run",
     "Maven.attestation02 [clean].executor": "Run",
     "Maven.attestation03 [clean].executor": "Run",
     "Maven.attestation03 [install].executor": "Run",
@@ -103,7 +128,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/Attestations/attestation3/SpringBootFullAppIntroExample_part2",
+    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/Attestations/attestation3/finalWithTests/SpringBootFullAppIntroExample",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -111,7 +136,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "database.query.execution",
+    "settings.editor.selected.configurable": "reference.idesettings.debugger.capture",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -139,49 +164,81 @@
       <recent name="ru.innopolis.attestation03.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Attestation03Application">
-    <configuration name="schema.sql (1)" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestattion03/src/main/resources/schema.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
-    <configuration name="schema.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation02/src/main/resources/schema.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="59f373ed-43bd-40ac-aada-23abd1cc7355" namespace="database/&quot;shop&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Attestation03Application | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/Attestation03Application.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="PersonProductRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homeworks" />
+  <component name="RunManager" selected="JUnit.Attestation03ApplicationTests">
+    <configuration name="AppointmentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="attestation03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.App" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl" />
+          <option name="PATTERN" value="ru.innopolis.attestation03.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImplTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.controllers.AppointmentControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppointmentControllerTest.findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="attestation03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.attestation03.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.controllers.AppointmentControllerTest" />
+      <option name="METHOD_NAME" value="findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppointmentControllerTest.findAllByTimeSlotIdShouldReturnAppointmentsReferencedWithSpecificTimeSlot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="attestation03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.attestation03.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.controllers.AppointmentControllerTest" />
+      <option name="METHOD_NAME" value="findAllByTimeSlotIdShouldReturnAppointmentsReferencedWithSpecificTimeSlot" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppointmentControllerTest.findByIdShouldReturnSpecificValidAppointment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="attestation03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.attestation03.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.controllers.AppointmentControllerTest" />
+      <option name="METHOD_NAME" value="findByIdShouldReturnSpecificValidAppointment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Attestation03ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="attestation03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.attestation03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.Attestation03ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,21 +258,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Database Script.schema.sql (1)" />
-      <item itemvalue="Database Script.schema.sql" />
-      <item itemvalue="HTTP Request.Attestation03Application | #1" />
-      <item itemvalue="HTTP Request.generated-requests | #1" />
-      <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
+      <item itemvalue="JUnit.AppointmentControllerTest" />
+      <item itemvalue="JUnit.AppointmentControllerTest.findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient" />
+      <item itemvalue="JUnit.AppointmentControllerTest.findAllByTimeSlotIdShouldReturnAppointmentsReferencedWithSpecificTimeSlot" />
+      <item itemvalue="JUnit.AppointmentControllerTest.findByIdShouldReturnSpecificValidAppointment" />
+      <item itemvalue="JUnit.Attestation03ApplicationTests" />
       <item itemvalue="Spring Boot.Attestation03Application" />
       <item itemvalue="Spring Boot.Attestattion03Application" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.Attestation03Application | #1" />
-        <item itemvalue="HTTP Request.generated-requests | #1" />
-        <item itemvalue="Database Script.schema.sql (1)" />
-        <item itemvalue="Database Script.schema.sql" />
-        <item itemvalue="JUnit.PersonProductRepositoryImplTest" />
+        <item itemvalue="JUnit.Attestation03ApplicationTests" />
+        <item itemvalue="JUnit.AppointmentControllerTest.findByIdShouldReturnSpecificValidAppointment" />
+        <item itemvalue="JUnit.AppointmentControllerTest" />
+        <item itemvalue="JUnit.AppointmentControllerTest.findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient" />
+        <item itemvalue="JUnit.AppointmentControllerTest.findAllByTimeSlotIdShouldReturnAppointmentsReferencedWithSpecificTimeSlot" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +296,8 @@
       <workItem from="1708924432227" duration="592000" />
       <workItem from="1709100342213" duration="64503000" />
       <workItem from="1709883862755" duration="47933000" />
-      <workItem from="1710387969216" duration="72800000" />
+      <workItem from="1710387969216" duration="84748000" />
+      <workItem from="1710820264392" duration="23696000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />
@@ -281,19 +339,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="setting files changed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PatientControllerTest.ic" NAME="PatientControllerTest Coverage Results" MODIFIED="1710908525734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest.ic" NAME="PersonProductRepositoryImplTest Coverage Results" MODIFIED="1706247221948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.*</FILTER>
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.App</FILTER>
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_createNewPerson__1_.ic" NAME="PersonProductRepositoryImplTest.createNewPerson (1) Coverage Results" MODIFIED="1706248838028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorControllerTest.ic" NAME="DoctorControllerTest Coverage Results" MODIFIED="1710904239924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$Attestation03ApplicationTests.ic" NAME="Attestation03ApplicationTests Coverage Results" MODIFIED="1710907575074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.attestation03.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/JAVA_innopolis$CarRepositoryImplTest.ic" NAME="CarRepositoryImplTest Coverage Results" MODIFIED="1707036339927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.repository.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_getProductCoast.ic" NAME="PersonProductRepositoryImplTest.getProductCoast Coverage Results" MODIFIED="1706247373437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$AppointmentControllerTest.ic" NAME="AppointmentControllerTest Coverage Results" MODIFIED="1710917295772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_createNewPerson__1_.ic" NAME="PersonProductRepositoryImplTest.createNewPerson (1) Coverage Results" MODIFIED="1706248838028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorControllerTest_findAllShouldReturnAllDoctors.ic" NAME="DoctorControllerTest.findAllShouldReturnAllDoctors Coverage Results" MODIFIED="1710820278966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_getProductCoast.ic" NAME="PersonProductRepositoryImplTest.getProductCoast Coverage Results" MODIFIED="1706247373437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
     </SUITE>
   </component>
