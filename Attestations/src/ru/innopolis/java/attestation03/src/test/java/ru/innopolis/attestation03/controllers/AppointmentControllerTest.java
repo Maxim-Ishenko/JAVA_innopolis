@@ -8,11 +8,17 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.innopolis.attestation03.dto.AppointmentDto;
+import ru.innopolis.attestation03.dto.TimeSlotDto;
 import ru.innopolis.attestation03.enums.ServiceType;
+import ru.innopolis.attestation03.models.Doctor;
+import ru.innopolis.attestation03.models.TimeSlot;
 import ru.innopolis.attestation03.services.AppointmentService;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -20,6 +26,7 @@ import java.util.Objects;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static ru.innopolis.attestation03.utils.Helper.asJsonString;
 
 @DisplayName("AppointmentController testing")
 @WebMvcTest(AppointmentController.class)
@@ -114,5 +121,28 @@ public class AppointmentControllerTest {
         mockMvc.perform(get("/appointments/byPatient/{patientId}", FIRST_TEST_PATIENT_ID))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()").value(1));
+    }
+
+    @Test
+    void createShouldAddValidAppointmentToCollection() throws Exception {
+        AppointmentDto testAppointment = new AppointmentDto();
+        testAppointment.setId(3L);
+        testAppointment.setDoctorId(FIRST_TEST_DOCTOR_ID);
+        testAppointment.setDoctorFullName("Тестов Доктор Докторович");
+        testAppointment.setPatientId(FIRST_TEST_PATIENT_ID);
+        testAppointment.setPatientFullName("Петров Петр Петрович");
+        testAppointment.setTimeSlotId(FIRST_TEST_TIME_SLOT_ID);
+        testAppointment.setServiceType(ServiceType.ONLINE);
+
+        Mockito.when(this.appointmentService.create(testAppointment))
+                .thenReturn(testAppointment);
+
+        mockMvc.perform(
+                        post("/appointments/appointment")
+                                .content(asJsonString(testAppointment))
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.id").value(3));
     }
 }
