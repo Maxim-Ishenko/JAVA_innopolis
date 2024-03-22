@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed">
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/repositories/DoctorRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/DoctorServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/utils/HelperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/PatientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/Attestation03Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/main/java/ru/innopolis/attestation03/Attestation03Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/AppointmentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/AppointmentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/DoctorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/DoctorServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/utils/HelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/utils/HelperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,9 @@
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\htmlReport" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,6 +53,7 @@
         <option name="downloadAnnotationsAutomatically" value="true" />
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -94,16 +97,25 @@
     "JUnit.DoctorRepositoryTest.executor": "Run",
     "JUnit.DoctorRepositoryTest.findAllByHasRemovedFalseShouldReturnNotSoftRemovedDoctors.executor": "Run",
     "JUnit.DoctorRepositoryTest.findAllShouldReturnDoctors.executor": "Run",
-    "JUnit.DoctorServiceTest.executor": "Coverage",
+    "JUnit.DoctorServiceTest.create_ShouldCreateDoctor.executor": "Debug",
+    "JUnit.DoctorServiceTest.deleteById_ShouldDeleteDoctorById.executor": "Run",
+    "JUnit.DoctorServiceTest.executor": "Run",
+    "JUnit.DoctorServiceTest.findAllByHasRemovedFalse_ShouldReturnAllDoctorsByHasRemovedFlag.executor": "Run",
     "JUnit.DoctorServiceTest.findAllShouldReturnAllDoctors.executor": "Run",
+    "JUnit.DoctorServiceTest.findAll_ShouldReturnAllDoctors.executor": "Run",
     "JUnit.DoctorServiceTest.findByIdShouldReturnExceptionIfNotExists.executor": "Run",
-    "JUnit.HelperTest.executor": "Coverage",
+    "JUnit.DoctorServiceTest.findById_ShouldReturnValidDoctor.executor": "Run",
+    "JUnit.HelperTest.asJsonString_ShouldThrowExceptionIfArgIsNotValid.executor": "Run",
+    "JUnit.HelperTest.executor": "Run",
     "JUnit.HelperTest.getFullNameTest.executor": "Coverage",
     "JUnit.PatientControllerTest.createShouldAddValidPatientToCollection.executor": "Run",
     "JUnit.PatientControllerTest.editShouldUpdatePatientFromCollection.executor": "Run",
     "JUnit.PatientControllerTest.executor": "Coverage",
     "JUnit.PatientControllerTest.findAllShouldReturnAllPatients.executor": "Run",
     "JUnit.PatientControllerTest.findByIdShouldReturnSpecificValidPatient.executor": "Run",
+    "JUnit.PatientServiceTest.aaaaaaaa.executor": "Run",
+    "JUnit.PatientServiceTest.executor": "Run",
+    "JUnit.PatientServiceTest.findAll_ShouldReturnPatientsList.executor": "Run",
     "JUnit.TimeSlotControllerTest.createShouldAddValidDoctorToCollection.executor": "Run",
     "JUnit.TimeSlotControllerTest.deleteShouldDeleteTimeSlotFromCollection.executor": "Run",
     "JUnit.TimeSlotControllerTest.editShouldUpdateTimeSlotFromCollection.executor": "Run",
@@ -143,7 +155,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.idesettings.debugger.capture",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -171,8 +183,8 @@
       <recent name="ru.innopolis.attestation03.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Attestation03ApplicationTests">
-    <configuration name="AppointmentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DoctorControllerTest.editShouldUpdateDoctorFromCollection">
+    <configuration name="DoctorControllerTest.editShouldUpdateDoctorFromCollection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="attestation03" />
       <extension name="coverage">
         <pattern>
@@ -181,41 +193,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.controllers.AppointmentControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.controllers.DoctorControllerTest" />
+      <option name="METHOD_NAME" value="editShouldUpdateDoctorFromCollection" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Attestation03ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="attestation03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.Attestation03ApplicationTests" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DoctorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DoctorServiceTest.create_ShouldCreateDoctor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="attestation03" />
       <extension name="coverage">
         <pattern>
@@ -225,37 +210,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.services" />
       <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.services.DoctorServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="create_ShouldCreateDoctor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DoctorServiceTest.deleteById_ShouldDeleteDoctorById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="attestation03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.utils.*" />
+          <option name="PATTERN" value="ru.innopolis.attestation03.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.utils" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.utils.HelperTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.services" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.services.DoctorServiceTest" />
+      <option name="METHOD_NAME" value="deleteById_ShouldDeleteDoctorById" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelperTest.getFullNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatientServiceTest.aaaaaaaa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="attestation03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.utils.*" />
+          <option name="PATTERN" value="ru.innopolis.attestation03.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.utils" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.utils.HelperTest" />
-      <option name="METHOD_NAME" value="getFullNameTest" />
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.services" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.services.PatientServiceTest" />
+      <option name="METHOD_NAME" value="aaaaaaaa" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceTest.findAll_ShouldReturnPatientsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="attestation03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.innopolis.attestation03.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.services" />
+      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.services.PatientServiceTest" />
+      <option name="METHOD_NAME" value="findAll_ShouldReturnPatientsList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -276,21 +279,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AppointmentControllerTest" />
-      <item itemvalue="JUnit.DoctorServiceTest" />
-      <item itemvalue="JUnit.HelperTest" />
-      <item itemvalue="JUnit.Attestation03ApplicationTests" />
-      <item itemvalue="JUnit.HelperTest.getFullNameTest" />
+      <item itemvalue="JUnit.DoctorControllerTest.editShouldUpdateDoctorFromCollection" />
+      <item itemvalue="JUnit.DoctorServiceTest.create_ShouldCreateDoctor" />
+      <item itemvalue="JUnit.DoctorServiceTest.deleteById_ShouldDeleteDoctorById" />
+      <item itemvalue="JUnit.PatientServiceTest.aaaaaaaa" />
+      <item itemvalue="JUnit.PatientServiceTest.findAll_ShouldReturnPatientsList" />
       <item itemvalue="Spring Boot.Attestation03Application" />
       <item itemvalue="Spring Boot.Attestattion03Application" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Attestation03ApplicationTests" />
-        <item itemvalue="JUnit.HelperTest" />
-        <item itemvalue="JUnit.AppointmentControllerTest" />
-        <item itemvalue="JUnit.DoctorServiceTest" />
-        <item itemvalue="JUnit.HelperTest.getFullNameTest" />
+        <item itemvalue="JUnit.DoctorControllerTest.editShouldUpdateDoctorFromCollection" />
+        <item itemvalue="JUnit.PatientServiceTest.findAll_ShouldReturnPatientsList" />
+        <item itemvalue="JUnit.DoctorServiceTest.create_ShouldCreateDoctor" />
+        <item itemvalue="JUnit.DoctorServiceTest.deleteById_ShouldDeleteDoctorById" />
+        <item itemvalue="JUnit.PatientServiceTest.aaaaaaaa" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +319,8 @@
       <workItem from="1709883862755" duration="47933000" />
       <workItem from="1710387969216" duration="84748000" />
       <workItem from="1710820264392" duration="42570000" />
-      <workItem from="1711021221580" duration="1004000" />
+      <workItem from="1711021221580" duration="10593000" />
+      <workItem from="1711079633728" duration="9750000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />
@@ -367,8 +371,11 @@
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.App</FILTER>
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.PersonProductRepositoryImpl</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$Attestation03ApplicationTests.ic" NAME="Attestation03ApplicationTests Coverage Results" MODIFIED="1711036538022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$Attestation03ApplicationTests.ic" NAME="Attestation03ApplicationTests Coverage Results" MODIFIED="1711076681132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.attestation03.*</FILTER>
+      <FILTER>ru.innopolis.attestation03.utils.*</FILTER>
+      <FILTER>ru.innopolis.attestation03.services.*</FILTER>
+      <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorControllerTest_findAllShouldReturnAllDoctors.ic" NAME="DoctorControllerTest.findAllShouldReturnAllDoctors Coverage Results" MODIFIED="1710820278966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
@@ -380,7 +387,7 @@
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JAVA_innopolis$Attestation03Application.ic" NAME="Attestation03Application Coverage Results" MODIFIED="1711001490150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$HelperTest.ic" NAME="HelperTest Coverage Results" MODIFIED="1711036613772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$HelperTest.ic" NAME="HelperTest Coverage Results" MODIFIED="1711079880367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.attestation03.utils.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorControllerTest.ic" NAME="DoctorControllerTest Coverage Results" MODIFIED="1710904239924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -389,7 +396,7 @@
     <SUITE FILE_PATH="coverage/JAVA_innopolis$PersonProductRepositoryImplTest_createNewPerson__1_.ic" NAME="PersonProductRepositoryImplTest.createNewPerson (1) Coverage Results" MODIFIED="1706248838028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.java.homework014_unit_tests_HW6.repository.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorServiceTest.ic" NAME="DoctorServiceTest Coverage Results" MODIFIED="1711036223085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorServiceTest.ic" NAME="DoctorServiceTest Coverage Results" MODIFIED="1711077562834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.attestation03.services.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JAVA_innopolis$CarRepositoryImplTest.ic" NAME="CarRepositoryImplTest Coverage Results" MODIFIED="1707036339927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
