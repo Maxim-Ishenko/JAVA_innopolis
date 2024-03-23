@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static ru.innopolis.attestation03.utils.Helper.asJsonString;
 
-@DisplayName("PatientController testing")
+@DisplayName("PatientController")
 @WebMvcTest(PatientController.class)
 public class PatientControllerTest {
     @Autowired
@@ -37,30 +37,29 @@ public class PatientControllerTest {
     Address testAddress = new Address();
     private final Long FIRST_TEST_PATIENT_ID = 1L;
 
-
-
     @BeforeEach
     public void init() {
         testAddress.setPermanentAddress("Воронеж");
         testAddress.setResidentialAddress("Мытищи");
 
-        PatientDto firstPatient = new PatientDto();
-        firstPatient.setId(1L);
-        firstPatient.setFirstName("Петр");
-        firstPatient.setLastName("Петров");
-        firstPatient.setPatronymic("Петрович");
-        firstPatient.setBirthdate(LocalDate.parse("1984-05-11"));
-        firstPatient.setPhoneNumber(13244);
-        firstPatient.setAddress(testAddress);
-
-        PatientDto secondPatient = new PatientDto();
-        secondPatient.setId(2L);
-        secondPatient.setFirstName("Янина");
-        secondPatient.setLastName("Абдурахманова");
-        secondPatient.setPatronymic("Мафусаиловна");
-        secondPatient.setBirthdate(LocalDate.parse("1974-03-18"));
-        secondPatient.setPhoneNumber(898989);
-        secondPatient.setAddress(testAddress);
+        PatientDto firstPatient = PatientDto.builder()
+                .id(1L)
+                .firstName("Петр")
+                .lastName("Петров")
+                .patronymic("Петрович")
+                .birthdate(LocalDate.parse("1984-05-11"))
+                .phoneNumber(13244)
+                .address(testAddress)
+                .build();
+        PatientDto secondPatient = PatientDto.builder()
+                .id(2L)
+                .firstName("Янина")
+                .lastName("Абдурахманова")
+                .patronymic("Мафусаиловна")
+                .birthdate(LocalDate.parse("1974-03-18"))
+                .phoneNumber(898989)
+                .address(testAddress)
+                .build();
 
         patients.add(firstPatient);
         patients.add(secondPatient);
@@ -71,8 +70,9 @@ public class PatientControllerTest {
         patients.clear();
     }
 
+    @DisplayName(value = "Метод findAll")
     @Test
-    void findAllShouldReturnAllPatients() throws Exception {
+    void findAll_ShouldReturnAllPatients() throws Exception {
         Mockito.when(this.patientService.findAll()).thenReturn(patients);
 
         mockMvc.perform(get("/patients"))
@@ -80,8 +80,9 @@ public class PatientControllerTest {
                 .andExpect(jsonPath("$.length()").value(2));
     }
 
+    @DisplayName(value = "Метод findById")
     @Test
-    void findByIdShouldReturnSpecificValidPatient() throws Exception {
+    void findById_ShouldReturnSpecificValidPatient() throws Exception {
         Mockito.when(this.patientService.findById(FIRST_TEST_PATIENT_ID))
                 .thenReturn(patients.get(0));
 
@@ -97,17 +98,18 @@ public class PatientControllerTest {
                 .andExpect(jsonPath("$.address.permanentAddress").value("Воронеж"));
     }
 
+    @DisplayName(value = "Метод create")
     @Test
-    void createShouldAddValidPatientToCollection() throws Exception {
-        PatientDto newPatient = new PatientDto();
-        newPatient.setId(3L);
-        newPatient.setFirstName("Петро");
-        newPatient.setLastName("Петровкин");
-        newPatient.setPatronymic("Петровичус");
-        newPatient.setBirthdate(LocalDate.parse("1989-01-12"));
-        newPatient.setPhoneNumber(1111);
-        newPatient.setAddress(testAddress);
-        patients.add(newPatient);
+    void create_ShouldAddValidPatientToCollection() throws Exception {
+        PatientDto newPatient = PatientDto.builder()
+                .id(3L)
+                .firstName("Петро")
+                .lastName("Петровкин")
+                .patronymic("Петровичус")
+                .birthdate(LocalDate.parse("1989-01-12"))
+                .phoneNumber(1111)
+                .address(testAddress)
+                .build();
 
         Mockito.when(this.patientService.create(newPatient)).thenReturn(newPatient);
 
@@ -127,8 +129,9 @@ public class PatientControllerTest {
                 .andExpect(jsonPath("$.address.permanentAddress").value("Воронеж"));
     }
 
+    @DisplayName(value = "Метод edit")
     @Test
-    void editShouldUpdatePatientFromCollection() throws Exception {
+    void edit_ShouldUpdatePatientFromCollection() throws Exception {
         PatientDto editedPatient = patients.get(0);
         editedPatient.setPhoneNumber(77777);
 
@@ -145,8 +148,9 @@ public class PatientControllerTest {
 
     }
 
+    @DisplayName(value = "Метод delete")
     @Test
-    void deleteShouldDeletePatientFromCollection() throws Exception {
+    void delete_ShouldDeletePatientFromCollection() throws Exception {
         willDoNothing().given(this.patientService).deleteById(FIRST_TEST_PATIENT_ID);
 
         mockMvc.perform(delete("/patients/{patientId}", FIRST_TEST_PATIENT_ID)
@@ -156,8 +160,9 @@ public class PatientControllerTest {
                 .andExpect(status().isAccepted());
     }
 
+    @DisplayName(value = "Метод softDelete")
     @Test
-    void softDeleteShouldUpdateHasRemovedFlag() throws Exception {
+    void softDelete_ShouldUpdateHasRemovedFlag() throws Exception {
         willDoNothing().given(this.patientService).softDeleteById(FIRST_TEST_PATIENT_ID);
 
         mockMvc.perform(

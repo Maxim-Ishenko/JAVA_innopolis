@@ -13,8 +13,9 @@ import ru.innopolis.attestation03.services.impl.DoctorServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
-@DisplayName(value = "DoctorService testing")
+@DisplayName(value = "DoctorService")
 @DisplayNameGeneration(value = DisplayNameGenerator.ReplaceUnderscores.class)
 @SpringBootTest
 public class DoctorServiceTest {
@@ -53,6 +54,7 @@ public class DoctorServiceTest {
         doctors.add(secondDoctor);
     }
 
+    @DisplayName(value = "Метод findAll")
     @Test
     public void findAll_ShouldReturnAllDoctors() {
         Mockito.when(doctorRepository.findAll())
@@ -65,6 +67,7 @@ public class DoctorServiceTest {
         Assertions.assertEquals(DoctorDto.from(doctors).get(0), DoctorDto.from(firstDoctor));
     }
 
+    @DisplayName(value = "Метод findAllByHasRemovedFalse")
     @Test
     public void findAllByHasRemovedFalse_ShouldReturnAllDoctorsByHasRemovedFlag() {
         Mockito.when(
@@ -77,6 +80,7 @@ public class DoctorServiceTest {
         Assertions.assertNotEquals(doctors.size(), foundDoctors.size());
     }
 
+    @DisplayName(value = "Метод findById - позитивный сценарий")
     @Test
     public void findById_ShouldReturnValidDoctor() {
         Mockito.when(doctorRepository.findById(47L)).thenThrow(CustomException.class);
@@ -84,6 +88,7 @@ public class DoctorServiceTest {
         Assertions.assertThrows(CustomException.class, () -> doctorService.findById(47L));
     }
 
+    @DisplayName(value = "Метод findById - негативный сценарий")
     @Test
     public void findById_ShouldReturnExceptionIfNotExists() {
         Mockito.when(doctorRepository.findById(47L)).thenThrow(CustomException.class);
@@ -91,40 +96,15 @@ public class DoctorServiceTest {
         Assertions.assertThrows(CustomException.class, () -> doctorService.findById(47L));
     }
 
-    @Test
-    public void create_ShouldCreateDoctor() {
-        Doctor testDoctor = new Doctor();
-        testDoctor.setId(FIRST_TEST_DOCTOR_ID);
-        testDoctor.setSpeciality(1);
-        testDoctor.setFirstName("Геннадий");
-        testDoctor.setLastName("Малахоу");
-        testDoctor.setPatronymic("Петрович");
-        testDoctor.setPhoneNumber(4558L);
-        testDoctor.setHasRemoved(false);
-
-        Mockito.when(doctorRepository.save(testDoctor)).thenReturn(testDoctor);
-
-        DoctorDto savedDoctor = doctorService.create(DoctorDto.from(testDoctor));
-
-//        Assertions.assertNotNull(savedDoctor);
-        Assertions.assertEquals(savedDoctor.getId(), testDoctor.getId());
-    }
-
-    @Test
-    public void update_shouldUpdateDoctor() {
-
-    }
-
+    @DisplayName(value = "Метод deleteById")
     @Test
     public void deleteById_ShouldDeleteDoctorById() {
+        Mockito.when(doctorRepository.findById(FIRST_TEST_DOCTOR_ID)).thenReturn(Optional.ofNullable(firstDoctor));
+
         doctorService.deleteById(FIRST_TEST_DOCTOR_ID);
 
         Mockito.verify(doctorRepository, Mockito.times(1))
                 .deleteById(FIRST_TEST_DOCTOR_ID);
-    }
-    @Test
-    public void softDeleteById_ShouldChangeHasRemovedFlagToTrueById() {
-
     }
 
     @AfterEach

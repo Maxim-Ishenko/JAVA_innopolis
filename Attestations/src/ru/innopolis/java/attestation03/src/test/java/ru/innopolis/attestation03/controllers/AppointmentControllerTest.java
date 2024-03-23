@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static ru.innopolis.attestation03.utils.Helper.asJsonString;
 
-@DisplayName("AppointmentController testing")
+@DisplayName("AppointmentController")
 @WebMvcTest(AppointmentController.class)
 public class AppointmentControllerTest {
     @Autowired
@@ -45,23 +45,24 @@ public class AppointmentControllerTest {
 
     @BeforeEach
     public void init() {
-        AppointmentDto firstAppointment = new AppointmentDto();
-        firstAppointment.setId(FIRST_TEST_APPOINTMENT_ID);
-        firstAppointment.setDoctorId(FIRST_TEST_DOCTOR_ID);
-        firstAppointment.setDoctorFullName("Тестов Доктор Докторович");
-        firstAppointment.setPatientId(FIRST_TEST_PATIENT_ID);
-        firstAppointment.setPatientFullName("Петров Петр Петрович");
-        firstAppointment.setTimeSlotId(FIRST_TEST_TIME_SLOT_ID);
-        firstAppointment.setServiceType(ServiceType.LIVE);
-
-        AppointmentDto secondAppointment = new AppointmentDto();
-        secondAppointment.setId(2L);
-        secondAppointment.setDoctorId(2L);
-        secondAppointment.setDoctorFullName("Тестов Доктор Докторович");
-        secondAppointment.setPatientId(2L);
-        secondAppointment.setPatientFullName("Абдурахманова Янина Мафусоиловна");
-        secondAppointment.setTimeSlotId(2L);
-        secondAppointment.setServiceType(ServiceType.ONLINE);
+        AppointmentDto firstAppointment = AppointmentDto.builder()
+                .id(FIRST_TEST_APPOINTMENT_ID)
+                .doctorId(FIRST_TEST_DOCTOR_ID)
+                .doctorFullName("Тестов Доктор Докторович")
+                .patientId(FIRST_TEST_PATIENT_ID)
+                .patientFullName("Петров Петр Петрович")
+                .timeSlotId(FIRST_TEST_TIME_SLOT_ID)
+                .serviceType(ServiceType.LIVE)
+                .build();
+        AppointmentDto secondAppointment = AppointmentDto.builder()
+                .id(2L)
+                .doctorId(2L)
+                .doctorFullName("Тестов Доктор Докторович")
+                .patientId(2L)
+                .patientFullName("Абдурахманова Янина Мафусоиловна")
+                .timeSlotId(2L)
+                .serviceType(ServiceType.ONLINE)
+                .build();
 
         appointments.add(firstAppointment);
         appointments.add(secondAppointment);
@@ -72,8 +73,9 @@ public class AppointmentControllerTest {
         appointments.clear();
     }
 
+    @DisplayName(value = "Метод findAll")
     @Test
-    void findAllShouldReturnAllAppointments() throws Exception {
+    void findAll_ShouldReturnAllAppointments() throws Exception {
         Mockito.when(this.appointmentService.findAll()).thenReturn(appointments);
 
         mockMvc.perform(get("/appointments"))
@@ -81,8 +83,9 @@ public class AppointmentControllerTest {
                 .andExpect(jsonPath("$.length()").value(2));
     }
 
+    @DisplayName(value = "Метод findById")
     @Test
-    void findByIdShouldReturnSpecificValidAppointment() throws Exception {
+    void findById_ShouldReturnSpecificValidAppointment() throws Exception {
         Mockito.when(this.appointmentService.findById(FIRST_TEST_APPOINTMENT_ID))
                 .thenReturn(appointments.get(0));
 
@@ -97,8 +100,9 @@ public class AppointmentControllerTest {
                 .andExpect(jsonPath("$.serviceType").value("LIVE"));
     }
 
+    @DisplayName(value = "Метод findAllByDoctorId")
     @Test
-    void findAllByDoctorIdShouldReturnAppointmentsReferencedWithSpecificDoctor() throws Exception {
+    void findAllByDoctorId_ShouldReturnAppointments_ReferencedWithSpecificDoctor() throws Exception {
         Mockito.when(this.appointmentService.findAllByDoctorId(FIRST_TEST_DOCTOR_ID))
                 .thenReturn(appointments.stream()
                         .filter(currentAppointment ->
@@ -110,8 +114,9 @@ public class AppointmentControllerTest {
                 .andExpect(jsonPath("$.length()").value(1));
     }
 
+    @DisplayName(value = "Метод findAllByPatientId")
     @Test
-    void findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient() throws Exception {
+    void findAllByPatientId_ShouldReturnAppointments_ReferencedWithSpecificPatient() throws Exception {
         Mockito.when(this.appointmentService.findAllByPatientId(FIRST_TEST_PATIENT_ID))
                 .thenReturn(appointments.stream()
                         .filter(currentAppointment ->
@@ -123,8 +128,9 @@ public class AppointmentControllerTest {
                 .andExpect(jsonPath("$.length()").value(1));
     }
 
+    @DisplayName(value = "Метод create")
     @Test
-    void createShouldAddValidAppointmentToCollection() throws Exception {
+    void create_ShouldAddValidAppointment_ToCollection() throws Exception {
         AppointmentDto testAppointment = new AppointmentDto();
         testAppointment.setId(3L);
         testAppointment.setDoctorId(FIRST_TEST_DOCTOR_ID);

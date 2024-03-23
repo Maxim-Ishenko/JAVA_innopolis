@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
@@ -13,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.HashMap;
 import java.util.Map;
 
+@DisplayName(value = "Helper")
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
 public class HelperTest {
@@ -33,12 +35,14 @@ public class HelperTest {
                         Helper.asJsonString(testObject)).thenReturn("{ 1: 1, 2: 2, 3: 3 }");
     }
 
+    @DisplayName(value = "Метод getFullName")
     @Test
-    public void getFullNameTest_ShouldReturnFullName() {
+    public void getFullName_ShouldReturnFullName() {
         Assertions.assertNotNull(Helper.getFullName("1", "2", "3"));
         Assertions.assertEquals(Helper.getFullName("1", "2", "3"), "1 2 3");
     }
 
+    @DisplayName(value = "Метод asJsonString - позитивный сценарий")
     @Test
     public void asJsonString_ShouldReturnJSONString() {
         Map<String, String> testObject = new HashMap<>();
@@ -50,6 +54,7 @@ public class HelperTest {
         Assertions.assertEquals(Helper.asJsonString(testObject), "{ 1: 1, 2: 2, 3: 3 }");
     }
 
+    @DisplayName(value = "Метод asJsonString - негативный сценарий")
     @Test
     public void asJsonString_ShouldThrowExceptionIfArgIsNotValid() {
         Mockito.when(Helper.asJsonString("Gena")).thenThrow(RuntimeException .class);

@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static ru.innopolis.attestation03.utils.Helper.asJsonString;
 
-@DisplayName("DoctorController testing")
+@DisplayName("DoctorController")
 @WebMvcTest(DoctorController.class)
 public class DoctorControllerTest {
     @Autowired
@@ -36,20 +36,21 @@ public class DoctorControllerTest {
 
     @BeforeEach
     public void init() {
-        DoctorDto firstDoctor = new DoctorDto();
-        firstDoctor.setId(FIRST_TEST_DOCTOR_ID);
-        firstDoctor.setSpeciality(1);
-        firstDoctor.setFirstName("Геннадий");
-        firstDoctor.setLastName("Малахоу");
-        firstDoctor.setPhoneNumber(4558L);
-
-        DoctorDto secondDoctor = new DoctorDto();
-        secondDoctor.setId(2L);
-        secondDoctor.setSpeciality(2);
-        secondDoctor.setFirstName("Зинаида");
-        secondDoctor.setLastName("Семенова");
-        secondDoctor.setPatronymic("Петровна");
-        secondDoctor.setPhoneNumber(1238L);
+        DoctorDto firstDoctor = DoctorDto.builder()
+                .id(FIRST_TEST_DOCTOR_ID)
+                .speciality(1)
+                .firstName("Геннадий")
+                .lastName("Малахоу")
+                .phoneNumber(4558L)
+                .build();
+        DoctorDto secondDoctor = DoctorDto.builder()
+                .id(2L)
+                .speciality(2)
+                .firstName("Зинаида")
+                .lastName("Семенова")
+                .patronymic("Петровна")
+                .phoneNumber(1238L)
+                .build();
 
         doctors.add(firstDoctor);
         doctors.add(secondDoctor);
@@ -60,8 +61,9 @@ public class DoctorControllerTest {
         doctors.clear();
     }
 
+    @DisplayName(value = "Метод findAll")
     @Test
-    void findAllShouldReturnAllDoctors() throws Exception {
+    void findAll_ShouldReturnAllDoctors() throws Exception {
         Mockito.when(this.doctorService.findAll()).thenReturn(doctors);
 
         mockMvc.perform(get("/doctors"))
@@ -69,8 +71,9 @@ public class DoctorControllerTest {
                 .andExpect(jsonPath("$.length()").value(2));
     }
 
+    @DisplayName(value = "Метод findById")
     @Test
-    void findByIdShouldReturnSpecificValidDoctor() throws Exception {
+    void findById_ShouldReturnSpecificValidDoctor() throws Exception {
         Mockito.when(this.doctorService.findById(FIRST_TEST_DOCTOR_ID))
                 .thenReturn(doctors.get(0));
 
@@ -83,15 +86,18 @@ public class DoctorControllerTest {
                 .andExpect(jsonPath("$.phoneNumber").value(4558));
     }
 
+    @DisplayName(value = "Метод create")
     @Test
-    void createShouldAddValidDoctorToCollection() throws Exception {
-        DoctorDto newDoctor = new DoctorDto();
-        newDoctor.setId(3L);
-        newDoctor.setSpeciality(3);
-        newDoctor.setFirstName("Геннадий");
-        newDoctor.setLastName("Иванов");
-        newDoctor.setPatronymic("Иванович");
-        newDoctor.setPhoneNumber(3218L);
+    void create_ShouldAddValidDoctorToCollection() throws Exception {
+        DoctorDto newDoctor = DoctorDto.builder()
+                .id(3L)
+                .speciality(3)
+                .firstName("Геннадий")
+                .lastName("Иванов")
+                .patronymic("Иванович")
+                .phoneNumber(3218L)
+                .build();
+
         doctors.add(newDoctor);
 
         Mockito.when(this.doctorService.create(newDoctor)).thenReturn(newDoctor);
@@ -110,8 +116,9 @@ public class DoctorControllerTest {
                 .andExpect(jsonPath("$.phoneNumber").value(3218));
     }
 
+    @DisplayName(value = "Метод edit")
     @Test
-    void editShouldUpdateDoctorFromCollection() throws Exception {
+    void edit_ShouldUpdateDoctorFromCollection() throws Exception {
         DoctorDto editedDoctor = doctors.get(0);
         editedDoctor.setPhoneNumber(77777L);
 
@@ -128,8 +135,9 @@ public class DoctorControllerTest {
 
     }
 
+    @DisplayName(value = "Метод delete")
     @Test
-    void deleteShouldDeleteDoctorFromCollection() throws Exception {
+    void delete_ShouldDeleteDoctorFromCollection() throws Exception {
         willDoNothing().given(this.doctorService).deleteById(FIRST_TEST_DOCTOR_ID);
 
         mockMvc.perform(delete("/doctors/{doctorId}", FIRST_TEST_DOCTOR_ID)
@@ -139,8 +147,9 @@ public class DoctorControllerTest {
                 .andExpect(status().isAccepted());
     }
 
+    @DisplayName(value = "Метод softDelete")
     @Test
-    void softDeleteShouldUpdateHasRemovedFlag() throws Exception {
+    void softDelete_ShouldUpdateHasRemovedFlag() throws Exception {
         willDoNothing().given(this.doctorService).softDeleteById(FIRST_TEST_DOCTOR_ID);
 
         mockMvc.perform(

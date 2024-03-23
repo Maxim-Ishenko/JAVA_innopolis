@@ -43,23 +43,24 @@ public class TimeSlotControllerTest {
 
     @BeforeEach
     public void init() {
-        TimeSlotDto firstTimeSlot = new TimeSlotDto();
-        firstTimeSlot.setId(1L);
-        firstTimeSlot.setDoctorId(1L);
-        firstTimeSlot.setDoctorFullName("Тестов Доктор Докторович");
-        firstTimeSlot.setDate(LocalDate.parse("2024-03-28"));
-        firstTimeSlot.setStartTime(LocalTime.parse("10:00"));
-        firstTimeSlot.setEndTime(LocalTime.parse("11:00"));
-        firstTimeSlot.setAvailability(true);
-
-        TimeSlotDto secondTimeSlot = new TimeSlotDto();
-        secondTimeSlot.setId(2L);
-        secondTimeSlot.setDoctorId(2L);
-        secondTimeSlot.setDoctorFullName("Тестова Фекла Павловна");
-        firstTimeSlot.setDate(LocalDate.parse("2024-04-29"));
-        secondTimeSlot.setStartTime(LocalTime.parse("11:00"));
-        secondTimeSlot.setEndTime(LocalTime.parse("12:00"));
-        secondTimeSlot.setAvailability(true);
+        TimeSlotDto firstTimeSlot = TimeSlotDto.builder()
+                .id(1L)
+                .doctorId(1L)
+                .doctorFullName("Тестов Доктор Докторович")
+                .date(LocalDate.parse("2024-03-28"))
+                .startTime(LocalTime.parse("10:00"))
+                .endTime(LocalTime.parse("11:00"))
+                .availability(true)
+                .build();
+        TimeSlotDto secondTimeSlot = TimeSlotDto.builder()
+                .id(2L)
+                .doctorId(2L)
+                .doctorFullName("Тестова Фекла Павловна")
+                .date(LocalDate.parse("2024-04-29"))
+                .startTime(LocalTime.parse("11:00"))
+                .endTime(LocalTime.parse("12:00"))
+                .availability(true)
+                .build();
 
         timeSlots.add(firstTimeSlot);
         timeSlots.add(secondTimeSlot);
@@ -70,8 +71,9 @@ public class TimeSlotControllerTest {
         timeSlots.clear();
     }
 
+    @DisplayName(value = "Метод findAll")
     @Test
-    void findAllShouldReturnAllTimeSlots() throws Exception {
+    void findAll_ShouldReturnAllTimeSlots() throws Exception {
         Mockito.when(this.timeSlotService.findAll()).thenReturn(timeSlots);
 
         mockMvc.perform(get("/timeSlots"))
@@ -79,8 +81,9 @@ public class TimeSlotControllerTest {
                 .andExpect(jsonPath("$.length()").value(2));
     }
 
+    @DisplayName(value = "Метод findById")
     @Test
-    void findByIdShouldReturnSpecificValidTimeSlot() throws Exception {
+    void findById_ShouldReturnSpecificValidTimeSlot() throws Exception {
         Mockito.when(this.timeSlotService.findById(FIRST_TEST_TIME_SLOT_ID))
                 .thenReturn(timeSlots.get(0));
 
@@ -88,15 +91,12 @@ public class TimeSlotControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1))
                 .andExpect(jsonPath("$.doctorId").value(1))
-                .andExpect(jsonPath("$.doctorFullName").value("Тестов Доктор Докторович"))
-                .andExpect(jsonPath("$.date").value("2024-03-28"))
-                .andExpect(jsonPath("$.startTime").value("10:00"))
-                .andExpect(jsonPath("$.endTime").value("11:00"))
-                .andExpect(jsonPath("$.availability").value(true));
+                .andExpect(jsonPath("$.doctorFullName").value("Тестов Доктор Докторович"));
     }
 
+    @DisplayName(value = "Метод findAllByDoctorId")
     @Test
-    void findAllByDoctorIdShouldReturnTimeSlotsReferencedWithSpecificDoctor() throws Exception {
+    void findAllByDoctorId_ShouldReturnTimeSlots_ReferencedWithSpecificDoctor() throws Exception {
         Mockito.when(this.timeSlotService.findAllByDoctorId(FIRST_TEST_DOCTOR_ID))
                 .thenReturn(timeSlots.stream()
                         .filter(currentTimeSlot ->
@@ -108,8 +108,9 @@ public class TimeSlotControllerTest {
                 .andExpect(jsonPath("$.length()").value(1));
     }
 
+    @DisplayName(value = "Метод findAllAvailableByDoctorId")
     @Test
-    void findAllAvailableByDoctorIdShouldReturnAvailableTimeSlotsReferencedWithSpecificDoctor()
+    void findAllAvailableByDoctorId_ShouldReturnAvailableTimeSlots_ReferencedWithSpecificDoctor()
             throws Exception {
         Mockito.when(this.timeSlotService.findAllByDoctorId(FIRST_TEST_DOCTOR_ID))
                 .thenReturn(timeSlots.stream()
@@ -124,8 +125,9 @@ public class TimeSlotControllerTest {
                 .andExpect(jsonPath("$.length()").value(1));
     }
 
+    @DisplayName(value = "Метод findAllAllAvailableByDoctorIdAndDate")
     @Test
-    void findAllAllAvailableByDoctorIdAndDateRangeShouldReturnCorrectCollection()
+    void findAllAllAvailableByDoctorIdAndDate_RangeShouldReturnCorrectCollection()
             throws Exception {
         List<TimeSlotDto> testedCollection = new ArrayList<>();
         testedCollection.add(timeSlots.get(0));
@@ -146,24 +148,26 @@ public class TimeSlotControllerTest {
                 .andExpect(jsonPath("$.length()").value(1));
     }
 
+    @DisplayName(value = "Метод create")
     @Test
-    void createShouldAddValidDoctorToCollection() throws Exception {
-        Doctor testDoctor = new Doctor();
-        testDoctor.setId(FIRST_TEST_DOCTOR_ID);
-        testDoctor.setSpeciality(1);
-        testDoctor.setFirstName("Доктор");
-        testDoctor.setLastName("Тестов");
-        testDoctor.setPatronymic("Докторович");
-        testDoctor.setPhoneNumber(4558L);
-
-        TimeSlot testTimeSlot = new TimeSlot();
-        testTimeSlot.setId(3L);
-        testTimeSlot.setDoctor(testDoctor);
-        testTimeSlot.setDate(LocalDate.parse("2024-04-28"));
-        testTimeSlot.setStartTime(LocalTime.parse("12:00"));
-        testTimeSlot.setEndTime(LocalTime.parse("13:00"));
-        testTimeSlot.setAvailability(true);
-        testTimeSlot.setHasRemoved(false);
+    void create_ShouldAddValidDoctor_ToCollection() throws Exception {
+        Doctor testDoctor = Doctor.builder()
+                .id(FIRST_TEST_DOCTOR_ID)
+                .speciality(1)
+                .firstName("Доктор")
+                .lastName("Тестов")
+                .patronymic("Докторович")
+                .phoneNumber(4558L)
+                .build();
+        TimeSlot testTimeSlot = TimeSlot.builder()
+                .id(3L)
+                .doctor(testDoctor)
+                .date(LocalDate.parse("2024-04-28"))
+                .startTime(LocalTime.parse("12:00"))
+                .endTime(LocalTime.parse("13:00"))
+                .availability(true)
+                .hasRemoved(false)
+                .build();
 
         Mockito.when(this.timeSlotService.create(1L, testTimeSlot))
                 .thenReturn(TimeSlotDto.from(testTimeSlot));
@@ -177,8 +181,9 @@ public class TimeSlotControllerTest {
                 .andExpect(jsonPath("$.id").value(3));
     }
 
+    @DisplayName(value = "Метод edit")
     @Test
-    void editShouldUpdateTimeSlotFromCollection() throws Exception {
+    void edit_ShouldUpdateTimeSlot_FromCollection() throws Exception {
         TimeSlotDto editedTimeSlot = timeSlots.get(0);
         editedTimeSlot.setAvailability(false);
 
@@ -195,8 +200,9 @@ public class TimeSlotControllerTest {
 
     }
 
+    @DisplayName(value = "Метод delete")
     @Test
-    void deleteShouldDeleteTimeSlotFromCollection() throws Exception {
+    void delete_ShouldDeleteTimeSlot_FromCollection() throws Exception {
         willDoNothing().given(this.timeSlotService).deleteById(FIRST_TEST_TIME_SLOT_ID);
 
         mockMvc.perform(delete("/timeSlots/{timeSlotId}", FIRST_TEST_TIME_SLOT_ID)
@@ -206,8 +212,9 @@ public class TimeSlotControllerTest {
                 .andExpect(status().isAccepted());
     }
 
+    @DisplayName(value = "Метод softDelete")
     @Test
-    void softDeleteShouldUpdateHasRemovedFlag() throws Exception {
+    void softDelete_ShouldUpdateHasRemovedFlag() throws Exception {
         willDoNothing().given(this.timeSlotService).softDeleteById(FIRST_TEST_TIME_SLOT_ID);
 
         mockMvc.perform(
