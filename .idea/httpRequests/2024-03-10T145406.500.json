@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-03-10T11:54:06.405+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/doctors/addDoctor"
+}
