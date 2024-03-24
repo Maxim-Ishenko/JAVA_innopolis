@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  postgres:
+    image: 'postgres:14-alpine'
+    container_name: 'appointments_container'
+    ports:
+      - 5432:5432
+    entrypoint:
+      - 'POSTGRES_DB=appointments'
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=1102'
+  app:
+    build: .
+    ports:
+      - 8080:8080

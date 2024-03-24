@@ -13,11 +13,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="attestation03" />
         <module name="attestation02" />
+        <module name="FinalProject" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FinalProject" options="-parameters" />
       <module name="attestation03" options="-parameters" />
     </option>
   </component>
