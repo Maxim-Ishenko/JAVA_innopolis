@@ -5,64 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="attestation/attestation03 merged into attestations/finalProject branch">
-      <change afterPath="$PROJECT_DIR$/FinalProject/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/FinalProjectApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/ServletInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/controllers/AppointmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/controllers/DoctorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/controllers/PatientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/controllers/TimeSlotController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/dto/AppointmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/dto/DoctorDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/dto/PatientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/dto/TimeSlotDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/enums/ResultsMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/enums/ServiceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/enums/Specialities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/exceptions/CustomException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/Doctor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/Patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/TimeSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/repositories/AppointmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/repositories/DoctorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/repositories/PatientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/repositories/TimeSlotRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/AppointmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/DoctorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/PatientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/TimeSlotService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/impl/AppointmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/impl/DoctorServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/impl/PatientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/services/impl/TimeSlotServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/utils/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/utils/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/FinalProjectApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/controllers/AppointmentControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/controllers/DoctorControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/controllers/PatientControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/controllers/TimeSlotControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/services/DoctorServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/services/PatientServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalProject/src/test/java/ru/innopolis/finalproject/utils/HelperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FinalProject/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54/storage_v2/_src_/database/appointments.tBiWWg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54/storage_v2/_src_/database/appointments.tBiWWg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +217,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.FinalProject/docker-compose.yaml.postgres: Compose Deployment">
+  <component name="RunManager" selected="Docker.FinalProject/docker-compose.yaml: Compose Deployment">
     <configuration name="Attestation03Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="attestation03" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.innopolis.attestation03.Attestation03Application" />
@@ -283,19 +232,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FinalProject/DockerFile###" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="buildOnly" value="true" />
-          <option name="sourceFilePath" value="FinalProject/DockerFile###" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="FinalProject/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
           <option name="sourceFilePath" value="FinalProject/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="FinalProject/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="FinalProject/docker-compose.yaml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -352,8 +300,8 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.FinalProject/docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Docker.FinalProject.postgres: Compose Deployment" />
-      <item itemvalue="Docker.FinalProject/DockerFile###" />
       <item itemvalue="Docker.FinalProject/Dockerfile" />
       <item itemvalue="Docker.FinalProject/docker-compose.yaml.app: Compose Deployment" />
       <item itemvalue="Docker.FinalProject/docker-compose.yaml.postgres: Compose Deployment" />
@@ -362,11 +310,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.FinalProject/docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.FinalProject/docker-compose.yaml.app: Compose Deployment" />
         <item itemvalue="Docker.FinalProject/docker-compose.yaml.postgres: Compose Deployment" />
         <item itemvalue="Docker.FinalProject/Dockerfile" />
-        <item itemvalue="Docker.FinalProject/docker-compose.yaml.app: Compose Deployment" />
         <item itemvalue="Docker.FinalProject.postgres: Compose Deployment" />
-        <item itemvalue="Docker.FinalProject/DockerFile###" />
       </list>
     </recent_temporary>
   </component>
@@ -395,6 +343,8 @@
       <workItem from="1711021221580" duration="10593000" />
       <workItem from="1711079633728" duration="21450000" />
       <workItem from="1711201779265" duration="16628000" />
+      <workItem from="1711281654746" duration="1153000" />
+      <workItem from="1711335969458" duration="14738000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />
@@ -417,6 +367,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

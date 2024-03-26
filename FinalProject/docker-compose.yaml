@@ -1,16 +1,42 @@
-version: '3'
+version: "3.9"
 
 services:
   postgres:
-    image: 'postgres:14-alpine'
-    container_name: 'appointments_container'
+    container_name: appointments_container
+    image: postgres:14.11-alpine3.19
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - PG_DATA=$PG_DATA
     ports:
-      - 5432:5432
-    entrypoint:
-      - 'POSTGRES_DB=appointments'
-      - 'POSTGRES_USER=postgres'
-      - 'POSTGRES_PASSWORD=1102'
+      - "127.0.0.1::5432"
+    volumes:
+      - db:/var/lib/postgresql/data/pgdata
   app:
+    depends_on:
+      - postgres
     build: .
+    image: app:latest
+    restart: on-failure
+    env_file: ./.env
     ports:
-      - 8080:8080
+    - "8082:8082"
+    environment:
+      SPRING_APPLICATION_JSON: '{
+          "spring.datasource.url" : "jdbc:postgresql://postgres:$PG_PORT/$POSTGRES_DB?useSSL=false",
+          "spring.datasource.driver-class-name" : "org.postgresql.Driver",
+          "spring.datasource.username" : "$POSTGRES_USER",
+          "spring.datasource.password" : "$POSTGRES_PASSWORD",
+          "spring.datasource.hikari.maximum-pool-size" : "20",
+          "spring.jpa.hibernate.ddl-auto" : "update"
+      }'
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
