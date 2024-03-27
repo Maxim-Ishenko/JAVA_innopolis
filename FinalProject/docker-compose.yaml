@@ -11,11 +11,8 @@ services:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
       - PG_DATA=$PG_DATA
-#    ports:
-#      - "127.0.0.1::5432"
     ports:
-#      - 80:8080
-      - 81:8081
+      - "127.0.0.1::5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
       - pgconf:/etc/postgresql
@@ -28,11 +25,8 @@ services:
     image: app:latest
     restart: on-failure
     env_file: ./.env
-#    ports:
-#    - "8082:8082"
     ports:
-#      - 80:8080
-      - 82:8082
+    - "8084:8084"
     environment:
       SPRING_APPLICATION_JSON: '{
           "spring.datasource.url" : "jdbc:postgresql://postgres:$PG_PORT/$POSTGRES_DB?autoReconnect=true&useSSL=false",
@@ -46,8 +40,6 @@ services:
       - .m2:/root/.m2
     stdin_open: true
     tty: true
-#    extra_hosts:
-#      - "site.local:192.168.88.1"
 
 volumes:
   pgdata:
@@ -56,4 +48,3 @@ volumes:
     driver: local
   pglog:
     driver: local
-#  data: {}
