@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="setting files changed">
+    <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="attestation/attestation03 merged into attestations/finalProject branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/AppointmentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/AppointmentControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/DoctorControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/DoctorControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/PatientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/PatientControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/TimeSlotControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/controllers/TimeSlotControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/DoctorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/DoctorServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/PatientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/services/PatientServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/utils/HelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java/ru/innopolis/attestation03/utils/HelperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/Patient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,114 +68,131 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Database Script.schema.sql.executor": "Run",
-    "Downloaded.Files.Path": "C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib",
-    "Downloaded.Files.Path.Enabled": "true",
-    "HTTP Request.Attestation03Application | #1.executor": "Run",
-    "HTTP Request.generated-requests | #1.executor": "Run",
-    "JUnit.AppointmentControllerTest.createShouldAddValidAppointmentToCollection.executor": "Run",
-    "JUnit.AppointmentControllerTest.executor": "Coverage",
-    "JUnit.AppointmentControllerTest.findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient.executor": "Run",
-    "JUnit.AppointmentControllerTest.findAllByTimeSlotIdShouldReturnAppointmentsReferencedWithSpecificTimeSlot.executor": "Run",
-    "JUnit.AppointmentControllerTest.findByIdShouldReturnSpecificValidAppointment.executor": "Run",
-    "JUnit.Attestation03ApplicationTests.executor": "Coverage",
-    "JUnit.DoctorControllerTest.createShouldAddValidDoctorToCollection.executor": "Run",
-    "JUnit.DoctorControllerTest.deleteShouldDeleteDoctorFromCollection.executor": "Run",
-    "JUnit.DoctorControllerTest.editShouldUpdateDoctorFromCollection.executor": "Run",
-    "JUnit.DoctorControllerTest.executor": "Coverage",
-    "JUnit.DoctorControllerTest.findAllShouldReturnAllDoctors.executor": "Coverage",
-    "JUnit.DoctorControllerTest.findByIdShouldReturnExceptionForNotValidDoctor.executor": "Run",
-    "JUnit.DoctorControllerTest.findByIdShouldReturnSpecificValidDoctor.executor": "Run",
-    "JUnit.DoctorControllerTest.saveShouldAddValidDoctorToCollection.executor": "Run",
-    "JUnit.DoctorControllerTest.softDeleteShouldUpdateHasRemovedFlag.executor": "Run",
-    "JUnit.DoctorRepositoryTest.executor": "Run",
-    "JUnit.DoctorRepositoryTest.findAllByHasRemovedFalseShouldReturnNotSoftRemovedDoctors.executor": "Run",
-    "JUnit.DoctorRepositoryTest.findAllShouldReturnDoctors.executor": "Run",
-    "JUnit.DoctorServiceTest.create_ShouldCreateDoctor.executor": "Run",
-    "JUnit.DoctorServiceTest.deleteById_ShouldDeleteDoctorById.executor": "Run",
-    "JUnit.DoctorServiceTest.executor": "Run",
-    "JUnit.DoctorServiceTest.findAllByHasRemovedFalse_ShouldReturnAllDoctorsByHasRemovedFlag.executor": "Run",
-    "JUnit.DoctorServiceTest.findAllShouldReturnAllDoctors.executor": "Run",
-    "JUnit.DoctorServiceTest.findAll_ShouldReturnAllDoctors.executor": "Run",
-    "JUnit.DoctorServiceTest.findByIdShouldReturnExceptionIfNotExists.executor": "Run",
-    "JUnit.DoctorServiceTest.findById_ShouldReturnValidDoctor.executor": "Run",
-    "JUnit.HelperTest.asJsonString_ShouldThrowExceptionIfArgIsNotValid.executor": "Run",
-    "JUnit.HelperTest.executor": "Run",
-    "JUnit.HelperTest.getFullNameTest.executor": "Coverage",
-    "JUnit.PatientControllerTest.createShouldAddValidPatientToCollection.executor": "Run",
-    "JUnit.PatientControllerTest.editShouldUpdatePatientFromCollection.executor": "Run",
-    "JUnit.PatientControllerTest.executor": "Coverage",
-    "JUnit.PatientControllerTest.findAllShouldReturnAllPatients.executor": "Run",
-    "JUnit.PatientControllerTest.findByIdShouldReturnSpecificValidPatient.executor": "Run",
-    "JUnit.PatientServiceTest.aaaaaaaa.executor": "Run",
-    "JUnit.PatientServiceTest.create_ShouldAddNewPatient (1).executor": "Run",
-    "JUnit.PatientServiceTest.create_ShouldAddNewPatient.executor": "Run",
-    "JUnit.PatientServiceTest.deleteById_ShouldDeleteSpecificPatient.executor": "Run",
-    "JUnit.PatientServiceTest.executor": "Run",
-    "JUnit.PatientServiceTest.findAll_ShouldReturnPatientsList.executor": "Run",
-    "JUnit.PatientServiceTest.findById_ShouldReturnSpecificPatient (1).executor": "Run",
-    "JUnit.PatientServiceTest.findById_ShouldReturnSpecificPatient.executor": "Debug",
-    "JUnit.TimeSlotControllerTest.createShouldAddValidDoctorToCollection.executor": "Run",
-    "JUnit.TimeSlotControllerTest.deleteShouldDeleteTimeSlotFromCollection.executor": "Run",
-    "JUnit.TimeSlotControllerTest.editShouldUpdateTimeSlotFromCollection.executor": "Run",
-    "JUnit.TimeSlotControllerTest.findAllAllAvailableByDoctorIdAndDateRangeShouldReturnCorrectCollection.executor": "Run",
-    "JUnit.TimeSlotControllerTest.findAllAvailableByDoctorIdShouldReturnAvailableTimeSlotsReferencedWithSpecificDoctor.executor": "Run",
-    "JUnit.TimeSlotControllerTest.findAllByDoctorIdShouldReturnTimeSlotsReferencedWithSpecificDoctor.executor": "Run",
-    "JUnit.TimeSlotControllerTest.findByIdShouldReturnSpecificValidTimeSlot.executor": "Run",
-    "JUnit.TimeSlotControllerTest.softDeleteShouldUpdateHasRemovedFlag.executor": "Run",
-    "JUnit.java in attestation03.executor": "Coverage",
-    "Maven.attestation02 [clean].executor": "Run",
-    "Maven.attestation03 [clean].executor": "Run",
-    "Maven.attestation03 [install].executor": "Run",
-    "Maven.attestation03 [test].executor": "Run",
-    "Maven.attestattion03 [clean].executor": "Run",
-    "Maven.attestattion03 [install].executor": "Run",
-    "OverrideImplement.generate.javadoc": "true",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Attestation03Application.executor": "Coverage",
-    "Spring Boot.Attestattion03Application.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "attestation/attestation03",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Database Script.schema.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.FinalProject.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.FinalProject/DockerFile###.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.FinalProject/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.FinalProject/docker-compose.yaml.app: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.FinalProject/docker-compose.yaml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.FinalProject/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\Максим\\Documents\\Java_School_Innopolis\\JavaProjects\\JAVA_innopolis\\Homeworks\\lib&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;HTTP Request.Attestation03Application | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in FinalProject.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AppointmentControllerTest.createShouldAddValidAppointmentToCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppointmentControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AppointmentControllerTest.findAllByPatientIdShouldReturnAppointmentsReferencedWithSpecificPatient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppointmentControllerTest.findAllByTimeSlotIdShouldReturnAppointmentsReferencedWithSpecificTimeSlot.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppointmentControllerTest.findByIdShouldReturnSpecificValidAppointment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Attestation03ApplicationTests.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.DoctorControllerTest.createShouldAddValidDoctorToCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorControllerTest.deleteShouldDeleteDoctorFromCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorControllerTest.editShouldUpdateDoctorFromCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.DoctorControllerTest.findAllShouldReturnAllDoctors.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.DoctorControllerTest.findByIdShouldReturnExceptionForNotValidDoctor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorControllerTest.findByIdShouldReturnSpecificValidDoctor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorControllerTest.saveShouldAddValidDoctorToCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorControllerTest.softDeleteShouldUpdateHasRemovedFlag.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorRepositoryTest.findAllByHasRemovedFalseShouldReturnNotSoftRemovedDoctors.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorRepositoryTest.findAllShouldReturnDoctors.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.create_ShouldCreateDoctor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.deleteById_ShouldDeleteDoctorById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.findAllByHasRemovedFalse_ShouldReturnAllDoctorsByHasRemovedFlag.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.findAllShouldReturnAllDoctors.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.findAll_ShouldReturnAllDoctors.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.findByIdShouldReturnExceptionIfNotExists.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoctorServiceTest.findById_ShouldReturnValidDoctor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HelperTest.asJsonString_ShouldThrowExceptionIfArgIsNotValid.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HelperTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HelperTest.getFullNameTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.PatientControllerTest.createShouldAddValidPatientToCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientControllerTest.editShouldUpdatePatientFromCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.PatientControllerTest.findAllShouldReturnAllPatients.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientControllerTest.findByIdShouldReturnSpecificValidPatient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.aaaaaaaa.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.create_ShouldAddNewPatient (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.create_ShouldAddNewPatient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.deleteById_ShouldDeleteSpecificPatient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.findAll_ShouldReturnPatientsList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.findById_ShouldReturnSpecificPatient (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PatientServiceTest.findById_ShouldReturnSpecificPatient.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.TimeSlotControllerTest.createShouldAddValidDoctorToCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TimeSlotControllerTest.deleteShouldDeleteTimeSlotFromCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TimeSlotControllerTest.editShouldUpdateTimeSlotFromCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TimeSlotControllerTest.findAllAllAvailableByDoctorIdAndDateRangeShouldReturnCorrectCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TimeSlotControllerTest.findAllAvailableByDoctorIdShouldReturnAvailableTimeSlotsReferencedWithSpecificDoctor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TimeSlotControllerTest.findAllByDoctorIdShouldReturnTimeSlotsReferencedWithSpecificDoctor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TimeSlotControllerTest.findByIdShouldReturnSpecificValidTimeSlot.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TimeSlotControllerTest.softDeleteShouldUpdateHasRemovedFlag.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in attestation03.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven.FinalProject [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.FinalProject [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attestation02 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attestation03 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attestation03 [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attestation03 [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attestattion03 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attestattion03 [install].executor&quot;: &quot;Run&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Attestation03Application.executor&quot;: &quot;Coverage&quot;,
+    &quot;Spring Boot.Attestattion03Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.FinalProjectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;attestation/finalProject&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Максим/Documents/Java_School_Innopolis/JavaProjects/JAVA_innopolis/FinalProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsDialog.application.dockerMachine&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "59f373ed-43bd-40ac-aada-23abd1cc7355",
-      "59f373ed-43bd-40ac-aada-23abd1cc7355/database/\"shop\""
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;59f373ed-43bd-40ac-aada-23abd1cc7355&quot;,
+      &quot;59f373ed-43bd-40ac-aada-23abd1cc7355/database/\&quot;shop\&quot;&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\FinalProject" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\FinalProject\src\test\java\ru\innopolis\finalproject" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\FinalProject\src\main\resources" />
+      <recent name="C:\Users\Максим\Documents\Java_School_Innopolis\JavaProjects\JAVA_innopolis\FinalProject\src\main\java\ru\innopolis\finalproject" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -192,79 +204,16 @@
       <recent name="ru.innopolis.attestation03.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in attestation03">
-    <configuration name="DoctorServiceTest.create_ShouldCreateDoctor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="attestation03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.services" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.services.DoctorServiceTest" />
-      <option name="METHOD_NAME" value="create_ShouldCreateDoctor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DoctorServiceTest.deleteById_ShouldDeleteDoctorById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="attestation03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.services" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.services.DoctorServiceTest" />
-      <option name="METHOD_NAME" value="deleteById_ShouldDeleteDoctorById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DoctorServiceTest.findAll_ShouldReturnAllDoctors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="attestation03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.services" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.services.DoctorServiceTest" />
-      <option name="METHOD_NAME" value="findAll_ShouldReturnAllDoctors" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimeSlotControllerTest.findByIdShouldReturnSpecificValidTimeSlot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="attestation03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.innopolis.attestation03.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.innopolis.attestation03.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ru.innopolis.attestation03.controllers.TimeSlotControllerTest" />
-      <option name="METHOD_NAME" value="findByIdShouldReturnSpecificValidTimeSlot" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="java in attestation03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="attestation03" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Docker.FinalProject/docker-compose.yaml: Compose Deployment">
     <configuration name="Attestation03Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="attestation03" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.innopolis.attestation03.Attestation03Application" />
@@ -272,29 +221,96 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Attestattion03Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="attestation03" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.innopolis.attestation03.Attestattion03Application" />
+    <configuration name="FinalProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="FinalProject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.innopolis.finalproject.FinalProjectApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FinalProject/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="FinalProject/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="FinalProject/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="FinalProject/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="FinalProject/docker-compose.yaml.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="FinalProject/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="FinalProject/docker-compose.yaml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="FinalProject/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="FinalProject.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="FinalProject/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="JUnit.DoctorServiceTest.create_ShouldCreateDoctor" />
-      <item itemvalue="JUnit.DoctorServiceTest.deleteById_ShouldDeleteDoctorById" />
-      <item itemvalue="JUnit.DoctorServiceTest.findAll_ShouldReturnAllDoctors" />
-      <item itemvalue="JUnit.TimeSlotControllerTest.findByIdShouldReturnSpecificValidTimeSlot" />
-      <item itemvalue="JUnit.java in attestation03" />
+      <item itemvalue="Docker.FinalProject/docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="Docker.FinalProject.postgres: Compose Deployment" />
+      <item itemvalue="Docker.FinalProject/Dockerfile" />
+      <item itemvalue="Docker.FinalProject/docker-compose.yaml.app: Compose Deployment" />
+      <item itemvalue="Docker.FinalProject/docker-compose.yaml.postgres: Compose Deployment" />
+      <item itemvalue="Spring Boot.FinalProjectApplication" />
       <item itemvalue="Spring Boot.Attestation03Application" />
-      <item itemvalue="Spring Boot.Attestattion03Application" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in attestation03" />
-        <item itemvalue="JUnit.DoctorServiceTest.findAll_ShouldReturnAllDoctors" />
-        <item itemvalue="JUnit.TimeSlotControllerTest.findByIdShouldReturnSpecificValidTimeSlot" />
-        <item itemvalue="JUnit.DoctorServiceTest.create_ShouldCreateDoctor" />
-        <item itemvalue="JUnit.DoctorServiceTest.deleteById_ShouldDeleteDoctorById" />
+        <item itemvalue="Docker.FinalProject/docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.FinalProject/docker-compose.yaml.postgres: Compose Deployment" />
+        <item itemvalue="Docker.FinalProject/docker-compose.yaml.app: Compose Deployment" />
+        <item itemvalue="Docker.FinalProject/Dockerfile" />
+        <item itemvalue="Docker.FinalProject.postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -322,6 +338,10 @@
       <workItem from="1710820264392" duration="42570000" />
       <workItem from="1711021221580" duration="10593000" />
       <workItem from="1711079633728" duration="21450000" />
+      <workItem from="1711201779265" duration="16628000" />
+      <workItem from="1711281654746" duration="1153000" />
+      <workItem from="1711335969458" duration="19573000" />
+      <workItem from="1711554530062" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />
@@ -345,6 +365,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -360,7 +383,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="merged attestation/attestation1 into the current homeworks/homework14" />
     <MESSAGE value="setting files changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting files changed" />
+    <MESSAGE value="attestation/attestation03 merged into attestations/finalProject branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="attestation/attestation03 merged into attestations/finalProject branch" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAVA_innopolis$PatientControllerTest.ic" NAME="PatientControllerTest Coverage Results" MODIFIED="1710908525734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -378,6 +402,7 @@
       <FILTER>ru.innopolis.attestation03.services.*</FILTER>
       <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$All_in_FinalProject.ic" NAME="All in FinalProject Coverage Results" MODIFIED="1711253032530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorControllerTest_findAllShouldReturnAllDoctors.ic" NAME="DoctorControllerTest.findAllShouldReturnAllDoctors Coverage Results" MODIFIED="1710820278966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
     </SUITE>
@@ -391,7 +416,7 @@
     <SUITE FILE_PATH="coverage/JAVA_innopolis$HelperTest.ic" NAME="HelperTest Coverage Results" MODIFIED="1711079880367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.attestation03.utils.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JAVA_innopolis$java_in_attestation03.ic" NAME="java in attestation03 Coverage Results" MODIFIED="1711169238788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JAVA_innopolis$java_in_attestation03.ic" NAME="java in attestation03 Coverage Results" MODIFIED="1711170095874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/JAVA_innopolis$DoctorControllerTest.ic" NAME="DoctorControllerTest Coverage Results" MODIFIED="1710904239924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.innopolis.attestation03.controllers.*</FILTER>
     </SUITE>
