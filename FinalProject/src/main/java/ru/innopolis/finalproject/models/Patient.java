@@ -34,7 +34,7 @@ public class Patient {
     @Column(name="birthdate")
     private LocalDate birthdate;
 
-    @Column(name="phone_number", unique = true, nullable = false)
+    @Column(name="phone_number", nullable = false)
     private Integer phoneNumber;
 
     @Column(name="address")
