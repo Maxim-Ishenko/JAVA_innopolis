@@ -14,7 +14,10 @@ services:
     ports:
       - "127.0.0.1::5432"
     volumes:
-      - db:/var/lib/postgresql/data/pgdata
+      - pgdata:/var/lib/postgresql/data
+      - pgconf:/etc/postgresql
+      - pglog:/var/log/postgresql
+
   app:
     depends_on:
       - postgres
@@ -39,4 +42,9 @@ services:
     tty: true
 
 volumes:
-  db:
+  pgdata:
+    driver: local
+  pgconf:
+    driver: local
+  pglog:
+    driver: local
