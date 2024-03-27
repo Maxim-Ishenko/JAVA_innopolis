@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-03-11T05:12:13.472+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/doctors/addDoctor"
+}
