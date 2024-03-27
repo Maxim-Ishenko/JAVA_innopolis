@@ -1,0 +1,3 @@
+name: Лаврентий Палыч, moneyAmount: 1000
+name: Иосиф Виссарионыч, moneyAmount: 250
+name: Феликс Эдмундыч, moneyAmount: 370

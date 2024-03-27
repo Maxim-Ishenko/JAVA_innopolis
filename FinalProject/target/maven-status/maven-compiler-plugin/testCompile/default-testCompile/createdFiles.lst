@@ -1,0 +1,8 @@
+ru\innopolis\finalproject\FinalProjectApplicationTests.class
+ru\innopolis\finalproject\controllers\AppointmentControllerTest.class
+ru\innopolis\finalproject\services\DoctorServiceTest.class
+ru\innopolis\finalproject\services\PatientServiceTest.class
+ru\innopolis\finalproject\controllers\DoctorControllerTest.class
+ru\innopolis\finalproject\controllers\PatientControllerTest.class
+ru\innopolis\finalproject\utils\HelperTest.class
+ru\innopolis\finalproject\controllers\TimeSlotControllerTest.class

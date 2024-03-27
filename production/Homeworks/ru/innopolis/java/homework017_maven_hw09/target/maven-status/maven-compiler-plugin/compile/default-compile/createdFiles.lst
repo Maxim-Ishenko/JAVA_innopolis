@@ -1,0 +1,16 @@
+ru\innopolis\model\Garage\Garage.class
+ru\innopolis\model\Race\DriftRace.class
+ru\innopolis\model\Car\Car.class
+ru\innopolis\model\Race\DragRace.class
+ru\innopolis\utils\CarDataHandlerParserHelper.class
+ru\innopolis\utils\FileWorkHelper.class
+ru\innopolis\model\Race\CasualRace.class
+ru\innopolis\model\Race\Race.class
+ru\innopolis\model\Car\ShowCar.class
+ru\innopolis\utils\RaceDataHandlerParserHelper.class
+ru\innopolis\repository\CarRepositoryImpl.class
+ru\innopolis\model\Race\TimeLimitRace.class
+ru\innopolis\repository\CarRepository.class
+ru\innopolis\App.class
+ru\innopolis\model\Race\CircuitRace.class
+ru\innopolis\model\Car\PerformanceCar.class

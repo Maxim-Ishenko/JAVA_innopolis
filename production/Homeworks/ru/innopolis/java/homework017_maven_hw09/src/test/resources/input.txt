@@ -1,0 +1,1 @@
+brand: Lada, model: Niva, year: 1987, power: 72, acceleration: 1, suspension: 2, durability: 3
