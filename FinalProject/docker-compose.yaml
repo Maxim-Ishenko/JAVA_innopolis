@@ -26,7 +26,7 @@ services:
     restart: on-failure
     env_file: ./.env
     ports:
-    - "8084:8084"
+    - "8082:8082"
     environment:
       SPRING_APPLICATION_JSON: '{
           "spring.datasource.url" : "jdbc:postgresql://postgres:$PG_PORT/$POSTGRES_DB?autoReconnect=true&useSSL=false",

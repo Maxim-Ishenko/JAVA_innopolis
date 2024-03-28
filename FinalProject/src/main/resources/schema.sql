@@ -1,3 +1,5 @@
+CREATE SCHEMA IF NOT EXISTS appointments;
+
 INSERT INTO doctor(
     phone_number,
     first_name,
