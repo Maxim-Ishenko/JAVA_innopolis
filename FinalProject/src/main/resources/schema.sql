@@ -1,34 +1,26 @@
-CREATE SCHEMA IF NOT EXISTS appointments;
+CREATE SCHEMA IF NOT EXISTS public;
 
 INSERT INTO doctor(
-    phone_number,
-    first_name,
-    last_name,
-    patronymic,
-    speciality,
-    has_removed
+    has_removed, speciality, phone_number, first_name, last_name, patronymic
 )
 VALUES
-    (89932912344, 'Зинаида', 'Петрова', 'Эдуардовна', 0, false),
-    (89932943214, 'Анатолий', 'Шнипельсон', 'Эдуардович', 4, false),
-    (89911112834, 'Ольга', 'Бердникова', 'Владимировна', 1, false),
-    (89911344834, 'Карл', 'Юнг', 'Густав', 3, false),
-    (89653437634, 'Василий', 'Сидоров', 'Петрович', 2, false);
+    (false, 0, 89932912344, 'Зинаида', 'ПетрОва', 'Эдуардовна'),
+    (false, 1, 89932943214, 'Анатолий', 'Шнипельсон', 'Эдуардович'),
+    (false, 2, 89911112834, 'Ольга', 'Бердникова', 'Владимировна'),
+    (false, 3, 89911344834, 'Карл', 'Юнг', 'Густав'),
+    (false, 4, 89653437634, 'Василий', 'Сидоров', 'Петрович');
 
 INSERT INTO patient(
-    first_name,
-    last_name,
-    patronymic,
-    birthdate,
-    phone_number,
-    permanent_address,
-    residential_address,
-    has_removed
-) VALUES
-      ('Семен', 'Семенов', 'Семенович', '1918-11-11', 4321, 'Рязань', 'Рязань', false),
-      ('Галина', 'Галинов', 'Эдуардовна', '1918-11-11', 645, 'Таганрог', 'Таганрог', false),
-      ('Боб', 'Бобов', 'Борисович', '1918-11-11', 867, 'Воронеж', 'Воронеж', false),
-      ('Фекла', 'Иванова', 'Сидоровна', '1918-11-11', 563, 'Екатеринбург', 'Екатеринбург', false),
-      ('Эдуард', 'Петров', 'Евгеньевич', '1918-11-11', 1212, 'Москва', 'Москва', false);
+      birthdate, has_removed, phone_number, first_name, last_name, patronymic, permanent_address, residential_address
+)
+VALUES
+    ('1918-11-11', false, 465321, 'Семен', 'Семенов', 'Семенович', 'Рязань', 'Рязань'),
+    ('1918-11-11', false, 131231, 'Галина', 'Галинов', 'Эдуардовна', 'Таганрог', 'Таганрог'),
+    ('1918-11-11', false, 558786, 'Боб', 'Бобов', 'Борисович', 'Воронеж', 'Воронеж'),
+    ('1918-11-11', false, 908878, 'Фекла', 'Иванова', 'Сидоровна', 'Екатеринбург', 'Екатеринбург'),
+    ('1918-11-11', false, 402859, 'Эдуард', 'Петров', 'Евгеньевич', 'Москва', 'Москва');
 
-select * from doctor;
+-- select * from doctor;
+
+-- Очистка всех таблиц с сбросом счетчика id
+-- TRUNCATE TABLE doctor, patient, appointment, time_slot RESTART IDENTITY CASCADE;

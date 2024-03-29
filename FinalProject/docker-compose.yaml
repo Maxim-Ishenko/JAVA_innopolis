@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   postgres:
-    container_name: appointments_container
+    container_name: final_appointments_container
     image: postgres:14.11-alpine3.19
     restart: unless-stopped
     env_file: ./.env
@@ -29,7 +29,7 @@ services:
     - "8082:8082"
     environment:
       SPRING_APPLICATION_JSON: '{
-          "spring.datasource.url" : "jdbc:postgresql://postgres:$PG_PORT/$POSTGRES_DB?autoReconnect=true&useSSL=false",
+          "spring.datasource.url" : "jdbc:postgresql://postgres:$PG_PORT/$POSTGRES_DB?useSSL=false",
           "spring.datasource.driver-class-name" : "org.postgresql.Driver",
           "spring.datasource.username" : "$POSTGRES_USER",
           "spring.datasource.password" : "$POSTGRES_PASSWORD",
