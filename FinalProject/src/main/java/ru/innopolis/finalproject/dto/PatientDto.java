@@ -1,5 +1,6 @@
 package ru.innopolis.finalproject.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,13 +17,21 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Schema(description = "Сущность пациента")
 public class PatientDto {
+    @Schema(name = "id", description = "Идентификатор пациента", example = "1")
     private Long id;
+    @Schema(name = "firstName", description = "Имя пациента", example = "Сергей")
     private String firstName;
+    @Schema(name = "lastName", description = "Фамилия пациента", example = "Иванов")
     private String lastName;
+    @Schema(name = "patronymic", description = "Отчество пациента", example = "Афанасьевич")
     private String patronymic;
+    @Schema(name = "birthdate", description = "Дата рождения пациента", example = "1988-02-17")
     private LocalDate birthdate;
+    @Schema(name = "phoneNumber", description = "Номер телефона пациента", example = "134534")
     private Integer phoneNumber;
+    @Schema(name = "address", description = "Адрес пациента")
     private Address address;
     private List<Appointment> appointment;
 

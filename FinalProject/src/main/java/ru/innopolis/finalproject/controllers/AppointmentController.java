@@ -26,7 +26,10 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(("/appointments"))
-@Tag(name = "Контроллер приемов", description = "Контроллер операций с зарегистрированными приемами")
+@Tag(
+        name = "Контроллер приемов",
+        description = "Контроллер операций с зарегистрированными приемами"
+)
 public class AppointmentController {
     private final AppointmentService appointmentService;
 
@@ -361,7 +364,9 @@ public class AppointmentController {
     public ResponseEntity<AppointmentDto> editAppointment(
             @PathVariable("appointmentId")
             @Parameter(
-                    description = "Идентификатор приема"
+                    name = "appointmentId",
+                    description = "Идентификатор приема",
+                    example = "1"
             ) Long appointmentId,
             @io.swagger.v3.oas.annotations.parameters.RequestBody(
                     description ="Отредактированная запись на прием",
