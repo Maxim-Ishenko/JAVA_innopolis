@@ -1,5 +1,6 @@
 package ru.innopolis.finalproject.controllers;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(("/timeSlots"))
+@Tag(name = "Контроллер временных слотов", description = "Контроллер операций с временными слотами")
 public class TimeSlotController {
     private final TimeSlotService timeSlotService;
 

@@ -1,5 +1,6 @@
 package ru.innopolis.finalproject.controllers;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(("/doctors"))
+@Tag(name = "Контроллер докторов", description = "Контроллер операций с докторами")
 public class DoctorController {
 
     private final DoctorService doctorService;
