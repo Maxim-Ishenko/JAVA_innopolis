@@ -328,7 +328,8 @@ public class AppointmentController {
                     description ="Новая запись на прием",
                     required = true,
                     content = @Content(
-                            schema=@Schema(implementation = AppointmentDto.class), mediaType = "application/json")
+                            schema=@Schema(implementation = AppointmentDto.class),
+                            mediaType = "application/json")
             )
             @Valid @RequestBody AppointmentDto appointment
             ) {
@@ -345,14 +346,14 @@ public class AppointmentController {
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
-                    description = "Запись успешно удалена",
+                    description = "Запись успешно обновлена",
                     content =
                             { @Content(mediaType = "application/json", schema =
                             @Schema(implementation = AppointmentDto.class)) }
             ),
             @ApiResponse(
                     responseCode = "404",
-                    description = "Запис по заданному идентификатору не найдена",
+                    description = "Запись по заданному идентификатору не найдена",
                     content = { @Content(mediaType = "application/json", schema =
                     @Schema(implementation = NotFoundException.class)) }
             )

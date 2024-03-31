@@ -42,6 +42,6 @@ public class Appointment {
     private ServiceType serviceType;
 
     @Column(name="has_removed")
-    @Schema(name = "hasRemoved", description = "Флаг удаления", example = "false")
+    @Schema(name = "hasRemoved", description = "Флаг доступности", example = "false")
     private Boolean hasRemoved;
 }
