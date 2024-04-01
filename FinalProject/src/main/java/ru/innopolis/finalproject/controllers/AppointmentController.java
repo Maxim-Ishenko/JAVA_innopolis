@@ -25,7 +25,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(("/appointments"))
+@RequestMapping("/appointments")
 @Tag(
         name = "Контроллер приемов",
         description = "Контроллер операций с зарегистрированными приемами"

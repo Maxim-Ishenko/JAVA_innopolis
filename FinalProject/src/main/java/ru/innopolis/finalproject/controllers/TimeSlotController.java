@@ -24,7 +24,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(("/timeSlots"))
+@RequestMapping("/timeSlots")
 @Tag(name = "Контроллер временных слотов", description = "Контроллер операций с временными слотами")
 public class TimeSlotController {
     private final TimeSlotService timeSlotService;

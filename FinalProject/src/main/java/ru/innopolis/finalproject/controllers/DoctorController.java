@@ -22,7 +22,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(("/doctors"))
+@RequestMapping("/doctors")
 @Tag(name = "Контроллер докторов", description = "Контроллер операций с докторами")
 public class DoctorController {
 
