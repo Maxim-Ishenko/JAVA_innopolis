@@ -1,0 +1,1 @@
+brand: gena, model: opel, year: 1987, power: 200, acceleration: 5, suspension: 4, durability: 7
