@@ -12,7 +12,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(("/patients"))
+@RequestMapping("/patients")
 public class PatientController {
     private final PatientService patientService;
 

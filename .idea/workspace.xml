@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f325fed1-3152-4019-a09e-f2612e581593" name="Changes" comment="attestation/attestation03 merged into attestations/finalProject branch">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject/src/main/java/ru/innopolis/finalproject/models/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/59f373ed-43bd-40ac-aada-23abd1cc7355.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/59f373ed-43bd-40ac-aada-23abd1cc7355.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deb36aa0-d075-4790-b70f-40cb33f92c54.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Attestations/src/ru/innopolis/java/attestation03/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="attestation/attestation01" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -341,7 +341,6 @@
       <workItem from="1711201779265" duration="16628000" />
       <workItem from="1711281654746" duration="1153000" />
       <workItem from="1711335969458" duration="19573000" />
-      <workItem from="1711554530062" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="merged attestation/attestation1 into the current homeworks/homework14">
       <option name="closed" value="true" />
