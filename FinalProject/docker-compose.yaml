@@ -23,10 +23,13 @@ services:
       - postgres
     build: .
     image: app:latest
-    restart: on-failure
+    restart: always
     env_file: ./.env
     ports:
-    - "8082:8082"
+      - target: 80
+        published: 8080
+        protocol: tcp
+        mode: host
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
